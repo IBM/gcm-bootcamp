@@ -20,6 +20,7 @@ const sidebars = {
         'lab-01-discover-cbom-qse/assess-prioritize',
         'lab-01-discover-cbom-qse/remediate',
         'lab-01-discover-cbom-qse/summary',
+        'lab-01-discover-cbom-qse/summary-glossary',
       ],
     },
     {

@@ -1,43 +1,70 @@
 ---
 sidebar_position: 3
-title: "Phase 2: Assess & Prioritize"
+title: "Phase 2: Assess"
 ---
 
-# Phase 2: Assess & Prioritize — Review Vulnerabilities in GCM
+# Phase 2: Assess — Review Vulnerabilities in GCM
 
-As **SecOps Manager**, use the GCM dashboard to find and prioritize the CCE Agency's cryptographic weaknesses.
+Review Vulnerabilities in GCM — as SecOps Manager, use the GCM dashboard to find and prioritize cryptographic weaknesses.
 
 ## Part 2: Identify Vulnerabilities in Guardium Cryptography Manager
 
-IBM Guardium Cryptography Manager (GCM) is your command center. It shows you every application that has been scanned, what cryptographic algorithms are in use, and which ones have known weaknesses. In this section, you are playing the role of the SecOps Manager — reviewing findings and deciding what the development team needs to fix.
+IBM Guardium Cryptography Manager (GCM) is your command center. It shows you every application that has been scanned, what cryptographic algorithms are in use, and which ones have known weaknesses. In this section, you are acting as the SecOps Manager — reviewing findings and deciding what the development team needs to fix.
 
-### Step A: Navigate to the Code Repository
+### Step A: Open GCM
 
-1. In GCM, click **"Inventory"** in the top menu, then select **"Code repositories"**.
-2. Find the entry for the **secure-chat** application and click the value in the **"Impacted code assets"** column (labeled **A**).
+1. In your browser, click the bookmark labeled **"GCM"**. This opens the IBM Guardium Cryptography Manager dashboard.
 
-   This opens a list of all source code files that contain cryptographic functions.
+2. Log in with the credentials provided by your lab facilitator if prompted.
 
-   ![GCM Inventory showing code repositories with secure-chat highlighted](/img/lab-01/gcm-code-repositories.png)
+### Step B: Navigate to the Code Repository
 
-3. Click the **"Vulnerabilities"** tab (labeled **A**) to see a list of detected security weaknesses.
-4. Locate the vulnerability called **"Use of small key size: 1024"** (labeled **B**) and click on it to expand the details.
+1. In GCM, open the top menu
 
-   ![GCM Vulnerabilities tab showing Client.java line 32 with Use of small key size: 1024](/img/lab-01/gcm-vulnerabilities-tab.png)
+   <img src="/img/lab-01/image2.png" alt="GCM page with button to open top menu highlighted" />
 
-:::note[Why this matters]
+   *GCM page with button to open top menu highlighted*
 
-A 1024-bit RSA key is considered too small by modern security standards — it can be cracked by today's computers, let alone tomorrow's quantum computers. NIST recommends a minimum of 2048 bits for RSA, and recommends migrating away from RSA entirely.
+2. Select **"Portfolio view"** from the top menu.
+
+   <img src="/img/lab-01/image3.png" alt="GCM top menu with portfolio view highlighted" />
+
+   *GCM top menu with portfolio view highlighted*
+
+3. Find the entry for the **secure-chat** application and click the value in the **"Impacted code assets"** column (labeled **A**). This opens a list of all source code files that contain cryptographic functions.
+
+   <img src="/img/lab-01/image4.png" alt="GCM Inventory showing code repositories with secure-chat highlighted" />
+
+   *GCM Inventory showing code repositories with secure-chat highlighted*
+
+4. Click the **"Vulnerabilities"** tab (labeled **A**) to see a list of detected security weaknesses.
+
+   <img src="/img/lab-01/image5.png" alt="Impacted code assets page for secure-chat with Vulnerabilities tab highlighted" />
+
+   *Impacted code assets page for secure-chat with Vulnerabilities tab highlighted*
+
+5. Locate the vulnerability called **"Use of small key size: 1024"** and click on it to expand the details.
+
+   <img src="/img/lab-01/image6.png" alt="GCM Vulnerabilities tab showing Client.java line 33 with &quot;Use of small key size: 1024&quot;" />
+
+   *GCM Vulnerabilities tab showing Client.java line 33 with "Use of small key size: 1024"*
+
+:::note
+
+A 1024-bit RSA key is considered too small by modern security standards — it can be cracked by today's computers, let alone a quantum computer running Shor's algorithm. NIST recommends a minimum of 2048 bits for RSA and recommends migrating away from RSA entirely in favor of NIST-approved PQC algorithms.
 
 :::
 
-### Step B: Create a Ticket for the Development Team
+### Step C: Create a Ticket for the Development Team
 
-As SecOps Manager, your job is to flag the issue for the developers. In a real workflow, you would open a ticket in your project management system.
+As SecOps Manager, formally flag this issue for the development team. In a real workflow, this becomes a traceable work item in your project management system.
 
-5. Note the location of the vulnerability: **line 32 of `Client.java`** in the secure-chat application.
-6. Create a ticket (or make a note) for the developer team to fix the small RSA key size on that line.
+1. Note the exact location: **line 32 of Client.java** in the secure-chat application.
 
----
+2. Create a ticket (or note) for the development team: *"Fix RSA-1024 key generation on line 32 of Client.java. Upgrade to minimum RSA-2048 or migrate to a NIST PQC algorithm."*
 
-Proceed to **[Phase 3: Remediate →](./03-remediate.md)**
+:::tip
+
+You are now switching roles. You have received the SecOps ticket and will now act as the Developer who must find and fix the vulnerability at the code level using the QSE plugin and IBM Bob.
+
+:::

@@ -5,17 +5,25 @@ title: Lab Overview
 
 # Lab 1: IBM Quantum Safe Explorer + IBM Bob
 
-**Hands-On Lab Guide — Post-Quantum Cryptography Migration**
+**Hands-On Lab Guide | Post-Quantum Cryptography Migration**
 
-## Background
+## Background & Lab Overview
 
 Quantum computers are advancing rapidly and will eventually break the public-key cryptography that protects most of today's digital systems — including encrypted communications, authentication tokens, and digital signatures. To stay ahead of this threat, government agencies and organizations must migrate their cryptographic implementations to **Post-Quantum Cryptography (PQC)** algorithms, which are designed to be secure even against quantum computers.
 
-In this lab, you will take on the role of a **Security Administrator at the CCE Agency (Crypto Currency Exchange)**. Your mission is to use two IBM tools — **IBM Quantum Safe Explorer (QSE)** and **IBM Bob** — to assess and harden the CCE Agency's secure-chat application against quantum threats.
+In this lab, you will take on the role of a **Security Administrator at the CCE Agency (Crypto Currency Exchange)**. Your mission is to use IBM tools — IBM Quantum Safe Explorer (QSE), IBM Bob, Jenkins CI/CD, and IBM Guardium Cryptography Manager (GCM) — to assess and harden the CCE Agency's secure-chat application against quantum threats.
 
-:::tip[No coding experience required]
+:::info[CCE SCENARIO]
 
-You will be clicking through pre-built tools and asking IBM Bob (an AI assistant) questions in plain English. Follow each step in order.
+Breaking NSA headline: China has published a definitive quantum roadmap. Harvest-Now, Decrypt-Later (HNDL) operations are actively capturing encrypted communications today — data that becomes readable once a quantum computer is operational. OMB M-23-02 compliance deadlines are immovable.
+
+CCE's secure-chat application handles encrypted agency communications, but no one has ever inventoried its cryptographic assets. Until now, CCE has had no CBOM, no vulnerability baseline, and no automated cryptographic scanning in its CI/CD pipeline. This lab changes that.
+
+:::
+
+:::tip
+
+No coding experience is required. You will be clicking through pre-built tools and asking IBM Bob questions in plain English. Follow each step in order.
 
 :::
 
@@ -23,32 +31,16 @@ You will be clicking through pre-built tools and asking IBM Bob (an AI assistant
 
 | Tool | What It Does |
 |------|--------------|
-| **IBM Quantum Safe Explorer (QSE)** | Scans application source code to find cryptographic weaknesses — like outdated encryption algorithms or insecure key sizes — and generates a detailed vulnerability report. |
-| **IBM Bob** | An AI assistant embedded in your code editor. You ask Bob questions in plain English, and it explains vulnerabilities, suggests fixes, and can automatically update the code for you. |
+| **IBM Quantum Safe Explorer (QSE)** | Scans application source code to find cryptographic weaknesses — outdated algorithms or insecure key sizes — and generates detailed vulnerability findings and a CycloneDX CBOM. |
+| **IBM Bob** | IBM's agentic coding IDE, connected to QSE via MCP. Bob queries live scan data to explain vulnerabilities in plain English, suggests fixes, and can automatically update the code for you. |
+| **Jenkins CI/CD** | Automates the build-scan-report pipeline. Every code commit triggers a QSE scan, generates an updated CBOM, and uploads results to GCM — creating a continuous, timestamped audit trail. |
+| **IBM Guardium Cryptography Manager (GCM)** | Your command center. Aggregates QSE scan findings, displays CCE's cryptographic security posture, and maintains the living CBOM. The source of truth for vulnerability review and OMB M-23-02 compliance reporting. |
 
 ## PQC Migration Phases Covered in This Lab
 
-The National Institute of Standards and Technology (NIST) and leading cybersecurity frameworks define a structured approach to PQC migration. This lab walks you through three of these phases:
-
 | Phase | Name | What Happens |
 |-------|------|--------------|
-| 1 | **Discover** | Scan the CCE Agency's secure-chat application to locate every place where cryptography is used. |
-| 2 | **Assess & Prioritize** | Review the scan results to understand which vulnerabilities pose the greatest risk, including weak RSA key sizes and non-quantum-resistant algorithms. |
-| 3 | **Remediate** | Use IBM Bob to automatically fix identified vulnerabilities, then commit the change so it flows through the CI/CD pipeline and is reflected back in GCM. |
-
-## Estimated Duration
-
-~45 minutes
-
-## Lab Steps
-
-| Step | Description |
-|------|-------------|
-| [Phase 1: Discover](./01-discover.md) | Review the QSE → Jenkins → GCM automated scan workflow |
-| [Phase 2: Assess & Prioritize](./02-assess-prioritize.md) | Identify vulnerabilities in Guardium Cryptography Manager |
-| [Phase 3: Remediate](./03-remediate.md) | Fix RSA vulnerabilities with IBM Bob, then validate through the pipeline |
-| [Wrap-Up & Reference](./04-summary.md) | Lab summary, end state, glossary, and optional reset |
-
----
-
-Proceed to **[Phase 1: Discover →](./01-discover.md)**
+| **1** | **Discover** | Review the automated QSE-Jenkins-GCM workflow and understand how the scan pipeline operates before diving into findings. |
+| **2** | **Assess** | Use the GCM dashboard to review scan results, identify the most critical cryptographic weaknesses, and create a remediation ticket. |
+| **3** | **Execute** | Use IBM Bob to automatically identify and fix RSA vulnerabilities with AI-generated code changes grounded in the real QSE scan data. |
+| **4** | **Sustain** | Commit the fixed code, push to trigger Jenkins, and confirm in GCM that the vulnerability is resolved — producing CCE's first auditable CBOM. |

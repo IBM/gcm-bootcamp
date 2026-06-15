@@ -1,58 +1,109 @@
 ---
 sidebar_position: 5
-title: "Wrap-Up & Reference"
+title: "Phase 4: Sustain"
 ---
 
-# Wrap-Up & Reference
+# Phase 4: Sustain — CI/CD Pipeline + GCM Confirmation
 
-## Lab Summary
+CI/CD Pipeline + GCM Confirmation — commit your fix, push to trigger Jenkins, and confirm the vulnerability is resolved in GCM.
 
-In this lab, you took on the role of a Security Administrator at the CCE Agency and completed a real-world PQC migration workflow using IBM Quantum Safe Explorer and IBM Bob. Here is what you accomplished:
+Remediation is not complete until it has been independently validated. Every code change must pass through the Jenkins CI/CD pipeline, which automatically triggers a new QSE scan, regenerates the CBOM, and uploads updated results to GCM — creating the timestamped audit trail needed for OMB M-23-02 compliance.
 
-- **Phase 1 — Discover:** Used GCM and QSE to scan the secure-chat application and inventory all cryptographic functions in use.
-- **Phase 2 — Assess & Prioritize:** Identified critical vulnerabilities — including a 1024-bit RSA key and a non-quantum-resistant algorithm — and understood their risk.
-- **Phase 3 — Remediate:** Used IBM Bob to automatically fix RSA vulnerabilities in the source code with AI-generated, context-aware code changes, then committed the fix and validated the result through the full CI/CD pipeline.
+## Part 4: Commit and Push Your Changes
 
-### Key Takeaway
+### Step A: Open Jenkins and Stage Your Changes in IBM Bob
 
-PQC migration does not have to be a massive, disruptive project. By using automated scanning tools like QSE and AI-assisted remediation through IBM Bob, the CCE Agency was able to discover, assess, fix, and validate cryptographic vulnerabilities in a single, streamlined workflow — without requiring deep cryptography expertise from every team member involved.
+1. Before committing, open **Jenkins** in your browser using the Jenkins bookmark and log in. Keep the Jenkins tab open — you will switch to it after pushing to watch the pipeline run.
 
----
+   <img src="/img/lab-01/image15.png" alt="Jenkins dashboard open in browser via bookmark" />
 
-## Lab End State
+   *Jenkins dashboard open in browser via bookmark*
 
-By the end of this lab, the CCE Agency's secure-chat application has:
+2. In IBM Bob, click the **"Source Control"** icon in the left sidebar (labeled **A**).
 
-- All cryptographic assets inventoried and visible in IBM Guardium Cryptography Manager (GCM).
-- Known weaknesses (weak RSA key size, non-quantum-safe algorithms) identified and documented.
-- RSA vulnerabilities remediated using AI-assisted code fixes via IBM Bob.
-- All changes committed, validated through the Jenkins CI/CD pipeline, and confirmed clean in GCM.
+3. Click on **"Client.java"** (labeled **B**) to preview the changes you are about to commit.
 
----
+4. Right-click on **"Client.java"** (labeled **B**) and select **"Stage Changes"** (labeled **C**).
 
-## Quick Glossary
+5. In the commit message box, type:
 
-| Term | Definition |
-|------|------------|
-| **PQC (Post-Quantum Cryptography)** | Encryption algorithms that can withstand attacks from both classical and quantum computers. NIST finalized the first PQC standards in 2024. |
-| **RSA** | A widely-used public-key encryption algorithm that will become vulnerable once large-scale quantum computers exist. |
-| **Cryptographic Bill of Materials (CBOM)** | An inventory of every cryptographic algorithm and key used in an application — similar to a software bill of materials (SBOM). |
-| **CI/CD Pipeline (Jenkins)** | An automated process that builds, tests, and scans your code every time a change is committed. Think of it as a quality control checkpoint. |
-| **GCM (IBM Guardium Cryptography Manager)** | A dashboard that collects scan results and gives you a centralized view of your organization's cryptographic health. |
-| **CWE** | Common Weakness Enumeration — a standardized catalog of known security weaknesses used to classify vulnerabilities. |
+   > **"fixed code with bob"**
 
----
+6. Click **"Commit"** (labeled **E**). Wait a few seconds and watch the commit graph (labeled **F**) update to show your new commit.
+
+   <img src="/img/lab-01/image16.png" alt="IBM Bob Source Control panel with Client.java staged and commit message entered" />
+
+   *IBM Bob Source Control panel with Client.java staged and commit message entered*
+
+### Step B: Push Your Changes to the Repository
+
+1. After committing, click the **"Sync Changes"** button (or the push arrow icon in the Source Control panel) to push your commit to the remote repository.
+
+2. Alternatively, open the Terminal (**Terminal → New Terminal**), type the following command, and then press enter:
+
+   > **git push**
+
+:::note
+
+The push to the remote repository is what triggers the Jenkins pipeline. A local commit without a push will not start a new Jenkins build. Always push your changes to see them flow through the pipeline and into GCM.
+
+:::
+
+### Step C: Watch the Jenkins Pipeline Run
+
+1. Switch to the **Jenkins** tab in your browser. Within a few seconds of your push, a new build will start automatically.
+
+2. Click on the **build progress bar** (labeled **A**) to watch the pipeline run in real time, or click the build number and select **"Console Output"** (labeled **B**) if the build has already finished.
+
+   <img src="/img/lab-01/image17.png" alt="Jenkins dashboard showing new build triggered with Console Output option" />
+
+   *Jenkins dashboard showing new build triggered with Console Output option*
+
+3. In the Console Output, watch for Jenkins to: scan the code with QSE, generate a findings report, produce a **CycloneDX CBOM** file, and upload it to GCM automatically.
+
+   <img src="/img/lab-01/image18.png" alt="Jenkins Console Output showing CBOM generation and successful file upload to GCM" />
+
+   *Jenkins Console Output showing CBOM generation and successful file upload to GCM*
+
+## Part 5: Verify the Results in GCM
+
+With the pipeline complete, return to GCM to confirm that the vulnerability has been resolved and that the updated scan results are reflected in the dashboard.
+
+1. Navigate back to **GCM** (labeled **A**) and click **"Discovery" → "Import profiles"** in the top menu.
+
+2. Check the **"Last import date"** (labeled **C**) for the QSE findings report to confirm it has been updated since your push.
+
+   <img src="/img/lab-01/image19.png" alt="GCM Discovery Import profiles page showing updated last import date for QSE report" />
+
+   *GCM Discovery Import profiles page showing updated last import date for QSE report*
+
+3. Click on the **"Code assets"** count (labeled **D**) and select **"secure-chat"**.
+
+4. Confirm that the **"Use of small key size: 1024"** vulnerability is no longer listed in the Vulnerabilities tab.
+
+   <img src="/img/lab-01/image20.png" alt="GCM secure-chat Vulnerabilities tab showing reduced findings after the fix" />
+
+   *GCM secure-chat Vulnerabilities tab showing reduced findings after the fix*
+
+:::tip
+
+If the vulnerability is still showing, wait 30 seconds and refresh the page. The GCM import can take a minute to complete after the Jenkins build finishes. Check the "Last import date" again to confirm the upload completed.
+
+:::
 
 ## Optional: Reset the Lab to Its Starting State
 
 If you want to run through the lab again from the beginning, you can revert the secure-chat code to its original state.
 
 1. Make sure you have at least one committed change after the initial setup commit.
-2. Open a terminal in Visual Studio Code and run the following command:
 
-   ```bash
-   git reset --hard HEAD~1
-   ```
+2. Open a terminal in IBM Bob and run:
 
-3. Trigger a new Jenkins scan to push the reverted results back to GCM.
-4. Restart Visual Studio Code so the QSE plugin reloads the updated scan data.
+   > **git reset --hard HEAD~1**
+
+3. Push the reset to trigger a new Jenkins scan:
+
+   > **git push --force**
+
+4. Restart IBM Bob so the QSE plugin reloads the updated scan data.
+
