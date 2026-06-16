@@ -1,6 +1,6 @@
-# Contributing to GCM Lab Guides
+# Contributing to GCM Workshop
 
-Thanks for contributing to the GCM Lab Guides. This guide covers everything you need to add or update content.
+Thanks for contributing to the GCM Workshop. This guide covers everything you need to add or update content.
 
 ## Access
 
@@ -75,7 +75,7 @@ GitHub Actions will build the site and deploy to GitHub Pages automatically. Che
 docs/
   lab-04-your-lab-title/
     _category_.json     ← required
-    index.md            ← required (lab overview page)
+    index.md            ← required (Lab Introduction page)
     01-step-title.md    ← one file per step
     02-step-title.md
 ```
@@ -109,7 +109,7 @@ title: "Page Title"      # shown in the sidebar and as the browser tab title
 ```markdown
 ---
 sidebar_position: 1
-title: Lab Overview
+title: Lab Introduction
 ---
 
 # Lab N: Your Title

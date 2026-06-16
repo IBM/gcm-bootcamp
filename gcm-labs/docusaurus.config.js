@@ -3,7 +3,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'GCM Lab Guides',
+  title: 'GCM Workshop',
   tagline: 'Hands-on labs for IBM Guardium Cryptography Manager and Quantum Safe technologies',
   favicon: 'img/favicon.png',
 
@@ -49,7 +49,7 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'GCM Lab Guides',
+        title: 'GCM Workshop',
         logo: {
           alt: 'IBM Logo',
           src: 'img/ibm-logo.png',
@@ -83,7 +83,7 @@ const config = {
             title: 'Labs',
             items: [
               {
-                label: 'Lab Overview',
+                label: 'Lab Introduction',
                 to: '/docs/intro',
               },
               {

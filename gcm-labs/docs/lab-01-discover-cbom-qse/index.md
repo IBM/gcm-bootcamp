@@ -1,13 +1,13 @@
 ---
 sidebar_position: 1
-title: Lab Overview
+title: Lab Introduction
 ---
 
 # Lab 1: IBM Quantum Safe Explorer + IBM Bob
 
 **Hands-On Lab Guide | Post-Quantum Cryptography Migration**
 
-## Background & Lab Overview
+## Background & Lab Introduction
 
 Quantum computers are advancing rapidly and will eventually break the public-key cryptography that protects most of today's digital systems — including encrypted communications, authentication tokens, and digital signatures. To stay ahead of this threat, government agencies and organizations must migrate their cryptographic implementations to **Post-Quantum Cryptography (PQC)** algorithms, which are designed to be secure even against quantum computers.
 

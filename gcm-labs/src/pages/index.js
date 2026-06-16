@@ -20,7 +20,7 @@ function HomepageHeader() {
             <Link
               className="button button--secondary button--lg"
               to="/docs/intro">
-              View Lab Overview
+              View Introduction
             </Link>
           </div>
         </div>
@@ -33,7 +33,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title="IBM GCM Lab Guides"
+      title="IBM GCM Workshop"
       description="Hands-on labs for IBM Guardium Cryptography Manager and Quantum Safe technologies">
       <HomepageHeader />
       <main>
