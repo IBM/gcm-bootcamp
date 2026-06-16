@@ -34,7 +34,11 @@ const sidebars = {
           id: 'lab-02-analysis-policy-migration/index',
           label: 'Overview',
         },
-        'lab-02-analysis-policy-migration/environment-setup',
+        'lab-02-analysis-policy-migration/discover',
+        'lab-02-analysis-policy-migration/assess',
+        'lab-02-analysis-policy-migration/execute',
+        'lab-02-analysis-policy-migration/sustain',
+        'lab-02-analysis-policy-migration/summary',
       ],
     },
     {
