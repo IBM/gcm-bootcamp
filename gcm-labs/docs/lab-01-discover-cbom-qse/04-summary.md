@@ -15,9 +15,7 @@ Remediation is not complete until it has been independently validated. Every cod
 
 1. Before committing, open **Jenkins** in your browser using the Jenkins bookmark and log in. Keep the Jenkins tab open — you will switch to it after pushing to watch the pipeline run.
 
-   <img src="/img/lab-01/jenkins-dashboard.png" alt="Jenkins dashboard open in browser via bookmark" />
-
-   *Jenkins dashboard open in browser via bookmark*
+   ![Jenkins dashboard open in browser via bookmark](/img/lab-01/image15.png)
 
 2. In IBM Bob, click the **"Source Control"** icon in the left sidebar (labeled **A**).
 
@@ -31,9 +29,7 @@ Remediation is not complete until it has been independently validated. Every cod
 
 6. Click **"Commit"** (labeled **E**). Wait a few seconds and watch the commit graph (labeled **F**) update to show your new commit.
 
-   <img src="/img/lab-01/bob-source-control.png" alt="IBM Bob Source Control panel with Client.java staged and commit message entered" />
-
-   *IBM Bob Source Control panel with Client.java staged and commit message entered*
+   ![IBM Bob Source Control panel with Client.java staged and commit message entered](/img/lab-01/image16.png)
 
 ### Step B: Push Your Changes to the Repository
 
@@ -55,15 +51,11 @@ The push to the remote repository is what triggers the Jenkins pipeline. A local
 
 2. Click on the **build progress bar** (labeled **A**) to watch the pipeline run in real time, or click the build number and select **"Console Output"** (labeled **B**) if the build has already finished.
 
-   <img src="/img/lab-01/jenkins-build-triggered.png" alt="Jenkins dashboard showing new build triggered with Console Output option" />
-
-   *Jenkins dashboard showing new build triggered with Console Output option*
+   ![Jenkins dashboard showing new build triggered with Console Output option](/img/lab-01/image17.png)
 
 3. In the Console Output, watch for Jenkins to: scan the code with QSE, generate a findings report, produce a **CycloneDX CBOM** file, and upload it to GCM automatically.
 
-   <img src="/img/lab-01/jenkins-console-output.png" alt="Jenkins Console Output showing CBOM generation and successful file upload to GCM" />
-
-   *Jenkins Console Output showing CBOM generation and successful file upload to GCM*
+   ![Jenkins Console Output showing CBOM generation and successful file upload to GCM](/img/lab-01/image18.png)
 
 ## Part 5: Verify the Results in GCM
 
@@ -73,17 +65,13 @@ With the pipeline complete, return to GCM to confirm that the vulnerability has 
 
 2. Check the **"Last import date"** (labeled **C**) for the QSE findings report to confirm it has been updated since your push.
 
-   <img src="/img/lab-01/gcm-import-profiles.png" alt="GCM Discovery Import profiles page showing updated last import date for QSE report" />
-
-   *GCM Discovery Import profiles page showing updated last import date for QSE report*
+   ![GCM Discovery Import profiles page showing updated last import date for QSE report](/img/lab-01/image19.png)
 
 3. Click on the **"Code assets"** count (labeled **D**) and select **"secure-chat"**.
 
 4. Confirm that the **"Use of small key size: 1024"** vulnerability is no longer listed in the Vulnerabilities tab.
 
-   <img src="/img/lab-01/gcm-vulnerabilities-resolved.png" alt="GCM secure-chat Vulnerabilities tab showing reduced findings after the fix" />
-
-   *GCM secure-chat Vulnerabilities tab showing reduced findings after the fix*
+   ![GCM secure-chat Vulnerabilities tab showing reduced findings after the fix](/img/lab-01/image20.png)
 
 :::tip
 

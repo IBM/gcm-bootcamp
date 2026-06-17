@@ -23,21 +23,17 @@ Bob does not guess at what your vulnerabilities might be. It calls QSE's `list_f
 
 2. If the service is not running, double-click the **QSE Service icon** (labeled **B**) to start it, then minimize the window (labeled **C**).
 
-   <img src="/img/lab-01/qse-service.png" alt="QSE Service icon in system tray and startup dialog" />
-
-   *QSE Service icon in system tray and startup dialog*
+   ![QSE Service icon in system tray and startup dialog](/img/lab-01/image7.png)
 
 3. Open **IBM Bob**.
 
-   <img src="/img/lab-01/bob-open-folder.png" alt="IBM Bob IDE open" />
+   ![IBM Bob IDE open](/img/lab-01/image8.png)
 
 4. Click **"Open Folder…"** (labeled **A**)
 
 5. Navigate to and select the **"secure-chat"** folder (labeled **B**), then click **"Select Folder"** (labeled **C**).
 
-   <img src="/img/lab-01/bob-select-folder.png" alt="IBM Bob Open Folder dialog with secure-chat selected" />
-
-   *IBM Bob Open Folder dialog with secure-chat selected*
+   ![IBM Bob Open Folder dialog with secure-chat selected](/img/lab-01/image9.png)
 
 ### Step B: Locate the Vulnerability in QSE's Cryptography Analysis
 
@@ -49,9 +45,7 @@ Bob does not guess at what your vulnerabilities might be. It calls QSE's `list_f
 
 4. Click through each vulnerability to jump to the affected line of code and read the details. Pay attention to the **CWE reference** (labeled **E**) — click it to read the full description of the weakness.
 
-   <img src="/img/lab-01/bob-crypto-analysis.png" alt="IBM Bob Cryptography Analysis panel showing keygen-RSA-1024 entry with 4 vulnerabilities" />
-
-   *IBM Bob Cryptography Analysis panel showing keygen-RSA-1024 entry with 4 vulnerabilities*
+   ![IBM Bob Cryptography Analysis panel showing keygen-RSA-1024 entry with 4 vulnerabilities](/img/lab-01/image10.png)
 
 :::note
 
@@ -63,7 +57,7 @@ You will notice two types of issues: classic cryptography vulnerabilities (e.g.,
 
 1. Open **IBM Bob** chat window by clicking on the side panel toggle, if not already open.
 
-   <img src="/img/lab-01/bob-chat-panel.png" alt="IBM Bob side panel toggle" />
+   ![IBM Bob side panel toggle](/img/lab-01/image11.png)
 
 2. If not logged in, ask for the lab facilitator to log you in.
 
@@ -73,11 +67,9 @@ You will notice two types of issues: classic cryptography vulnerabilities (e.g.,
 
 4. Confirm that Bob calls MCP tools in the background — you will see tool call indicators in the Bob panel (`list_findings` will appear). If no tools are invoked, ask your lab facilitator to verify the MCP connection.
 
-   <img src="/img/lab-01/bob-mcp-tool-call.png" alt="IBM Bob panel showing MCP tool call for list_findings with scan summary results" />
+   ![IBM Bob panel showing MCP tool call for list_findings with scan summary results](/img/lab-01/image12.png)
 
-   *IBM Bob panel showing MCP tool call for list_findings with scan summary results*
-
-   <img src="/img/lab-01/bob-vulnerabilities-list.png" alt="IBM Bob listing PQC vulnerabilities by category including RSA findings" />
+   ![IBM Bob listing PQC vulnerabilities by category including RSA findings](/img/lab-01/image13.png)
 
    *IBM Bob listing PQC vulnerabilities by category including RSA findings*
 
@@ -103,9 +95,7 @@ You will notice two types of issues: classic cryptography vulnerabilities (e.g.,
 
 2. Bob will propose a remediation plan. **Review the plan before confirming** — make sure the proposed changes align with what was flagged in the QSE analysis.
 
-   <img src="/img/lab-01/bob-todo-list.png" alt="IBM Bob Todo List showing planned RSA fixes across Client.java and Server.java" />
-
-   *IBM Bob Todo List showing planned RSA fixes across Client.java and Server.java*
+   ![IBM Bob Todo List showing planned RSA fixes across Client.java and Server.java](/img/lab-01/image14.png)
 
 3. Once Bob applies the fix, review the changes made to **Client.java** in the editor.
 
