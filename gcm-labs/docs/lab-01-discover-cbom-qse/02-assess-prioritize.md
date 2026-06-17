@@ -21,25 +21,25 @@ IBM Guardium Cryptography Manager (GCM) is your command center. It shows you eve
 
 1. In GCM, open the top menu
 
-   <img src="/img/lab-01/image2.png" alt="GCM page with button to open top menu highlighted" />
+   <img src="/img/lab-01/gcm-menu.png" alt="GCM page with button to open top menu highlighted" />
 
    *GCM page with button to open top menu highlighted*
 
 2. Select **"Portfolio view"** from the top menu.
 
-   <img src="/img/lab-01/image3.png" alt="GCM top menu with portfolio view highlighted" />
+   <img src="/img/lab-01/gcm-portfolio-view.png" alt="GCM top menu with portfolio view highlighted" />
 
    *GCM top menu with portfolio view highlighted*
 
 3. Find the entry for the **secure-chat** application and click the value in the **"Impacted code assets"** column (labeled **A**). This opens a list of all source code files that contain cryptographic functions.
 
-   <img src="/img/lab-01/image4.png" alt="GCM Inventory showing code repositories with secure-chat highlighted" />
+   <img src="/img/lab-01/gcm-secure-chat.png" alt="GCM Inventory showing code repositories with secure-chat highlighted" />
 
    *GCM Inventory showing code repositories with secure-chat highlighted*
 
 4. Click the **"Vulnerabilities"** tab (labeled **A**) to see a list of detected security weaknesses.
 
-   <img src="/img/lab-01/image5.png" alt="Impacted code assets page for secure-chat with Vulnerabilities tab highlighted" />
+   <img src="/img/lab-01/gcm-vulnerabilities-tab.png" alt="Impacted code assets page for secure-chat with Vulnerabilities tab highlighted" />
 
    *Impacted code assets page for secure-chat with Vulnerabilities tab highlighted*
 

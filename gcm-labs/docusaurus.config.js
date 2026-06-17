@@ -12,7 +12,7 @@ const config = {
   },
 
   url: 'https://IBM.github.io',
-  baseUrl: '/gcm-bootcamp/',
+  baseUrl: process.env.NODE_ENV === 'development' ? '/' : '/gcm-bootcamp/',
 
   organizationName: 'IBM',
   projectName: 'gcm-bootcamp',

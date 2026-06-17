@@ -22,7 +22,7 @@ The pipeline has four key components:
 
 1. In your browser, click the bookmark labeled **"QSE Workflow"** (labeled **A** on your screen). This opens a diagram showing how GCM, QSE, and the Jenkins CI/CD pipeline work together.
 
-   <img src="/img/lab-01/image1.png" alt="QSE Automated Workflow diagram showing GCM, QSE, and Jenkins pipeline" />
+   <img src="/img/lab-01/workflow-diagram.png" alt="QSE Automated Workflow diagram showing GCM, QSE, and Jenkins pipeline" />
 
    *QSE Automated Workflow diagram showing GCM, QSE, and Jenkins pipeline*
 
