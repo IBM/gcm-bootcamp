@@ -20,7 +20,7 @@ Inventory management is key to maintaining crypto-agility. Here, you'll run scan
 3. Click **Refresh icon (B)** until Status is **Completed**
 4. Click on **4 IT Assets link (C)**
 
-<img src="/img/lab-02/image1.png" alt="GCM Discovery Profiles screen with Network Scan Run discovery now and the 4 IT Assets link highlighted" />
+![GCM Discovery Profiles screen with Network Scan Run discovery now and the 4 IT Assets link highlighted](/img/lab-02/Phase1.1.png)
 
 *GCM Discovery Profiles screen with Network Scan "Run discovery now" and the 4 IT Assets link highlighted*
 
@@ -28,7 +28,7 @@ Inventory management is key to maintaining crypto-agility. Here, you'll run scan
 
 1. Click on the **sampleapp.test.lab:5080** IT asset **(A)** to open side panel
 
-<img src="/img/lab-02/image2.png" alt="GCM Inventory IT-assets table filtered to Network Scan, sampleapp.test.lab:5080 flagged Critical" />
+![GCM Inventory IT-assets table filtered to Network Scan, sampleapp.test.lab:5080 flagged Critical](/img/lab-02/Phase1.2.png)
 
 *GCM Inventory IT-assets table filtered to Network Scan, sampleapp.test.lab:5080 flagged Critical*
 
@@ -41,7 +41,7 @@ Sometimes the value doesn't change. This is a known issue. Leave it as Moderate 
 
 :::
 
-<img src="/img/lab-02/image3.png" alt="sampleapp.test.lab:5080 asset side panel showing Unsafe/Critical posture, cert-69, and Small RSA Key Length violation" />
+![sampleapp.test.lab:5080 asset side panel showing Unsafe/Critical posture, cert-69, and Small RSA Key Length violation](/img/lab-02/Phase1.3.png)
 
 *sampleapp.test.lab:5080 asset side panel showing Unsafe/Critical posture, cert-69, and Small RSA Key Length violation*
 

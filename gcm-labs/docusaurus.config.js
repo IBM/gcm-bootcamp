@@ -19,6 +19,8 @@ const config = {
 
   onBrokenLinks: 'throw',
 
+  plugins: ['docusaurus-plugin-image-zoom'],
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -129,6 +131,15 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+      },
+      zoom: {
+        selector: '.markdown img',
+        config: {
+          background: {
+            light: 'rgba(0, 0, 0, 0.8)',
+            dark: 'rgba(0, 0, 0, 0.8)',
+          },
+        },
       },
     }),
 };

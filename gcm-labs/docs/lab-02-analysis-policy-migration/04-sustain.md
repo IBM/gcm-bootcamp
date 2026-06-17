@@ -16,7 +16,7 @@ Remediation only counts if it is verified and maintained. A post-remediation res
 3. Click **Refresh icon (B)** until Status is **Completed**
 4. Click on **4 IT Assets link (C)**
 
-<img src="/img/lab-02/image14.png" alt="GCM Discovery Profiles re-running the Network Scan after remediation" />
+![GCM Discovery Profiles re-running the Network Scan after remediation](/img/lab-02/Phase4.1.png)
 
 *GCM Discovery Profiles re-running the Network Scan after remediation*
 
@@ -27,13 +27,13 @@ Remediation only counts if it is verified and maintained. A post-remediation res
 3. And no RSA key length violation shows **(B)** any more
 4. Click **Certificate (C)** to see the new certificate
 
-<img src="/img/lab-02/image15.png" alt="GCM Inventory and asset panel showing exploitability reduced to Medium with no RSA key-length violation" />
+![GCM Inventory and asset panel showing exploitability reduced to Medium with no RSA key-length violation](/img/lab-02/Phase4.2.png)
 
 *GCM Inventory and asset panel showing exploitability reduced to Medium with no RSA key-length violation*
 
 5. Click on the new certificate **sampleapp (A)** that has been associated to the IT Asset
 
-<img src="/img/lab-02/image16.png" alt="GCM Cryptographic Objects showing the new sampleapp certificate linked to the IT asset" />
+![GCM Cryptographic Objects showing the new sampleapp certificate linked to the IT asset](/img/lab-02/Phase4.3.png)
 
 *GCM Cryptographic Objects showing the new sampleapp certificate linked to the IT asset*
 
@@ -41,7 +41,7 @@ Remediation only counts if it is verified and maintained. A post-remediation res
 7. In the Classic Violations tab, you can also see there are **No violations found (C)** or the original Key Size violation is no longer there
 8. However, there are still **PQC Violations (D)**
 
-<img src="/img/lab-02/image17.png" alt="Certificate panels showing RSA-2048, no classic violations, and remaining PQC violations" />
+![Certificate panels showing RSA-2048, no classic violations, and remaining PQC violations](/img/lab-02/Phase4.4.png)
 
 *Certificate panels showing RSA-2048, no classic violations, and remaining PQC violations*
 
@@ -51,14 +51,14 @@ Let's verify the certificate is now trusted by the browser:
 
 1. Click on **SampleWebs** > **Sample App** (right-click) > **Open in incognito window (A)**
 
-<img src="/img/lab-02/image18.png" alt="SampleWebs menu with Sample App Open in incognito window highlighted" />
+![SampleWebs menu with Sample App Open in incognito window highlighted](/img/lab-02/Phase4.5.png)
 
 *SampleWebs menu with Sample App "Open in incognito window" highlighted*
 
 2. Click **View site information** > **Connection is secure** > **Show certificate (issued by CLM) (B)**
 3. Notice how the **sampleapp.test.lab** certificate is issued by **CLM (B)** and therefore trusted by the browser
 
-<img src="/img/lab-02/image19.png" alt="Incognito Certificate Viewer showing the certificate issued by CLM and trusted" />
+![Incognito Certificate Viewer showing the certificate issued by CLM and trusted](/img/lab-02/Phase4.6.png)
 
 *Incognito Certificate Viewer showing the certificate issued by CLM and trusted*
 
@@ -95,7 +95,7 @@ Bohdi will explore GCM's TDE client inventory, review the existing IBM Db2 TDE c
 1. Click top menu > **Inventory** > **TDE clients**
 2. Click **Configure TDE client (A)**
 
-<img src="/img/lab-02/image20.png" alt="GCM TDE Clients inventory with the DB2 client (Active KMIP, Complete linking) and Configure TDE client" />
+![GCM TDE Clients inventory with the DB2 client (Active KMIP, Complete linking) and Configure TDE client](/img/lab-02/Phase4.7.png)
 
 *GCM TDE Clients inventory with the DB2 client (Active KMIP, Complete linking) and Configure TDE client*
 
@@ -103,7 +103,7 @@ Bohdi will explore GCM's TDE client inventory, review the existing IBM Db2 TDE c
 4. Click **cancel (C)** to stop the TDE client configuration
 5. Click on the existing **DB2 TDE Client (D)**
 
-<img src="/img/lab-02/image21.png" alt="Configure TDE client dialog with the Database type dropdown showing supported platforms" />
+![Configure TDE client dialog with the Database type dropdown showing supported platforms](/img/lab-02/Phase4.8.png)
 
 *Configure TDE client dialog with the Database type dropdown showing supported platforms*
 
@@ -127,21 +127,29 @@ For CCE, IBM Db2 is the primary database platform running the digital currency l
    You only need to type the alias. ie: connect, **info**, **rotate**
    :::
 
-<img src="/img/lab-02/image22.png" alt="Db2 encryptioninfo output showing AES-256 and a KMIP keystore with master key labels" />
+![Db2 encryptioninfo output showing AES-256 and a KMIP keystore with master key labels](/img/lab-02/Phase4.9.png)
 
 *Db2 encryptioninfo output showing AES-256 and a KMIP keystore with master key labels*
 
 3. Rotate key using these commands. Run Rotate command to rotate the key.
 
-<img src="/img/lab-02/image23.png" alt="Rotation output showing Return Status 0 and a new master key label" />
+![Rotation output showing Return Status 0 and a new master key label](/img/lab-02/Phase4.10.png)
 
 *Rotation output showing Return Status 0 and a new master key label*
 
 4. Check in GCM to see the new Rotated key. Go to **Inventory** and **Cryptographic objects**.
 
-<img src="/img/lab-02/image24.png" alt="GCM Cryptographic Objects showing the newly rotated AES-256 key with activation timestamp" />
+![GCM Cryptographic Objects showing the newly rotated AES-256 key with activation timestamp](/img/lab-02/Phase4.11.png)
 
 *GCM Cryptographic Objects showing the newly rotated AES-256 key with activation timestamp*
+
+![GCM TDE key management updated view after key rotation](/img/lab-02/Phase4.12.png)
+
+*GCM TDE key management updated view after key rotation*
+
+![GCM TDE client showing updated key inventory after rotation](/img/lab-02/Phase4.13.png)
+
+*GCM TDE client showing updated key inventory after rotation*
 
 ### Phase 4.2 Outcome — CCE TDE Key Management
 

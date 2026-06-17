@@ -17,13 +17,13 @@ Let's verify the actual certificate that the application is using by connecting 
 2. Click **Show advanced** > **Proceed to sampleapp.test.lab (unsafe) (A)**
 3. Click **Not Secure** > **Certificate details (B)**
 
-<img src="/img/lab-02/image4.png" alt="Your connection is not private warning for sampleapp.test.lab with Certificate details highlighted" />
+!["Your connection is not private" warning for sampleapp.test.lab with Certificate details highlighted](/img/lab-02/Phase2.1.png)
 
 *"Your connection is not private" warning for sampleapp.test.lab with Certificate details highlighted*
 
 4. Notice this is a self-signed certificate **(A)** which is not trusted
 
-<img src="/img/lab-02/image5.png" alt="Certificate Viewer showing the self-signed sampleapp.test.lab certificate hierarchy" />
+![Certificate Viewer showing the self-signed sampleapp.test.lab certificate hierarchy](/img/lab-02/Phase2.2.png)
 
 *Certificate Viewer showing the self-signed sampleapp.test.lab certificate hierarchy*
 
@@ -33,7 +33,7 @@ Return to the GCM tab...
 
 1. Click on the **cert-69 (A)** to open side panel. The certificate name may vary but should follow the same naming convention.
 
-<img src="/img/lab-02/image6.png" alt="GCM Cryptographic Objects view with cert-69 (High combined violation severity) highlighted" />
+![GCM Cryptographic Objects view with cert-69 (High combined violation severity) highlighted](/img/lab-02/Phase2.3.png)
 
 *GCM Cryptographic Objects view with cert-69 (High combined violation severity) highlighted*
 
@@ -41,7 +41,7 @@ Return to the GCM tab...
 3. Notice AI generated Summary at the top
 4. Click **Create Ticket (C)**
 
-<img src="/img/lab-02/image7.png" alt="cert-69 side panel with AI-generated summary and RSA-1024 details, Create Ticket flow open" />
+![cert-69 side panel with AI-generated summary and RSA-1024 details, Create Ticket flow open](/img/lab-02/Phase2.4.png)
 
 *cert-69 side panel with AI-generated summary and RSA-1024 details, Create Ticket flow open*
 
