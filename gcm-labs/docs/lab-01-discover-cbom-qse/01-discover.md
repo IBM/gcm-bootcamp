@@ -24,8 +24,7 @@ The pipeline has four key components:
 
    <img src="/img/lab-01/workflow-diagram.png" alt="QSE Automated Workflow diagram showing GCM, QSE, and Jenkins pipeline" />
 
-   *QSE Automated Workflow diagram showing GCM, QSE, and Jenkins pipeline*
-
+   ![QSE Automated Workflow diagram showing GCM, QSE, and Jenkins pipeline](/img/lab-01/image1.png)
 2. Study the diagram. As you review it, confirm you can identify:
 
    - Where QSE performs the scan on the source code repository
