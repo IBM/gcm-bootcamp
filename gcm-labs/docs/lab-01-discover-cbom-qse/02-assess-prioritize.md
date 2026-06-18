@@ -37,7 +37,7 @@ IBM Guardium Cryptography Manager (GCM) is your command center. It shows you eve
 
 5. Locate the vulnerability called **"Use of small key size: 1024"** and click on it to expand the details.
 
-   <img src="/img/lab-01/image6.png" alt="GCM Vulnerabilities tab showing Client.java line 33 with &quot;Use of small key size: 1024&quot;" />
+   ![Expanding the Use of small key size: 1024 vulnerability details](/img/lab-01/image6.png)
 
    *GCM Vulnerabilities tab showing Client.java line 33 with "Use of small key size: 1024"*
 
