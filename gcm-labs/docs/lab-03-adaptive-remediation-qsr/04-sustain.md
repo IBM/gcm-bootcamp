@@ -3,16 +3,14 @@ sidebar_position: 5
 title: "Step 4: Sustain"
 ---
 
-# Step 4: Sustain — Enforce Policy, Monitor Crypto Operations, and Manage Proxies
+# Step 4: Sustain — Enforce Policy and Benchmark Performance
 
-In Labs 1 and 2, CCE learned that remediation is not complete until it can be monitored, governed, and repeated at scale. The same principle applies to QSR.
+In Labs 1 and 2, CCE learned that remediation is not complete until it can be governed and repeated at scale. The same principle applies to QSR.
 
-In this phase, you will review four operational capabilities that allow CCE to run quantum-safe remediation continuously — not just as a one-time technical exercise:
+In this phase, you will review two operational capabilities that allow CCE to run quantum-safe remediation continuously — not just as a one-time technical exercise:
 
 1. Reverse Proxy policy controls
-2. Observability and crypto telemetry
-3. Proxy Manager
-4. Performance Harness
+2. Performance Harness
 
 ---
 
@@ -41,83 +39,27 @@ Review the policy options available in the demo environment. Depending on your l
 2. Rerun one of the client tests using **Try it**.
 3. Review how the transaction behavior changes in response to the policy adjustment.
 
+![QSR demo showing policy enforcement — Legacy and Hybrid clients blocked, Quantum Safe client still supported](/img/lab-03/Step4.1.png)
+
+*QSR demo showing policy enforcement — Legacy and Hybrid clients blocked when stricter controls are applied, while the Quantum Safe client remains supported*
+
 ### Step 4.1.4 — Restore the Original Setting
 
 After testing, return the control to its original setting unless instructed otherwise by your lab facilitator.
 
 ---
 
-## Part 4.2 — Observability
-
-QSR's observability capability provides real-time visibility into cryptographic operations and traffic metrics, including Prometheus-compatible monitoring for crypto events. This allows security teams to detect, track, and report on cryptographic activity without relying solely on application logs.
-
-### Step 4.2.1 — Open Observability
-
-1. On the QSR demo page, locate **Admin tasks**.
-2. Select **Observability**.
-3. Wait for the observability dashboard to load.
-
-### Step 4.2.2 — Review Crypto Telemetry
-
-Review the available dashboard panels. Look for information such as:
-
-- Traffic volume and TLS transaction patterns
-- Crypto usage trends and key exchange activity
-- Client crypto profiles observed
-- Proxy activity and health
-- Policy enforcement events or errors
-
-### Step 4.2.3 — Connect Observability to CCE Operations
-
-Consider how Bohdi would use these dashboards in a production CCE deployment:
-
-- Detect continued use of legacy cryptography across agency systems.
-- Track the adoption of hybrid and PQC traffic over time.
-- Identify clients that fail policy enforcement.
-- Monitor proxy health across data centers and cloud environments.
-- Provide evidence packages for OMB M-23-02 and FedRAMP compliance reporting.
-- Feed crypto telemetry into existing SIEM and enterprise monitoring workflows.
-
----
-
-## Part 4.3 — Proxy Manager
-
-Proxy Manager provides centralized monitoring, configuration, and management of multiple QSR proxies from a single console. In a production CCE deployment, it would give security and platform teams unified control over proxies deployed across data centers, cloud environments, Kubernetes ingress paths, agency-to-agency network boundaries, and partner integration zones.
-
-:::warning
-
-In this lab environment, Proxy Manager is **view only**. Do not edit, save, or update any configuration unless explicitly instructed by your lab facilitator.
-
-:::
-
-### Step 4.3.1 — Open Proxy Manager
-
-1. On the QSR demo page, locate **Admin tasks**.
-2. Select **Proxy Manager**.
-3. Wait for the Proxy Manager console to open.
-
-### Step 4.3.2 — Review Managed Proxies
-
-Review the available proxy entries and identify:
-
-- Reverse Proxy and Forward Proxy instances
-- Proxy health and status
-- Configuration and deployment metadata
-- Monitoring details
-
----
-
-## Part 4.4 — Performance Harness
+## Part 4.2 — Performance Harness
 
 PQC migration is not only a security exercise. Agencies must also understand latency, throughput, and operational impact before deploying new cryptographic standards broadly. The Performance Harness benchmarks TLS performance across legacy, hybrid, and PQC transactions to help guide production architecture decisions.
 
-### Step 4.4.1 — Open the Performance Harness
+### Step 4.2.1 — Open the Performance Harness
 
 1. Return to the QSR demo environment.
 2. Locate **Performance Harness**.
 3. Click **New Performance Test Harness** or **Performance Test Harness**, depending on the available option.
 
-### Step 4.4.2 — Review Test Options
+### Step 4.2.2 — Review Test Options
 
 Review the available benchmark configurations. The demo allows you to explore combinations of:
 
@@ -125,7 +67,7 @@ Review the available benchmark configurations. The demo allows you to explore co
 - Key exchange algorithms
 - Signature algorithms
 
-### Step 4.4.3 — Run or Review a Test
+### Step 4.2.3 — Run or Review a Test
 
 1. Select an available test configuration.
 2. Start the test or open an existing test result.
@@ -137,7 +79,7 @@ Pay attention to:
 - Relative performance differences across algorithm types
 - Algorithm combinations and any compatibility observations
 
-### Step 4.4.4 — Interpret the Results
+### Step 4.2.4 — Interpret the Results
 
 In a production setting, CCE would use this data to answer questions such as:
 
@@ -151,7 +93,7 @@ In a production setting, CCE would use this data to answer questions such as:
 
 :::info[Step 4 Complete]
 
-You reviewed all four operational capabilities for sustaining QSR in production: dynamic crypto policy controls, real-time observability, centralized proxy management, and TLS performance benchmarking. CCE now has a repeatable operational model for quantum-safe remediation at scale.
+You reviewed QSR's policy controls — enforcing which client crypto profiles are accepted or blocked — and benchmarked TLS performance across legacy, hybrid, and PQC configurations. CCE now has a repeatable operational model for quantum-safe remediation at scale.
 
 :::
 

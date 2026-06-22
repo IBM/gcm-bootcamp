@@ -19,8 +19,6 @@ In this lab, you demonstrated how CCE can protect sensitive communications durin
 | **Reverse Proxy Interoperability** | Demonstrated how the Reverse Proxy supports inbound client compatibility across legacy, hybrid, and quantum-safe crypto profiles. |
 | **Forward Proxy Protection** | Enabled the Forward Proxy to upgrade legacy outbound TLS traffic before it crosses the internet, reducing HNDL exposure. |
 | **Dynamic Crypto Policy Controls** | Explored controls that enforce enterprise-wide cryptographic standards for incoming traffic. |
-| **Observability** | Reviewed crypto telemetry, traffic metrics, and Prometheus-compatible monitoring dashboards. |
-| **Proxy Manager** | Reviewed centralized monitoring and management of distributed QSR proxies. |
 | **Performance Harness** | Explored TLS performance benchmarking across legacy, hybrid, and PQC transaction types. |
 
 ---
@@ -33,8 +31,6 @@ By completing Lab 3, CCE has demonstrated that it can:
 - Support legacy, hybrid, and PQC clients simultaneously.
 - Reduce Harvest-Now, Decrypt-Later exposure on active communication paths.
 - Bridge legacy systems to modern cryptographic standards without immediate backend rewrites.
-- Monitor cryptographic activity in near real time.
-- Centrally manage QSR proxy deployments across distributed environments.
 - Benchmark cryptographic performance before broader rollout.
 
 ---
@@ -59,7 +55,7 @@ Table 1 below shows how Lab 3 maps to IBM's Six-Phase PQC Migration Lifecycle (i
 | **Phase 3 — Risk Scoring & Prioritization** | Focuses QSR deployment on network paths with the highest HNDL exposure. |
 | **Phase 4 — Roadmap, Architecture & Governance** | Demonstrates proxy-based architecture for legacy-to-modern crypto bridging. |
 | **Phase 5 — Pilot Testing & Phased Migration** | Executes a pilot using Forward Proxy, Reverse Proxy, and performance benchmarking. |
-| **Phase 6 — Validation, Monitoring & Crypto-Agility** | Uses observability and Proxy Manager to monitor and sustain QSR operations at scale. |
+| **Phase 6 — Validation, Monitoring & Crypto-Agility** | Uses policy controls and performance benchmarking to sustain QSR operations at scale. |
 
 ---
 
@@ -68,7 +64,6 @@ Table 1 below shows how Lab 3 maps to IBM's Six-Phase PQC Migration Lifecycle (i
 After completing Lab 3, CCE should:
 
 - Identify high-risk User-to-Agency and Agency-to-Agency communication paths for priority QSR deployment.
-- Expand observability integration into existing SIEM and enterprise monitoring dashboards.
 - Use performance harness results to guide production architecture and rollout sequencing.
 - Define enterprise crypto policies for legacy, hybrid, and PQC traffic at each network boundary.
 - Continue migrating applications and certificates toward NIST-standardized PQC algorithms: **ML-KEM**, **ML-DSA**, and **SLH-DSA**.

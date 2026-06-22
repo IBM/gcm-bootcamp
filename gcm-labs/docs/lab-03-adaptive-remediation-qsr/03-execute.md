@@ -36,6 +36,10 @@ The Forward Proxy addresses **Harvest-Now, Decrypt-Later (HNDL)** risk by ensuri
 3. Turn on / enable the **Forward Proxy**.
 4. Confirm the **Reverse Proxy** remains enabled.
 
+![QSR demo with Forward Proxy control highlighted](/img/lab-03/Step3.1.png)
+
+*QSR demo with Forward Proxy control highlighted*
+
 Both proxies are now active. The full client-to-backend path is protected.
 
 ---
@@ -53,6 +57,10 @@ Compare this result to your Step 2 Legacy client test. Look for:
 - Authentication translation by the Forward Proxy
 - Evidence that traffic between the proxies is now quantum-safe protected
 - Continued successful access to the backend application
+
+![Legacy client TLS handshake details showing quantum-safe key exchange between Forward Proxy and Adaptive Proxy](/img/lab-03/Step3.2.png)
+
+*Legacy client TLS handshake details showing quantum-safe key exchange (MLKEM1024) between Forward Proxy and Adaptive Proxy*
 
 :::tip
 

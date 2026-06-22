@@ -18,6 +18,10 @@ You will observe how QSR handles:
 
 ## Step 2.1 — Test the Quantum Safe Client
 
+![QSR demo landing page with Try It highlighted for all three client types](/img/lab-03/Step2.1.png)
+
+*QSR demo landing page with Try It highlighted for all three client types*
+
 1. On the QSR demo landing page, locate the **Quantum Safe client**.
 2. Ensure the **Reverse Proxy** control is **enabled**.
 3. Leave the **Forward Proxy** control **disabled** for this first test.
@@ -60,6 +64,12 @@ Look for differences compared to the Quantum Safe client result. Pay attention t
 5. Review the transaction output.
 
 The purpose of this test is to observe that legacy clients may still connect to the backend, but their cryptographic posture does not meet CCE's desired quantum-safe standard without additional protection on the client side.
+
+---
+
+![QSR demo results showing all three clients connected to the banking web portal with TLS Handshake Details](/img/lab-03/Step2.2.png)
+
+*QSR demo results showing all three clients connected to the banking web portal with TLS Handshake Details*
 
 ---
 

@@ -25,36 +25,44 @@ Legacy / Hybrid / Quantum Safe Client
       Backend Application
 ```
 
-The goal is to show how QSR protects communication over the internet while allowing existing backend systems to remain unchanged. The demo includes three client types — **Legacy**, **Hybrid**, and **Quantum Safe** — along with controls for the Forward Proxy, Reverse Proxy, Observability, Proxy Manager, and Performance Harness.
+The goal is to show how QSR protects communication over the internet while allowing existing backend systems to remain unchanged. The demo includes three client types — **Legacy**, **Hybrid**, and **Quantum Safe** — along with controls for the Forward Proxy, Reverse Proxy, and Performance Harness.
 
 ---
 
 ## Step 1.1 — Open the QSR Adaptive Proxy Demo
 
-1. Open your browser.
+1. Open your browser and navigate to the QSR demo link provided in your **Box folder**.
 
-2. Click the bookmark labeled **QSR Adaptive Proxy**.
+2. Log in using the credentials provided to you.
 
-   If your facilitator provides the demo URL directly, navigate to:
+   ![Screenshot: QSR login page](/img/lab-03/placeholder-login.png)
 
-   ```
-   https://ibm.biz/ibm-qsr-ap
-   ```
+   *[Screenshot placeholder — QSR login page]*
 
-3. Wait for the QSR demo landing page to load.
+3. Once logged in, click the **Adaptive Proxy Demo** tab in the top navigation bar.
 
-4. Confirm that you can see three client options:
+   ![Screenshot: Adaptive Proxy Demo tab selected in top navigation](/img/lab-03/placeholder-adaptive-proxy-tab.png)
+
+   *[Screenshot placeholder — Adaptive Proxy Demo tab highlighted in top navigation]*
+
+4. Wait for the QSR demo landing page to load.
+
+5. Confirm that you can see three client options:
    - **Legacy client**
    - **Hybrid client**
    - **Quantum Safe client**
 
-5. Confirm that you can see controls for:
+6. Confirm that you can see controls for:
    - **Forward Proxy**
    - **Reverse Proxy**
 
+![QSR Adaptive Proxy demo landing page showing Legacy Client, Hybrid Client, and Quantum Safe Client panels](/img/lab-03/Step1.1.png)
+
+*QSR Adaptive Proxy demo landing page showing Legacy Client, Hybrid Client, and Quantum Safe Client panels*
+
 :::tip
 
-If the page does not load, ask your lab facilitator to confirm the environment URL or check that your VPN or lab network connection is active.
+If the page does not load or you do not see your credentials, ask your lab facilitator for assistance.
 
 :::
 
@@ -73,7 +81,9 @@ In this model:
 
 This architecture is what allows CCE to protect communications **before** a full application rewrite is feasible.
 
----
+![QSR Adaptive Proxy architecture showing Legacy, Hybrid, and PQC clients connected through Forward and Reverse Proxies to the backend application](/img/lab-03/Step1.2.png)
+
+*QSR Adaptive Proxy architecture showing Legacy, Hybrid, and PQC clients connected through Forward and Reverse Proxies to the backend application*
 
 ---
 

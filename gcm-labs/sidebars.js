@@ -7,7 +7,7 @@ const sidebars = {
     'getting-started',
     {
       type: 'category',
-      label: 'Lab 1: QSE + IBM Bob',
+      label: 'Lab 1: Discover and Inventory CBOM',
       collapsible: true,
       collapsed: false,
       items: [
