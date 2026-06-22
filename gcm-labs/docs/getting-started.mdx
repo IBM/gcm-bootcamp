@@ -1,0 +1,140 @@
+---
+sidebar_position: 2
+title: Environment Setup
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Environment Setup
+
+Complete the steps below before starting any lab. You will connect to a Windows virtual machine hosted on IBM TechZone and sign into IBM Bob.
+
+:::info
+
+Your lab instructor will provide your **TechZone reservation link** and **IBMid credentials** before the session begins. If you have not received these, contact your instructor before proceeding.
+
+:::
+
+---
+
+## Step 1 — Find Your Connection Details
+
+Navigate to your TechZone Reservation page and click on your reservation. Under **Published Services**, you will see the connection endpoints assigned to your environment. Each attendee gets unique port numbers.
+
+![TechZone Published Services showing RDP and console endpoints](/img/getting-started/image1.png)
+
+:::tip
+
+Keep this page open — you will refer back to it for credentials and port numbers throughout setup.
+
+:::
+
+---
+
+## Step 2 — Connect to the Virtual Machine
+
+Choose your connection method. **Remote Desktop is strongly recommended** for the best experience.
+
+<Tabs groupId="connection-method">
+  <TabItem value="rdp" label="Option 1: Remote Desktop (Recommended)" default>
+
+### Windows
+
+1. Click the **Search bar** at the bottom of your screen and search for **Remote Desktop Connection**.
+
+   ![Searching for Remote Desktop Connection on Windows](/img/getting-started/image2.png)
+
+2. Copy the **Remote Desktop QSE** link from your TechZone reservation page. Remove any `http://` or `https://` prefix, then paste it into the **Computer** field and click **Connect**.
+
+   ![Pasting the RDP link into Remote Desktop Connection](/img/getting-started/image3.png)
+
+3. When the credentials prompt appears, enter the username and password shown in parentheses next to the Remote Desktop QSE link on your reservation page, then click **OK**.
+
+4. If you see a certificate warning, click **Yes** to proceed.
+
+   ![Certificate warning — click Yes to continue](/img/getting-started/image4.png)
+
+---
+
+### Mac
+
+1. If you do not have the **Windows App** installed, open the App Store, search for **Windows App**, and install it.
+
+   ![Installing Windows App from the Mac App Store](/img/getting-started/image5.png)
+
+2. Open the Windows App, click the **+** icon in the upper right, then select **Add PC**.
+
+   ![Adding a new PC in Windows App on Mac](/img/getting-started/image6.png)
+
+3. Copy the **Remote Desktop QSE** link from your TechZone reservation page. Remove any `https://` prefix, paste it into the **PC name** field, then click **Add**.
+
+   ![Entering the PC name in Windows App](/img/getting-started/image7.png)
+
+4. Double-click the PC you just added. When prompted for credentials, enter the username and password shown in parentheses next to the Remote Desktop QSE link on your reservation page. Press **Continue** or **OK** until the remote desktop loads.
+
+   ![Entering credentials in Windows App on Mac](/img/getting-started/image8.png)
+
+  </TabItem>
+  <TabItem value="browser" label="Option 2: Browser Connection">
+
+:::warning
+
+Browser-based access is available as a fallback but is **not recommended** — it is slower and lacks clipboard support.
+
+:::
+
+From your TechZone reservation page, click the **Console** button next to the virtual machine you want to access.
+
+![TechZone console button for browser-based VM access](/img/getting-started/image9.png)
+
+:::tip Browser Console Tips
+
+Once inside the browser console, use the toolbar controls shown below:
+
+![Browser console toolbar — CAD, Resize, and Send Text buttons](/img/getting-started/image10.png)
+
+| Button | What it does |
+|--------|-------------|
+| **CAD (A)** | Sends `Ctrl+Alt+Delete` to the VM |
+| **Resize (B)** | Changes the display resolution (e.g. 1024×768) |
+| **Send Text (C)** | Pastes text from your local clipboard into the VM |
+
+:::
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Step 3 — Sign Into IBM Bob
+
+IBM Bob is the AI assistant used throughout the labs. Complete the following steps after connecting to the virtual machine.
+
+1. On the Windows VM desktop or taskbar, click the **robot icon** to open IBM Bob.
+
+   ![Robot icon on the VM taskbar for launching IBM Bob](/img/getting-started/image11.png)
+
+2. Click **Log in to Bob**.
+
+   ![IBM Bob login screen — click Log in to Bob](/img/getting-started/image12.png)
+
+3. When browser pop-ups appear asking for permission, click **Allow** and then **Open**.
+
+   ![Browser permission pop-ups — click Allow then Open](/img/getting-started/image13.png)
+
+4. Chrome will open with the IBM Bob authentication page.
+
+   ![IBM Bob authentication page in Chrome](/img/getting-started/image14.png)
+
+5. Enter the **IBMid** credentials provided by your lab instructor and sign in.
+
+   ![Signing into IBM Bob with IBMid credentials](/img/getting-started/image15.png)
+
+---
+
+## You're Ready
+
+Once you are signed into IBM Bob, your environment is fully configured. Proceed to the first lab.
+
+**[Start Lab 1: Discover and Inventory CBOM →](./lab-01-discover-cbom-qse/)**
