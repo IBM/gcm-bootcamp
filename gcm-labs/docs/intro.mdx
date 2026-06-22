@@ -3,31 +3,92 @@ sidebar_position: 1
 title: Lab Introduction
 ---
 
-# IBM GCM Quantum Safe Lab Series
+# Introduction into IBM's PQC Labs
 
-Welcome to the IBM Guardium Cryptography Manager (GCM) Quantum Safe hands-on lab series. These labs guide you through the end-to-end journey of discovering, analyzing, and remediating cryptographic risk in preparation for a post-quantum world.
+These series of PQC labs are designed to walk you through IBM's post-quantum cryptography (PQC) strategy and approach for migrating/remediating your agency's classic cryptography to be Post-Quantum Safe (PQS). This lab scenario mirrors what many of you (federal agencies) are facing: a federal agency with mission-critical workloads that must prepare for quantum threats like harvest now decrypt later (HNDL), supply chain and vendor dependency, etc. while maintaining operations and meeting federal PQC mandates.
 
-## What You'll Learn
+The IBM Quantum-Safe Readiness Index (2025) found even the most advanced organizations score no higher than 35–50 out of 100. The purpose of these IBM's labs is to help federal agencies increase their QSRI score. The IBM labs are structure to help federal agencies begin now, discover/inventory their CBOM, assess their risks, create a plan, sequence work correctly, provide hands-on experience with software tools to build crypto-agility, and understand the resources/skills to execute their plan.
 
-By completing this lab series, you will be able to:
+## Lab Storyline
 
-- Discover and inventory all cryptographic assets across your environment using a **Cryptography Bill of Materials (CBOM)**
-- Analyze cryptographic risk and enforce quantum-safe policies using **IBM Guardium Cryptography Manager**
-- Migrate cryptographic secrets to a managed vault using **HashiCorp Vault**
-- Automatically remediate legacy applications with **Quantum Safe Remediator (QSR)**
+<div style={{display: 'flex', gap: '2rem', alignItems: 'center', flexWrap: 'wrap', marginBottom: '1.5rem'}}>
+  <img src="/img/intro/image1.png" alt="Crypto Currency Exchange Federal Agency" style={{maxWidth: '140px'}} />
+  <div>
+    <p>These labs use a fictious federal agency called "Crypto Currency Exchange" (CCE) where you will gain hands on experience using IBM's integrated suite of Guardium/Vault PQS software tools – designed to help federal organizations discover, assess, plan, manage, and remediate/migrate cryptographic vulnerabilities across their hybrid environments to PQS environment.</p>
+    <p>The time period is the fall of 2026, NSA has a breaking headline that China is on a definitive roadmap to develop a quantum computer capable of running Shor's algorithm that can break classic cryptography algorithms. The newly formed CCE Federal Agency oversees the United States (U.S.) crypto digital currency backed by commodities. The agency needs to accelerate their PQC migration timeline to protect themselves against HNDL attacks. They select IBM's PQC approach and software portfolio tools to execute their PQC plans.</p>
+  </div>
+</div>
 
-## Lab Series Overview
+## Actors
 
-| Lab | Title | Tools |
-|-----|-------|-------|
-| 1 | [Discover and Inventory CBOM](./lab-01-discover-cbom-qse/index.md) | Quantum Safe Explorer (QSE), IBM Bob |
-| 2 | [Analysis, Policy & Migration](./lab-02-analysis-policy-migration/index.md) | Guardium Cryptography Manager, HashiCorp Vault |
-| 3 | [Adaptive Remediation](./lab-03-adaptive-remediation-qsr/index.md) | Quantum Safe Remediator (QSR) |
+<div style={{display: 'flex', gap: '3rem', alignItems: 'flex-start', flexWrap: 'wrap', marginBottom: '1.5rem'}}>
+  <div style={{textAlign: 'center'}}>
+    <img src="/img/intro/image3.png" alt="Johnny Utah – CISO" style={{maxWidth: '180px', borderRadius: '50%'}} />
+    <p><strong>Johnny Utah – CISO</strong></p>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src="/img/intro/image2.png" alt="Bohdi – Security Administrator" style={{maxWidth: '180px', borderRadius: '50%'}} />
+    <p><strong>Bohdi – Security Administrator</strong></p>
+  </div>
+</div>
 
-## Background
+Johnny Utah, the CCE agency's CISO, instructs his IT staff to apply IBM's end-to-end integrated PQS software portfolio tools to discover and inventory quantum-vulnerable cryptography, prioritize remediation/migration issues, deploy quantum-safe algorithms (NIST-standardized ML-KEM, ML-DSA, SLH-DSA), and enforce post-quantum policies across their agency — before Chinese adversaries can decrypt harvested data and any data moving forward.
 
-The quantum computing era poses an existential threat to today's public-key cryptography. IBM's Quantum Safe portfolio provides an end-to-end framework for organizations to discover, manage, and migrate their cryptographic posture before quantum computers break current encryption standards.
+## Adopting a Plan
 
-## Before You Begin
+IBM's recommends federal agencies adopt our Six-Phase PQC Migration Lifecycle Framework as shown in figure 1. Our framework is created from NIST, CISA, CNSA 2.0, the Applied Quantum PQC Migration Framework, the PQC Coalition Migration Roadmap, and leading practitioner frameworks authoritative guidance.
 
-Complete the [Getting Started](./getting-started.md) guide to ensure your environment is configured correctly before starting Lab 1.
+It provides a structured, actionable path from initial governance commitment through continuous quantum-safe operations — applicable to all federal agencies.
+
+![Figure 1. IBM's Six-Phase PQC Migration Lifecycle](/img/intro/image4.png)
+
+*Figure 1. IBM's Six-Phase PQC Migration Lifecycle*
+
+## Overview of the PQC Labs
+
+### Lab 1. Discover and Inventory CBOM
+
+Quantum Safe Explorer (QSE) integrates with GCM to analyze application code for cryptographic vulnerabilities. In lab 1, you'll see how developers and SecOps collaborate to identify issues, fix them in code, and validate changes through CI/CD pipelines.
+
+**Quantum Safe Explorer:** Automatically scans applications and infrastructure to inventory cryptographic assets and identify quantum-vulnerable algorithms.
+
+### Lab 2. Analysis / Policy & Management / Migration
+
+In lab 2, you will use the core capabilities of Guardium Cryptography Manager (GCM). You'll learn how GCM provides visibility into cryptographic assets, supports compliance, and enables lifecycle management — all critical for building a Quantum Safe (QS) strategy. Inventory management is key to maintaining crypto-agility. Here, you'll run scans, review discovered assets and perform lifecycle operations like renewing and deploying certificates using IBM (Hashicorp) Vault. These tasks demonstrate how GCM helps reduce risk and enforce cryptographic policies.
+
+**Guardium Cryptography Manager:** Prioritizes remediation/migration based on business impact and regulatory/mandate requirements, helping teams focus on high-risk areas.
+
+**IBM (Hashicorp) Vault:** Acts as a centralized secrets management solution to secure, store, and control access to sensitive data like API keys, credentials, and certificates.
+
+### Lab 3. Adaptive Remediation for Legacy Apps
+
+During your PQC transition, your agency will come across inconsistent cryptographic standards across applications/services – exposing sensitive data in User-to-Agency and Agency-to-Agency communications. This can create potential security risks over multiple network boundaries and the internet.
+
+In lab 3, you will learn how to assess PQC posture, verify cryptographic algorithms, and protect applications using IBM's Quantum Safe Remediator's (QSR) adaptive proxy. You will learn how to deploy QS Reverse Proxies at the backend or cloud perimeter to securely handle incoming PQC traffic, ensuring seamless interoperability with legacy applications while protecting network boundaries.
+
+You will deploy QS Forward Proxy at the client side to upgrade legacy TLS traffic to Post-Quantum (PQ) before transmission over the internet.
+
+**Quantum Safe Remediator:** Supports the transition to quantum-safe algorithms and policies, enabling crypto agility at scale.
+
+## Lab to Framework Alignment
+
+Table 1 below shows how each IBM lab aligns with our PQC lifecycle framework.
+
+| Phase | Name | IBM Lab | Primary Goal | Key Output |
+|-------|------|---------|--------------|------------|
+| 1 | Governance, Mandate & Business Case | NA | Establish authority and funding | Program charter, exec mandate |
+| 2 | Discovery & Cryptographic Inventory | Lab 1 | Build complete CBOM | Living cryptographic asset inventory |
+| 3 | Risk Scoring & Prioritization | Lab 2 | Rank assets by quantum urgency | Risk-ordered migration backlog |
+| 4 | Roadmap, Architecture & Governance | Lab 2 | Design execution path | Multi-year roadmap, crypto-agile blueprint |
+| 5 | Pilot Testing & Phased Migration | Lab 2 & 3 | Execute quantum-safe migration | Migrated assets, evidence packages |
+| 6 | Validation, Monitoring & Crypto-Agility | Lab 2 | Sustain quantum-safe posture | Continuous compliance, living CBOM |
+
+*Table 1. IBM PQC labs aligned to IBM Six-Phases of PQC lifecycle framework.*
+
+## Architecture
+
+Federal agencies and regulated enterprises face a unique challenge: cryptographic assets are embedded invisibly across sprawling hybrid environments — on-premises data centers, cloud workloads, containerized applications, legacy mainframes, OT systems, and interconnected supply chains — yet must all be migrated to quantum-safe standards within binding regulatory timelines. IBM's PQC architecture addresses this challenge through four integrated software capabilities: (1) IBM Quantum Safe Explorer (QSE), (2) IBM Guardium Cryptography Manager (GCM), (3) IBM Quantum Safe Remediator (QSR), and (4) IBM (HashiCorp) Vault to deliver an end-to-end cryptographic lifecycle — from discovery and risk-based prioritization through validated quantum-safe remediation — structured to meet NSM-10, CNSA 2.0, NIST FIPS 203/204/205, FISMA, and FedRAMP compliance mandates.
+
+![Figure 2. IBM's Guardium Cryptography Manager Enterprise Architecture](/img/intro/image5.png)
+
+*Figure 2. IBM's Guardium Cryptography Manager Enterprise Architecture*
