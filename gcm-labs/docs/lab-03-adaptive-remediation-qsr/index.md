@@ -77,15 +77,17 @@ IBM Quantum Safe Remediator addresses this transition problem by placing adaptiv
 | **Proxy Manager** | Centralized console for monitoring, configuring, and managing multiple deployed proxies from a single interface. |
 | **Performance Harness** | Benchmarks TLS performance across legacy, hybrid, and PQC transactions to guide production architecture decisions. |
 
-## PQC Migration Phases Covered in This Lab
+## Lab Workflow
 
-| Phase | Name | What Happens |
-|-------|------|--------------|
-| **1** | **Discover** | Open the QSR Adaptive Proxy demo environment and review the client-to-proxy-to-application architecture. |
-| **2** | **Assess** | Test legacy, hybrid, and quantum-safe clients to observe TLS handshake behavior, key exchange, and authentication translation. |
-| **3** | **Execute** | Enable the Forward Proxy and Reverse Proxy to protect traffic using quantum-safe communication while preserving compatibility with the backend application. |
-| **4** | **Sustain** | Review policy controls, observability, Proxy Manager, and performance benchmarking to understand how CCE can operate QSR continuously at scale. |
+Each step below maps to a phase of IBM's Six-Phase PQC Migration Lifecycle. Lab 3 focuses on Phases 5 and 6: executing a pilot deployment of QSR proxies (Pilot Migration) and establishing the observability, policy controls, and proxy management needed to sustain quantum-safe operations at scale (Validation & Monitoring). The Discover step also touches Phase 4 as CCE reviews proxy architecture and identifies the gaps in its current network posture.
+
+| Step | Name | What Happens | PQC Lifecycle Phase |
+|------|------|--------------|---------------------|
+| **1** | **Discover** | Open the QSR Adaptive Proxy demo environment and review the client-to-proxy-to-application architecture. Identify the gap in CCE's current posture: legacy communications still unprotected at the network layer. | Phase 4 & 5 — Architecture & Pilot Testing |
+| **2** | **Assess** | Test legacy, hybrid, and quantum-safe clients to observe TLS handshake behavior, key exchange, and authentication translation. | Phase 5 — Pilot Testing & Phased Migration |
+| **3** | **Execute** | Enable the Forward Proxy and Reverse Proxy to protect traffic using quantum-safe communication while preserving compatibility with the backend application. | Phase 5 — Pilot Testing & Phased Migration |
+| **4** | **Sustain** | Review policy controls, observability, Proxy Manager, and performance benchmarking to understand how CCE can operate QSR continuously at scale. | Phase 6 — Validation, Monitoring & Crypto-Agility |
 
 ---
 
-Proceed to **[Phase 1: Discover →](./discover)**
+Proceed to **[Step 1: Discover →](./discover)**

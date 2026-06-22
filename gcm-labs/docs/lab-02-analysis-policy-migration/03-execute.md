@@ -1,9 +1,9 @@
 ---
 sidebar_position: 4
-title: "Phase 3: Execute"
+title: "Step 3: Execute"
 ---
 
-# Phase 3: Execute — Certificate Renewal and Deployment
+# Step 3: Execute — Certificate Renewal and Deployment
 
 Use GCM's Certificate Lifecycle Management (CLM) integrated with Vault PKI to renew and deploy the quantum-resistant certificate.
 
@@ -11,7 +11,7 @@ This is the remediation step. Using Certificate Lifecycle Management integrated 
 
 ### Step 1: Initiate Certificate Renewal
 
-Continuing within GCM from Phase 2, with the cert-69 side panel open:
+Continuing within GCM from Step 2, with the cert-69 side panel open:
 
 1. Click **back arrow (D)** to skip ticket creation
 2. Ensure **Certificate Lifecycle Management (E)** is selected
@@ -84,12 +84,12 @@ If you get an error after trying to save, reduce the validity period as seen in 
 
 *Certificate deployment script completed successfully*
 
-:::info[Phase 3 Complete]
+:::info[Step 3 Complete]
 
-You've successfully renewed the RSA-1024 certificate with a new RSA-2048 certificate signed by HashiCorp Vault PKI and deployed it to the sample application server. Proceed to Phase 4 to validate the remediation and manage CCE's database encryption keys.
+You've successfully renewed the RSA-1024 certificate with a new RSA-2048 certificate signed by HashiCorp Vault PKI and deployed it to the sample application server. Proceed to Step 4 to validate the remediation and manage CCE's database encryption keys.
 
 :::
 
 ---
 
-Proceed to **[Phase 4: Sustain →](./sustain)**
+Proceed to **[Step 4: Sustain →](./sustain)**

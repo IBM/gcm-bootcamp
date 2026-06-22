@@ -1,9 +1,9 @@
 ---
 sidebar_position: 5
-title: "Phase 4: Sustain"
+title: "Step 4: Sustain"
 ---
 
-# Phase 4: Sustain — Enforce Policy, Monitor Crypto Operations, and Manage Proxies
+# Step 4: Sustain — Enforce Policy, Monitor Crypto Operations, and Manage Proxies
 
 In Labs 1 and 2, CCE learned that remediation is not complete until it can be monitored, governed, and repeated at scale. The same principle applies to QSR.
 
@@ -149,7 +149,7 @@ In a production setting, CCE would use this data to answer questions such as:
 
 ---
 
-:::info[Phase 4 Complete]
+:::info[Step 4 Complete]
 
 You reviewed all four operational capabilities for sustaining QSR in production: dynamic crypto policy controls, real-time observability, centralized proxy management, and TLS performance benchmarking. CCE now has a repeatable operational model for quantum-safe remediation at scale.
 

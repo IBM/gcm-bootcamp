@@ -36,11 +36,13 @@ No coding experience is required. You will be clicking through pre-built tools a
 | **Jenkins CI/CD** | Automates the build-scan-report pipeline. Every code commit triggers a QSE scan, generates an updated CBOM, and uploads results to GCM — creating a continuous, timestamped audit trail. |
 | **IBM Guardium Cryptography Manager (GCM)** | Your command center. Aggregates QSE scan findings, displays CCE's cryptographic security posture, and maintains the living CBOM. The source of truth for vulnerability review and OMB M-23-02 compliance reporting. |
 
-## PQC Migration Phases Covered in This Lab
+## Lab Workflow
 
-| Phase | Name | What Happens |
-|-------|------|--------------|
-| **1** | **Discover** | Review the automated QSE-Jenkins-GCM workflow and understand how the scan pipeline operates before diving into findings. |
-| **2** | **Assess** | Use the GCM dashboard to review scan results, identify the most critical cryptographic weaknesses, and create a remediation ticket. |
-| **3** | **Execute** | Use IBM Bob to automatically identify and fix RSA vulnerabilities with AI-generated code changes grounded in the real QSE scan data. |
-| **4** | **Sustain** | Commit the fixed code, push to trigger Jenkins, and confirm in GCM that the vulnerability is resolved — producing CCE's first auditable CBOM. |
+Each step below maps to a phase of IBM's Six-Phase PQC Migration Lifecycle. Lab 1 focuses primarily on Phase 2 (Discovery & Cryptographic Inventory), with the Execute step reaching into Phase 5 (Pilot Testing & Phased Migration) as CCE applies its first code-level fix.
+
+| Step | Name | What Happens | PQC Lifecycle Phase |
+|------|------|--------------|---------------------|
+| **1** | **Discover** | Review the automated QSE-Jenkins-GCM workflow and understand how the scan pipeline operates before diving into findings. | Phase 2 — Discovery & Cryptographic Inventory |
+| **2** | **Assess** | Use the GCM dashboard to review scan results, identify the most critical cryptographic weaknesses, and create a remediation ticket. | Phase 2 — Discovery & Cryptographic Inventory |
+| **3** | **Execute** | Use IBM Bob to automatically identify and fix RSA vulnerabilities with AI-generated code changes grounded in the real QSE scan data. | Phase 5 — Pilot Testing & Phased Migration |
+| **4** | **Sustain** | Commit the fixed code, push to trigger Jenkins, and confirm in GCM that the vulnerability is resolved — producing CCE's first auditable CBOM. | Phase 2 & 5 — Discovery / Pilot Migration |

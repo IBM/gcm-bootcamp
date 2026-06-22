@@ -1,9 +1,9 @@
 ---
 sidebar_position: 3
-title: "Phase 2: Assess"
+title: "Step 2: Assess"
 ---
 
-# Phase 2: Assess — Review Vulnerabilities in GCM
+# Step 2: Assess — Review Vulnerabilities in GCM
 
 Review Vulnerabilities in GCM — as Bohdi, CCE's Security Administrator, use the GCM dashboard to find and prioritize cryptographic weaknesses.
 
@@ -61,12 +61,12 @@ You are now switching roles. You have received the ticket and will now act as th
 
 :::
 
-:::info[Phase 2 Complete]
+:::info[Step 2 Complete]
 
-You have reviewed CCE's vulnerability findings in GCM, identified the RSA-1024 weakness in Client.java, and created a remediation ticket for the development team. Proceed to Phase 3 to fix the vulnerability using IBM Bob.
+You have reviewed CCE's vulnerability findings in GCM, identified the RSA-1024 weakness in Client.java, and created a remediation ticket for the development team. Proceed to Step 3 to fix the vulnerability using IBM Bob.
 
 :::
 
 ---
 
-Proceed to **[Phase 3: Execute →](./execute)**
+Proceed to **[Step 3: Execute →](./execute)**

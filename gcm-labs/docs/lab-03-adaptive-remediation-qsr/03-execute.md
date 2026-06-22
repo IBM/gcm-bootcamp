@@ -1,9 +1,9 @@
 ---
 sidebar_position: 4
-title: "Phase 3: Execute"
+title: "Step 3: Execute"
 ---
 
-# Phase 3: Execute — Protect Legacy Traffic with Forward and Reverse Proxy
+# Step 3: Execute — Protect Legacy Traffic with Forward and Reverse Proxy
 
 In this phase, you will enable the **Forward Proxy** and demonstrate how QSR upgrades legacy client traffic before it crosses the internet.
 
@@ -46,7 +46,7 @@ Both proxies are now active. The full client-to-backend path is protected.
 2. Click **Try it** again.
 3. Review the updated transaction output.
 
-Compare this result to your Phase 2 Legacy client test. Look for:
+Compare this result to your Step 2 Legacy client test. Look for:
 
 - TLS handshake changes
 - Key exchange changes
@@ -96,7 +96,7 @@ QSR provides a practical transition architecture that allows CCE to:
 
 ---
 
-:::info[Phase 3 Complete]
+:::info[Step 3 Complete]
 
 You enabled the Forward Proxy and demonstrated how QSR protects legacy client traffic using quantum-safe communication between proxy points. CCE can now protect sensitive communications across network boundaries without modifying the backend application.
 
@@ -104,4 +104,4 @@ You enabled the Forward Proxy and demonstrated how QSR protects legacy client tr
 
 ---
 
-Proceed to **[Phase 4: Sustain →](./sustain)**
+Proceed to **[Step 4: Sustain →](./sustain)**

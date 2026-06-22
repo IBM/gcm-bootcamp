@@ -1,9 +1,9 @@
 ---
 sidebar_position: 2
-title: "Phase 1: Discover"
+title: "Step 1: Discover"
 ---
 
-# Phase 1: Discover — Understand the QSR Adaptive Proxy Architecture
+# Step 1: Discover — Understand the QSR Adaptive Proxy Architecture
 
 Before running the demo, you will review the QSR architecture and confirm your environment is ready.
 
@@ -86,7 +86,7 @@ Labs 1 and 2 addressed two layers of CCE's cryptographic exposure:
 
 What CCE has not yet addressed: the cryptographic posture of **communications in transit** across network boundaries. Even after certificates are renewed at the application layer, the TLS sessions between clients and backend services may still negotiate legacy or hybrid key exchange — leaving traffic exposed to Harvest-Now, Decrypt-Later (HNDL) risk during transmission.
 
-Review the gap analysis below before proceeding to Phase 2:
+Review the gap analysis below before proceeding to Step 2:
 
 | Communication Path | Current Status | HNDL Risk |
 |---|---|---|
@@ -96,12 +96,12 @@ Review the gap analysis below before proceeding to Phase 2:
 
 QSR's Adaptive Proxy addresses this gap by protecting communications at the network layer — without requiring any changes to the backend application.
 
-:::info[Phase 1 Complete]
+:::info[Step 1 Complete]
 
-You have reviewed the QSR Adaptive Proxy architecture and identified the gap in CCE's current posture: legacy and hybrid clients communicating over network boundaries without quantum-safe protection. Proceed to Phase 2 to test how each client type behaves with the Reverse Proxy active.
+You have reviewed the QSR Adaptive Proxy architecture and identified the gap in CCE's current posture: legacy and hybrid clients communicating over network boundaries without quantum-safe protection. Proceed to Step 2 to test how each client type behaves with the Reverse Proxy active.
 
 :::
 
 ---
 
-Proceed to **[Phase 2: Assess →](./assess)**
+Proceed to **[Step 2: Assess →](./assess)**

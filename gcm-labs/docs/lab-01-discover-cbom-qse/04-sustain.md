@@ -1,9 +1,9 @@
 ---
 sidebar_position: 5
-title: "Phase 4: Sustain"
+title: "Step 4: Sustain"
 ---
 
-# Phase 4: Sustain — CI/CD Pipeline + GCM Confirmation
+# Step 4: Sustain — CI/CD Pipeline + GCM Confirmation
 
 CI/CD Pipeline + GCM Confirmation — commit your fix, push to trigger Jenkins, and confirm the vulnerability is resolved in GCM.
 
@@ -79,7 +79,7 @@ If the vulnerability is still showing, wait 30 seconds and refresh the page. The
 
 :::
 
-:::info[Phase 4 Complete]
+:::info[Step 4 Complete]
 
 The Jenkins pipeline has run, the updated CBOM has been uploaded to GCM, and the RSA-1024 vulnerability no longer appears in the secure-chat findings. CCE's first auditable CBOM is now live in GCM.
 

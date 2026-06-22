@@ -1,9 +1,9 @@
 ---
 sidebar_position: 2
-title: "Phase 1: Discover"
+title: "Step 1: Discover"
 ---
 
-# Phase 1: Discover — Run GCM's Network Scanner
+# Step 1: Discover — Run GCM's Network Scanner
 
 Run GCM's network scanner to discover cryptographic assets and identify quantum-vulnerable certificates.
 
@@ -45,12 +45,12 @@ Sometimes the value doesn't change. This is a known issue. Leave it as Moderate 
 
 *sampleapp.test.lab:5080 asset side panel showing Unsafe/Critical posture, cert-69, and Small RSA Key Length violation*
 
-:::info[Phase 1 Complete]
+:::info[Step 1 Complete]
 
-You've discovered the sampleapp.test.lab certificate with RSA-1024 encryption, identified as Critical exploitability due to quantum vulnerability. Proceed to Phase 2 to understand exactly why this certificate is dangerous and create a tracked remediation ticket.
+You've discovered the sampleapp.test.lab certificate with RSA-1024 encryption, identified as Critical exploitability due to quantum vulnerability. Proceed to Step 2 to understand exactly why this certificate is dangerous and create a tracked remediation ticket.
 
 :::
 
 ---
 
-Proceed to **[Phase 2: Assess →](./assess)**
+Proceed to **[Step 2: Assess →](./assess)**

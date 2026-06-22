@@ -55,11 +55,13 @@ No coding experience is required. You will be clicking through pre-built tools i
 | **Network Scanner** | Built-in GCM capability that discovers TLS/SSL certificates across your infrastructure by scanning domains and ports. It identifies weak cryptographic algorithms (RSA-1024, MD5, SHA-1) and generates policy violation alerts. |
 | **AI-Powered Risk Assessment** | GCM's AI engine that analyzes discovered certificates, explains vulnerabilities in plain English, calculates exploitability scores, and generates remediation recommendations including ticket creation for tracking fixes. |
 
-## PQC Migration Phases Covered in This Lab
+## Lab Workflow
 
-| Phase | Name | What Happens |
-|-------|------|--------------|
-| **1** | **Discover** | Run GCM's network scanner to discover the sampleapp.test.lab certificate. Review the scan results showing 4 IT assets, identify the RSA-1024 certificate with Critical exploitability, and understand the "Small RSA Key Length" policy violation. |
-| **2** | **Assess** | Use GCM's AI-powered risk assessment to understand why RSA-1024 is quantum-vulnerable. Review the certificate details showing it is self-signed and untrusted. Adjust business impact settings to see how exploitability scores change. Use the AI-generated ticket creation feature to document the vulnerability. |
-| **3** | **Execute** | Use GCM's Certificate Lifecycle Management (CLM) integrated with HashiCorp Vault PKI to renew the weak certificate. Generate a new RSA-2048 certificate signed by the internal CA, download the certificate with private key, and deploy it to the sample application server using the automated deployment script. |
-| **4** | **Sustain** | Run a post-renewal network scan to confirm vulnerability resolution, verify the new RSA-2048 certificate is browser-trusted, and demonstrate live TDE master key rotation using GCM's KMIP key management to protect CCE's database encryption at rest. |
+Each step below maps to a phase of IBM's Six-Phase PQC Migration Lifecycle. Lab 2 focuses on Phases 3 and 5: ranking assets by quantum urgency (Risk Scoring) and executing the first migration of vulnerable certificates and encryption keys (Pilot Migration). The Sustain step also introduces Phase 6 validation through post-remediation scanning and continuous monitoring.
+
+| Step | Name | What Happens | PQC Lifecycle Phase |
+|------|------|--------------|---------------------|
+| **1** | **Discover** | Run GCM's network scanner to discover the sampleapp.test.lab certificate. Review the scan results showing 4 IT assets, identify the RSA-1024 certificate with Critical exploitability, and understand the "Small RSA Key Length" policy violation. | Phase 3 — Risk Scoring & Prioritization |
+| **2** | **Assess** | Use GCM's AI-powered risk assessment to understand why RSA-1024 is quantum-vulnerable. Review the certificate details showing it is self-signed and untrusted. Adjust business impact settings to see how exploitability scores change. Use the AI-generated ticket creation feature to document the vulnerability. | Phase 3 — Risk Scoring & Prioritization |
+| **3** | **Execute** | Use GCM's Certificate Lifecycle Management (CLM) integrated with HashiCorp Vault PKI to renew the weak certificate. Generate a new RSA-2048 certificate signed by the internal CA, download the certificate with private key, and deploy it to the sample application server using the automated deployment script. | Phase 5 — Pilot Testing & Phased Migration |
+| **4** | **Sustain** | Run a post-renewal network scan to confirm vulnerability resolution, verify the new RSA-2048 certificate is browser-trusted, and demonstrate live TDE master key rotation using GCM's KMIP key management to protect CCE's database encryption at rest. | Phase 5 & 6 — Pilot Migration / Validation & Monitoring |

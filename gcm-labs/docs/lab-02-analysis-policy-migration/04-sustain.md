@@ -1,9 +1,9 @@
 ---
 sidebar_position: 5
-title: "Phase 4: Sustain"
+title: "Step 4: Sustain"
 ---
 
-# Phase 4: Sustain — Validate Remediation and Continuous Monitoring
+# Step 4: Sustain — Validate Remediation and Continuous Monitoring
 
 Validate the remediation was successful and establish continuous monitoring for ongoing compliance.
 
@@ -62,7 +62,7 @@ Let's verify the certificate is now trusted by the browser:
 
 *Incognito Certificate Viewer showing the certificate issued by CLM and trusted*
 
-:::info[Phase 4 Complete]
+:::info[Step 4 Complete]
 
 You've validated that the quantum-vulnerable RSA-1024 certificate has been successfully replaced with RSA-2048, reducing exploitability from Critical to Medium. The certificate is now trusted by browsers and no longer violates classic cryptographic policies.
 
@@ -76,7 +76,7 @@ While RSA-2048 is stronger than RSA-1024, it's still vulnerable to future quantu
 
 ---
 
-## Phase 4 Part 2: Transparent Database Encryption (TDE) Key Management
+## Step 4 Part 2: Transparent Database Encryption (TDE) Key Management
 
 Transparent Database Encryption (TDE) protects sensitive data at rest by encrypting entire database files at the storage layer — invisible to applications but critical to CCE's data security posture. For CCE, whose mission involves protecting the United States' commodity-backed digital currency ledger, any database encryption key compromise is a national security event.
 
@@ -143,7 +143,7 @@ Confirm that the Return Status is **0** and that a new master key label has been
 
 *GCM TDE client showing updated key inventory after rotation*
 
-:::info[Phase 4 Complete]
+:::info[Step 4 Complete]
 
 You have validated that CCE's RSA-1024 certificate was successfully replaced with RSA-2048, reducing exploitability from Critical to Medium. You also executed a live TDE master key rotation using GCM as the KMIP keystore — confirming end-to-end cryptographic lifecycle management for CCE's database at rest. CCE's digital currency ledger remained protected throughout the operation, satisfying OMB M-23-02 data-at-rest encryption requirements.
 

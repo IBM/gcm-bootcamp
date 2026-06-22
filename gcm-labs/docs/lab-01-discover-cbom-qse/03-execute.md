@@ -1,9 +1,9 @@
 ---
 sidebar_position: 4
-title: "Phase 3: Execute"
+title: "Step 3: Execute"
 ---
 
-# Phase 3: Execute — Fix Vulnerabilities Using QSE + IBM Bob
+# Step 3: Execute — Fix Vulnerabilities Using QSE + IBM Bob
 
 Fix Vulnerabilities Using QSE + IBM Bob — use the QSE plugin and IBM Bob to understand and fix RSA vulnerabilities.
 
@@ -113,16 +113,16 @@ Bob is making real changes to your code. Take a moment to read through the diff 
 
 :::note
 
-The exact number of remaining vulnerabilities may vary depending on the specific changes Bob made. A reduction confirms the fix was successful. You will get final confirmation in GCM after the Jenkins pipeline runs in Phase 4.
+The exact number of remaining vulnerabilities may vary depending on the specific changes Bob made. A reduction confirms the fix was successful. You will get final confirmation in GCM after the Jenkins pipeline runs in Step 4.
 
 :::
 
-:::info[Phase 3 Complete]
+:::info[Step 3 Complete]
 
-IBM Bob has used live QSE scan data to identify and fix the RSA-1024 vulnerabilities in the secure-chat source code. The QSE re-scan confirms a reduced vulnerability count. Proceed to Phase 4 to commit the fix and validate it through the CI/CD pipeline.
+IBM Bob has used live QSE scan data to identify and fix the RSA-1024 vulnerabilities in the secure-chat source code. The QSE re-scan confirms a reduced vulnerability count. Proceed to Step 4 to commit the fix and validate it through the CI/CD pipeline.
 
 :::
 
 ---
 
-Proceed to **[Phase 4: Sustain →](./sustain)**
+Proceed to **[Step 4: Sustain →](./sustain)**

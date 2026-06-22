@@ -1,15 +1,15 @@
 ---
 sidebar_position: 3
-title: "Phase 2: Assess"
+title: "Step 2: Assess"
 ---
 
-# Phase 2: Assess — AI-Powered Risk Assessment
+# Step 2: Assess — AI-Powered Risk Assessment
 
 Use GCM's AI-powered risk assessment to understand vulnerabilities and create remediation plans.
 
 :::tip
 
-GCM should be open from Phase 1. If you closed it, reopen it using the GCM bookmark and navigate to **Inventory → IT Assets**.
+GCM should be open from Step 1. If you closed it, reopen it using the GCM bookmark and navigate to **Inventory → IT Assets**.
 
 :::
 
@@ -61,12 +61,12 @@ Notice how AI will generate a Title and Description, which includes affected IT 
 
 :::
 
-:::info[Phase 2 Complete]
+:::info[Step 2 Complete]
 
-You've assessed the quantum vulnerability, confirmed the certificate is self-signed and untrusted, and reviewed AI-generated remediation recommendations. Proceed to Phase 3 to renew the certificate and deploy a stronger replacement.
+You've assessed the quantum vulnerability, confirmed the certificate is self-signed and untrusted, and reviewed AI-generated remediation recommendations. Proceed to Step 3 to renew the certificate and deploy a stronger replacement.
 
 :::
 
 ---
 
-Proceed to **[Phase 3: Execute →](./execute)**
+Proceed to **[Step 3: Execute →](./execute)**

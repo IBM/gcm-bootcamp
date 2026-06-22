@@ -1,9 +1,9 @@
 ---
 sidebar_position: 2
-title: "Phase 1: Discover"
+title: "Step 1: Discover"
 ---
 
-# Phase 1: Discover — Review the Automated Scan Workflow
+# Step 1: Discover — Review the Automated Scan Workflow
 
 Review the Automated Scan Workflow — see how QSE, Jenkins, and GCM connect before diving into findings.
 
@@ -32,16 +32,16 @@ The pipeline has four key components:
 
 :::note
 
-This diagram represents the exact workflow you will follow in this lab. Each arrow represents an automated handoff — once you commit and push code in Phase 4, Jenkins, QSE, and GCM each play their role without any manual intervention.
+This diagram represents the exact workflow you will follow in this lab. Each arrow represents an automated handoff — once you commit and push code in Step 4, Jenkins, QSE, and GCM each play their role without any manual intervention.
 
 :::
 
-:::info[Phase 1 Complete]
+:::info[Step 1 Complete]
 
-You have reviewed the automated QSE-Jenkins-GCM workflow and understand how cryptographic scan results flow from source code into GCM's dashboard. Proceed to Phase 2 to review the actual vulnerabilities discovered in the secure-chat application.
+You have reviewed the automated QSE-Jenkins-GCM workflow and understand how cryptographic scan results flow from source code into GCM's dashboard. Proceed to Step 2 to review the actual vulnerabilities discovered in the secure-chat application.
 
 :::
 
 ---
 
-Proceed to **[Phase 2: Assess →](./assess)**
+Proceed to **[Step 2: Assess →](./assess)**

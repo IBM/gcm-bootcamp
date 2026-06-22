@@ -1,9 +1,9 @@
 ---
 sidebar_position: 3
-title: "Phase 2: Assess"
+title: "Step 2: Assess"
 ---
 
-# Phase 2: Assess — Test Client Compatibility and TLS Behavior
+# Step 2: Assess — Test Client Compatibility and TLS Behavior
 
 In this phase, you will test how different client types interact with the backend application through the QSR architecture, with only the **Reverse Proxy** enabled.
 
@@ -79,12 +79,12 @@ After completing all three client tests, consider the following:
 
 ---
 
-:::info[Phase 2 Complete]
+:::info[Step 2 Complete]
 
-You tested all three client types and observed how the Reverse Proxy supports interoperability across legacy, hybrid, and quantum-safe cryptographic profiles. The key gap: legacy clients are still communicating without quantum-safe protection between client and enterprise perimeter. Phase 3 addresses this.
+You tested all three client types and observed how the Reverse Proxy supports interoperability across legacy, hybrid, and quantum-safe cryptographic profiles. The key gap: legacy clients are still communicating without quantum-safe protection between client and enterprise perimeter. Step 3 addresses this.
 
 :::
 
 ---
 
-Proceed to **[Phase 3: Execute →](./execute)**
+Proceed to **[Step 3: Execute →](./execute)**
