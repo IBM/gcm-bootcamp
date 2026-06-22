@@ -21,14 +21,14 @@ Continuing within GCM from Step 2, with the cert-69 side panel open:
 
 *cert-69 panel with Certificate Lifecycle Management selected*
 
+![Renew certificate wizard — Select certificate authority (Vault PKI / CLM / VaultCA)](/img/lab-02/Phase2.6\(3.2\).png)
+
+*Renew certificate wizard — Select certificate authority (Vault PKI / CLM / VaultCA)*
+
 ### Step 2: Configure New Certificate
 
 1. Select **CA-signed certificate (A)**
 2. Fill in required field values **(B)** and Click **Next (C)**
-
-![Renew certificate wizard — Select certificate authority (Vault PKI / CLM / VaultCA)](/img/lab-02/Phase2.6\(3.2\).png)
-
-*Renew certificate wizard — Select certificate authority (Vault PKI / CLM / VaultCA)*
 
 :::tip
 

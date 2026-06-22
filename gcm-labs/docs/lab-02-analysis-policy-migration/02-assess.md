@@ -33,15 +33,15 @@ Let's verify the actual certificate that the application is using by connecting 
 
 *Certificate Viewer showing the self-signed sampleapp.test.lab certificate hierarchy*
 
+![GCM Cryptographic Objects view with cert-69 (High combined violation severity) highlighted](/img/lab-02/Phase2.3.png)
+
+*GCM Cryptographic Objects view with cert-69 (High combined violation severity) highlighted*
+
 ### Step 2: Review Certificate Details and Create Ticket
 
 Return to the GCM tab...
 
 1. Click on the **cert-69 (A)** to open side panel. The certificate name may vary but should follow the same naming convention.
-
-![GCM Cryptographic Objects view with cert-69 (High combined violation severity) highlighted](/img/lab-02/Phase2.3.png)
-
-*GCM Cryptographic Objects view with cert-69 (High combined violation severity) highlighted*
 
 2. Review **RSA Key size (B)** is 1024 and Produces a Policy Violation
 3. Notice AI generated Summary at the top
