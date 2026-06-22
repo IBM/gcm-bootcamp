@@ -96,12 +96,12 @@ QSR provides a practical transition architecture that allows CCE to:
 
 ---
 
-## Phase 3 Complete
+:::info[Phase 3 Complete]
 
-You enabled the Forward Proxy and demonstrated how QSR protects legacy client traffic using quantum-safe communication between proxy points.
+You enabled the Forward Proxy and demonstrated how QSR protects legacy client traffic using quantum-safe communication between proxy points. CCE can now protect sensitive communications across network boundaries without modifying the backend application.
 
-CCE has now executed adaptive remediation for a legacy communication path without modifying the backend application.
+:::
 
 ---
 
-Proceed to **[Phase 4: Sustain →](./04-sustain)**
+Proceed to **[Phase 4: Sustain →](./sustain)**

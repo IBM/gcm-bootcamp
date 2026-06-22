@@ -11,7 +11,7 @@ title: Lab Introduction
 
 Quantum computers are advancing rapidly and will eventually break the public-key cryptography that protects most of today's digital systems — including encrypted communications, authentication tokens, and digital signatures. To stay ahead of this threat, government agencies and organizations must migrate their cryptographic implementations to **Post-Quantum Cryptography (PQC)** algorithms, which are designed to be secure even against quantum computers.
 
-In this lab, you will take on the role of a **Security Administrator at the CCE Agency (Crypto Currency Exchange)**. Your mission is to use IBM tools — IBM Quantum Safe Explorer (QSE), IBM Bob, Jenkins CI/CD, and IBM Guardium Cryptography Manager (GCM) — to assess and harden the CCE Agency's secure-chat application against quantum threats.
+In this lab, you will take on the role of **Bohdi, CCE's Security Administrator**. Your mission is to use IBM tools — IBM Quantum Safe Explorer (QSE), IBM Bob, Jenkins CI/CD, and IBM Guardium Cryptography Manager (GCM) — to assess and harden the CCE Agency's secure-chat application against quantum threats.
 
 :::info[CCE SCENARIO]
 

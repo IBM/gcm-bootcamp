@@ -51,6 +51,8 @@ IBM Quantum Safe Remediator gives CCE a practical transition layer for crypto ag
 
 ## How Lab 3 Fits into the PQC Migration Journey
 
+Table 1 below shows how Lab 3 maps to IBM's Six-Phase PQC Migration Lifecycle (introduced in the [Lab Introduction](/docs/intro)).
+
 | IBM PQC Lifecycle Phase | Lab 3 Contribution |
 |-------------------------|-------------------|
 | **Phase 2 — Discovery & Cryptographic Inventory** | Uses prior CBOM and cryptographic posture data from Labs 1 & 2 to identify where proxy-based remediation is needed. |

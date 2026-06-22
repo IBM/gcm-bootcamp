@@ -79,12 +79,12 @@ After completing all three client tests, consider the following:
 
 ---
 
-## Phase 2 Complete
+:::info[Phase 2 Complete]
 
-You tested multiple client types and observed how QSR supports interoperability across legacy, hybrid, and quantum-safe cryptographic standards.
+You tested all three client types and observed how the Reverse Proxy supports interoperability across legacy, hybrid, and quantum-safe cryptographic profiles. The key gap: legacy clients are still communicating without quantum-safe protection between client and enterprise perimeter. Phase 3 addresses this.
 
-CCE has now assessed the communication behavior of different client crypto profiles. The key gap identified: legacy clients are still communicating without quantum-safe protection between the client and the enterprise perimeter. That is what Phase 3 addresses.
+:::
 
 ---
 
-Proceed to **[Phase 3: Execute →](./03-execute)**
+Proceed to **[Phase 3: Execute →](./execute)**

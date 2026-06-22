@@ -17,7 +17,7 @@ Bob does not guess at what your vulnerabilities might be. It calls QSE's `list_f
 
 :::
 
-### Step A: Confirm the QSE Service is Running
+### Step 1: Confirm the QSE Service is Running
 
 1. Before opening IBM Bob, confirm the QSE service is running. Look for the **QSE Service icon** (labeled **A**) in the system tray.
 
@@ -35,15 +35,15 @@ Bob does not guess at what your vulnerabilities might be. It calls QSE's `list_f
 
    ![IBM Bob Open Folder dialog with secure-chat selected](/img/lab-01/image9.png)
 
-### Step B: Locate the Vulnerability in QSE's Cryptography Analysis
+### Step 2: Locate the Vulnerability in QSE's Cryptography Analysis
 
-1. In the Cryptography results panel, click **"API discovery"** (labeled **D**) and select **`src\Client.java`** (labeled **E**). The QSE plugin will automatically highlight line 32 — the location of the vulnerability.
+1. Click **"Cryptography analysis"** (labeled **A**) to open a full breakdown of every cryptographic function in the project and its associated vulnerabilities.
 
-2. Click **"Cryptography analysis"** (labeled **A**) to open a full breakdown of every cryptographic function in the project and its associated vulnerabilities.
+2. Click the first entry: **"keygen-(RSA)-(1024 bit)"** (labeled **B**). You will see it has 4 vulnerabilities (labeled **C**).
 
-3. Click the first entry: **"keygen-(RSA)-(1024 bit)"** (labeled **B**). You will see it has 4 vulnerabilities (labeled **C**).
+3. Click through each vulnerability to jump to the affected line of code and read the details. Pay attention to the **CWE reference** (labeled **E**) — click it to read the full description of the weakness.
 
-4. Click through each vulnerability to jump to the affected line of code and read the details. Pay attention to the **CWE reference** (labeled **E**) — click it to read the full description of the weakness.
+4. In the Cryptography results panel, click **"API discovery"** (labeled **D**) and select **`src\Client.java`** (labeled **E**). The QSE plugin will automatically highlight line 32 — the location of the vulnerability.
 
    ![IBM Bob Cryptography Analysis panel showing keygen-RSA-1024 entry with 4 vulnerabilities](/img/lab-01/image10.png)
 
@@ -53,7 +53,7 @@ You will notice two types of issues: classic cryptography vulnerabilities (e.g.,
 
 :::
 
-### Step C: Ask Bob to List Your Vulnerabilities
+### Step 3: Ask Bob to List Your Vulnerabilities
 
 1. Open **IBM Bob** chat window by clicking on the side panel toggle, if not already open.
 
@@ -73,13 +73,13 @@ You will notice two types of issues: classic cryptography vulnerabilities (e.g.,
 
    *IBM Bob listing PQC vulnerabilities by category including RSA findings*
 
-### Step D: Navigate to Code Findings Directly
+### Step 4: Navigate to Code Findings Directly
 
 1. Review the list Bob returns. You can click any **code reference** in Bob's response (e.g., *Client.java:32*) to jump directly to that line in the file.
 
 2. Try clicking a few references to confirm navigation works and to familiarize yourself with where each vulnerability appears in the source code before asking Bob to fix them.
 
-### Step E: Get Detailed Information on the RSA Vulnerabilities
+### Step 5: Get Detailed Information on the RSA Vulnerabilities
 
 1. In the Bob panel, type:
 
@@ -87,7 +87,7 @@ You will notice two types of issues: classic cryptography vulnerabilities (e.g.,
 
 2. Bob will call the `get_finding_detail` tool to retrieve the full details of each RSA finding from the QSE scan, including CWE guidance. This grounds Bob in the real scan data before making any code changes.
 
-### Step F: Ask Bob to Fix the Vulnerabilities
+### Step 6: Ask Bob to Fix the Vulnerabilities
 
 1. In the Bob panel, type:
 
@@ -105,7 +105,7 @@ Bob is making real changes to your code. Take a moment to read through the diff 
 
 :::
 
-### Step G: Verify the Fix with a New QSE Scan
+### Step 7: Verify the Fix with a New QSE Scan
 
 1. Run a new QSE scan to confirm the fix worked. In IBM Bob: **View → Command Palette** → type **"Quantum Safe Explorer: Scan Cryptography Analysis"** → press **Enter**.
 
@@ -116,3 +116,13 @@ Bob is making real changes to your code. Take a moment to read through the diff 
 The exact number of remaining vulnerabilities may vary depending on the specific changes Bob made. A reduction confirms the fix was successful. You will get final confirmation in GCM after the Jenkins pipeline runs in Phase 4.
 
 :::
+
+:::info[Phase 3 Complete]
+
+IBM Bob has used live QSE scan data to identify and fix the RSA-1024 vulnerabilities in the secure-chat source code. The QSE re-scan confirms a reduced vulnerability count. Proceed to Phase 4 to commit the fix and validate it through the CI/CD pipeline.
+
+:::
+
+---
+
+Proceed to **[Phase 4: Sustain →](./sustain)**

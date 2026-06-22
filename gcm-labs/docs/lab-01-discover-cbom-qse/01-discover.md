@@ -35,3 +35,13 @@ The pipeline has four key components:
 This diagram represents the exact workflow you will follow in this lab. Each arrow represents an automated handoff — once you commit and push code in Phase 4, Jenkins, QSE, and GCM each play their role without any manual intervention.
 
 :::
+
+:::info[Phase 1 Complete]
+
+You have reviewed the automated QSE-Jenkins-GCM workflow and understand how cryptographic scan results flow from source code into GCM's dashboard. Proceed to Phase 2 to review the actual vulnerabilities discovered in the secure-chat application.
+
+:::
+
+---
+
+Proceed to **[Phase 2: Assess →](./assess)**

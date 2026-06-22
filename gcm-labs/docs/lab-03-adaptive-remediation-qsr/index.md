@@ -13,7 +13,7 @@ With Labs 1 and 2 complete, the CCE agency has established its initial quantum-s
 
 In **Lab 1**, CCE used **IBM Quantum Safe Explorer (QSE)** to discover cryptographic vulnerabilities in application source code and generate a living Cryptographic Bill of Materials (CBOM).
 
-In **Lab 2**, CCE used **IBM Guardium Cryptography Manager (GCM)** and **IBM HashiCorp Vault** to analyze risk, enforce cryptographic policy, renew weak certificates, and validate improved cryptographic posture.
+In **Lab 2**, CCE used **IBM Guardium Cryptography Manager (GCM)** and **HashiCorp Vault** to analyze risk, enforce cryptographic policy, renew weak certificates, and validate improved cryptographic posture.
 
 However, Johnny Utah, CCE's CISO, now faces a harder operational problem.
 
@@ -29,7 +29,7 @@ In this lab, you will use **IBM Quantum Safe Remediator (QSR)** — specifically
 
 :::info[CCE SCENARIO]
 
-Breaking NSA headline: China has published a definitive quantum roadmap with milestones for a cryptographically relevant quantum computer capable of running Shor's algorithm.
+CCE has inventoried its cryptographic assets and renewed its weakest certificates. But Johnny Utah's threat model has expanded: adversaries are not only targeting data at rest — they are actively harvesting encrypted communications across agency network boundaries today, including traffic from legacy systems that cannot be rewritten on short notice.
 
 Johnny Utah briefs CCE leadership:
 
@@ -77,7 +77,7 @@ IBM Quantum Safe Remediator addresses this transition problem by placing adaptiv
 | **Proxy Manager** | Centralized console for monitoring, configuring, and managing multiple deployed proxies from a single interface. |
 | **Performance Harness** | Benchmarks TLS performance across legacy, hybrid, and PQC transactions to guide production architecture decisions. |
 
-## Lab 3 Phases
+## PQC Migration Phases Covered in This Lab
 
 | Phase | Name | What Happens |
 |-------|------|--------------|
@@ -88,4 +88,4 @@ IBM Quantum Safe Remediator addresses this transition problem by placing adaptiv
 
 ---
 
-Proceed to **[Phase 1: Discover →](./01-discover)**
+Proceed to **[Phase 1: Discover →](./discover)**

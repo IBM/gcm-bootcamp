@@ -37,3 +37,7 @@ PQC migration does not have to be a massive, disruptive project. By using automa
 | **CWE (Common Weakness Enumeration)** | A standardized catalog of known security weaknesses used to classify vulnerabilities. QSE maps each finding to a CWE ID. |
 | **MCP (Model Context Protocol)** | The protocol that connects IBM Bob to live QSE scan data, so Bob's answers are grounded in your actual findings rather than generic knowledge. |
 | **CycloneDX CBOM** | The open standard format used by QSE to output the cryptographic inventory. Uploaded automatically to GCM by Jenkins. |
+
+---
+
+Proceed to **[Lab 2: Analysis, Policy & Migration →](../lab-02-analysis-policy-migration/)**

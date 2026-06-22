@@ -5,19 +5,19 @@ title: "Phase 2: Assess"
 
 # Phase 2: Assess — Review Vulnerabilities in GCM
 
-Review Vulnerabilities in GCM — as SecOps Manager, use the GCM dashboard to find and prioritize cryptographic weaknesses.
+Review Vulnerabilities in GCM — as Bohdi, CCE's Security Administrator, use the GCM dashboard to find and prioritize cryptographic weaknesses.
 
 ## Part 2: Identify Vulnerabilities in Guardium Cryptography Manager
 
-IBM Guardium Cryptography Manager (GCM) is your command center. It shows you every application that has been scanned, what cryptographic algorithms are in use, and which ones have known weaknesses. In this section, you are acting as the SecOps Manager — reviewing findings and deciding what the development team needs to fix.
+IBM Guardium Cryptography Manager (GCM) is your command center. It shows you every application that has been scanned, what cryptographic algorithms are in use, and which ones have known weaknesses. In this section, you are acting as Bohdi, CCE's Security Administrator — reviewing findings and deciding what the development team needs to fix.
 
-### Step A: Open GCM
+### Step 1: Open GCM
 
 1. In your browser, click the bookmark labeled **"GCM"**. This opens the IBM Guardium Cryptography Manager dashboard.
 
 2. Log in with the credentials provided by your lab facilitator if prompted.
 
-### Step B: Navigate to the Code Repository
+### Step 2: Navigate to the Code Repository
 
 1. In GCM, open the top menu
 
@@ -39,7 +39,7 @@ IBM Guardium Cryptography Manager (GCM) is your command center. It shows you eve
 
    ![Expanding the Use of small key size: 1024 vulnerability details](/img/lab-01/image6.png)
 
-   *GCM Vulnerabilities tab showing Client.java line 33 with "Use of small key size: 1024"*
+   *GCM Vulnerabilities tab showing Client.java with "Use of small key size: 1024"*
 
 :::note
 
@@ -47,9 +47,9 @@ A 1024-bit RSA key is considered too small by modern security standards — it c
 
 :::
 
-### Step C: Create a Ticket for the Development Team
+### Step 3: Create a Ticket for the Development Team
 
-As SecOps Manager, formally flag this issue for the development team. In a real workflow, this becomes a traceable work item in your project management system.
+As CCE's Security Administrator, formally flag this issue for the development team. In a real workflow, this becomes a traceable work item in your project management system.
 
 1. Note the exact location: **line 32 of Client.java** in the secure-chat application.
 
@@ -57,6 +57,16 @@ As SecOps Manager, formally flag this issue for the development team. In a real 
 
 :::tip
 
-You are now switching roles. You have received the SecOps ticket and will now act as the Developer who must find and fix the vulnerability at the code level using the QSE plugin and IBM Bob.
+You are now switching roles. You have received the ticket and will now act as the Developer who must find and fix the vulnerability at the code level using the QSE plugin and IBM Bob.
 
 :::
+
+:::info[Phase 2 Complete]
+
+You have reviewed CCE's vulnerability findings in GCM, identified the RSA-1024 weakness in Client.java, and created a remediation ticket for the development team. Proceed to Phase 3 to fix the vulnerability using IBM Bob.
+
+:::
+
+---
+
+Proceed to **[Phase 3: Execute →](./execute)**

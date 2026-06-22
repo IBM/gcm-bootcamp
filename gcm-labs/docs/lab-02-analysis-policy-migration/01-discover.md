@@ -47,6 +47,10 @@ Sometimes the value doesn't change. This is a known issue. Leave it as Moderate 
 
 :::info[Phase 1 Complete]
 
-You've discovered the sampleapp.test.lab certificate with RSA-1024 encryption, identified as Critical exploitability due to quantum vulnerability.
+You've discovered the sampleapp.test.lab certificate with RSA-1024 encryption, identified as Critical exploitability due to quantum vulnerability. Proceed to Phase 2 to understand exactly why this certificate is dangerous and create a tracked remediation ticket.
 
 :::
+
+---
+
+Proceed to **[Phase 2: Assess →](./assess)**

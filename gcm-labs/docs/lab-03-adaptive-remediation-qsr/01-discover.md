@@ -75,12 +75,33 @@ This architecture is what allows CCE to protect communications **before** a full
 
 ---
 
-## Phase 1 Complete
+---
 
-You have opened the QSR demo environment and reviewed how QSR fits into CCE's PQC migration architecture.
+## Step 1.3 — Identify the Gap in CCE's Current Posture
 
-CCE now understands how QSR can sit between clients and backend applications to protect communications without changing existing systems.
+Labs 1 and 2 addressed two layers of CCE's cryptographic exposure:
+
+- **Lab 1:** Discovered and fixed vulnerable cryptographic algorithms in application source code and generated a living CBOM.
+- **Lab 2:** Renewed the weakest certificates and rotated database encryption keys.
+
+What CCE has not yet addressed: the cryptographic posture of **communications in transit** across network boundaries. Even after certificates are renewed at the application layer, the TLS sessions between clients and backend services may still negotiate legacy or hybrid key exchange — leaving traffic exposed to Harvest-Now, Decrypt-Later (HNDL) risk during transmission.
+
+Review the gap analysis below before proceeding to Phase 2:
+
+| Communication Path | Current Status | HNDL Risk |
+|---|---|---|
+| Quantum-safe client → Backend | Strong key exchange, compatible | Low |
+| Hybrid client → Backend | Mixed — depends on negotiation | Medium |
+| Legacy client → Backend | Legacy TLS only, no PQC protection | **High** |
+
+QSR's Adaptive Proxy addresses this gap by protecting communications at the network layer — without requiring any changes to the backend application.
+
+:::info[Phase 1 Complete]
+
+You have reviewed the QSR Adaptive Proxy architecture and identified the gap in CCE's current posture: legacy and hybrid clients communicating over network boundaries without quantum-safe protection. Proceed to Phase 2 to test how each client type behaves with the Reverse Proxy active.
+
+:::
 
 ---
 
-Proceed to **[Phase 2: Assess →](./02-assess)**
+Proceed to **[Phase 2: Assess →](./assess)**

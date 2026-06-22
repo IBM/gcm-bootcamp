@@ -11,7 +11,7 @@ Remediation is not complete until it has been independently validated. Every cod
 
 ## Part 4: Commit and Push Your Changes
 
-### Step A: Open Jenkins and Stage Your Changes in IBM Bob
+### Step 1: Open Jenkins and Stage Your Changes in IBM Bob
 
 1. Before committing, open **Jenkins** in your browser using the Jenkins bookmark and log in. Keep the Jenkins tab open — you will switch to it after pushing to watch the pipeline run.
 
@@ -31,7 +31,7 @@ Remediation is not complete until it has been independently validated. Every cod
 
    ![IBM Bob Source Control panel with Client.java staged and commit message entered](/img/lab-01/image16.png)
 
-### Step B: Push Your Changes to the Repository
+### Step 2: Push Your Changes to the Repository
 
 1. After committing, click the **"Sync Changes"** button (or the push arrow icon in the Source Control panel) to push your commit to the remote repository.
 
@@ -45,7 +45,7 @@ The push to the remote repository is what triggers the Jenkins pipeline. A local
 
 :::
 
-### Step C: Watch the Jenkins Pipeline Run
+### Step 3: Watch the Jenkins Pipeline Run
 
 1. Switch to the **Jenkins** tab in your browser. Within a few seconds of your push, a new build will start automatically.
 
@@ -79,6 +79,18 @@ If the vulnerability is still showing, wait 30 seconds and refresh the page. The
 
 :::
 
+:::info[Phase 4 Complete]
+
+The Jenkins pipeline has run, the updated CBOM has been uploaded to GCM, and the RSA-1024 vulnerability no longer appears in the secure-chat findings. CCE's first auditable CBOM is now live in GCM.
+
+:::
+
+---
+
+Proceed to **[Summary & Glossary →](./summary-glossary)**
+
+---
+
 ## Optional: Reset the Lab to Its Starting State
 
 If you want to run through the lab again from the beginning, you can revert the secure-chat code to its original state.
@@ -94,4 +106,3 @@ If you want to run through the lab again from the beginning, you can revert the 
    > **git push --force**
 
 4. Restart IBM Bob so the QSE plugin reloads the updated scan data.
-

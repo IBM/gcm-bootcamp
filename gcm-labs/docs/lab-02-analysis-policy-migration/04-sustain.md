@@ -78,19 +78,11 @@ While RSA-2048 is stronger than RSA-1024, it's still vulnerable to future quantu
 
 ## Phase 4 Part 2: Transparent Database Encryption (TDE) Key Management
 
-### Background — Why TDE Key Management Matters for CCE
+Transparent Database Encryption (TDE) protects sensitive data at rest by encrypting entire database files at the storage layer — invisible to applications but critical to CCE's data security posture. For CCE, whose mission involves protecting the United States' commodity-backed digital currency ledger, any database encryption key compromise is a national security event.
 
-Transparent Database Encryption (TDE) protects sensitive data at rest by encrypting entire database files at the storage layer — invisible to applications but critical to the agency's data security posture.
+GCM's TDE Key Management capability provides centralized visibility and control over TDE clients across CCE's database fleet, with GCM acting as the KMIP keystore that authorizes all database encryption operations.
 
-For CCE, whose mission involves protecting the United States' commodity-backed digital currency ledger, any database encryption key compromise is a national security event.
-
-GCM's TDE Key Management capability provides centralized visibility and control over TDE clients across CCE's database fleet.
-
-### GCM TDE Client Overview — Supported Database Types
-
-The existing Db2 TDE Client is already registered in GCM with two AES-256 symmetric keys active, both created in December 2025 during CCE's initial GCM onboarding. The KMIP client certificate status is Active and Database Linking is Complete — confirming that GCM is the live keystore authorizing Db2's encryption operations.
-
-Bohdi will explore GCM's TDE client inventory, review the existing IBM Db2 TDE configuration, and execute a live master encryption key rotation — a critical operational step for maintaining cryptographic hygiene and demonstrating readiness under NSA CNSA 2.0 and OMB M-23-02 mandates.
+### Step 1: Review TDE Clients in GCM
 
 1. Click top menu > **Inventory** > **TDE clients**
 2. Click **Configure TDE client (A)**
@@ -99,45 +91,45 @@ Bohdi will explore GCM's TDE client inventory, review the existing IBM Db2 TDE c
 
 *GCM TDE Clients inventory with the DB2 client (Active KMIP, Complete linking) and Configure TDE client*
 
-3. Check all supported database types **(B)**
-4. Click **cancel (C)** to stop the TDE client configuration
-5. Click on the existing **DB2 TDE Client (D)**
+3. Review the supported database types **(B)** — GCM supports IBM Db2, Oracle Database, Microsoft SQL Server, MySQL/MariaDB, and PostgreSQL. For CCE, IBM Db2 is the primary database platform running the digital currency ledger.
+4. Click **Cancel (C)** to close the configuration dialog without saving.
+5. Click on the existing **DB2 TDE Client (D)** to review its current configuration.
 
 ![Configure TDE client dialog with the Database type dropdown showing supported platforms](/img/lab-02/Phase4.8.png)
 
 *Configure TDE client dialog with the Database type dropdown showing supported platforms*
 
-GCM's TDE Key Management module supports multiple enterprise database platforms. Bohdi will first explore the full list of supported database types in GCM before drilling into CCE's existing Db2 TDE client configuration. Supported database types visible in the "Configure TDE client" dialog include:
+The existing Db2 TDE Client is already registered in GCM with two AES-256 symmetric keys active, created during CCE's initial GCM onboarding. The KMIP client certificate status is **Active** and Database Linking is **Complete** — confirming that GCM is the live keystore authorizing Db2's encryption operations.
 
-- IBM Db2
-- Oracle Database
-- Microsoft SQL Server
-- MySQL / MariaDB
-- PostgreSQL
+### Step 2: Connect to the Database Server and Review Encryption Status
 
-For CCE, IBM Db2 is the primary database platform running the digital currency ledger.
-
-### Rotate Key from DB2
-
-1. Click on **SSH icon** on the Taskbar to ssh into the RHEL server with user admin
-   - Switch user to **db2inst1**. Run Connect command to Connect to the Database.
-2. Run the following commands to see current configuration
-
-   :::tip
-   You only need to type the alias. ie: connect, **info**, **rotate**
-   :::
+1. Click the **SSH icon** on the Taskbar to open an SSH connection to the RHEL server.
+2. At the prompt, type the **connect** alias to connect to the Db2 database as db2inst1.
+3. Type the **info** alias to run the encryption info command and review the current configuration.
 
 ![Db2 encryptioninfo output showing AES-256 and a KMIP keystore with master key labels](/img/lab-02/Phase4.9.png)
 
 *Db2 encryptioninfo output showing AES-256 and a KMIP keystore with master key labels*
 
-3. Rotate key using these commands. Run Rotate command to rotate the key.
+Confirm that:
+- The database is encrypted with **AES-256**
+- The keystore type is **KMIP** (pointing to GCM)
+- The current master key label is visible
+
+### Step 3: Rotate the Master Encryption Key
+
+1. Type the **rotate** alias to execute the master key rotation command.
 
 ![Rotation output showing Return Status 0 and a new master key label](/img/lab-02/Phase4.10.png)
 
 *Rotation output showing Return Status 0 and a new master key label*
 
-4. Check in GCM to see the new Rotated key. Go to **Inventory** and **Cryptographic objects**.
+Confirm that the Return Status is **0** and that a new master key label has been assigned.
+
+### Step 4: Verify the Rotated Key in GCM
+
+1. Return to GCM and navigate to **Inventory** > **Cryptographic objects**.
+2. Confirm the new AES-256 symmetric key appears with a current activation timestamp.
 
 ![GCM Cryptographic Objects showing the newly rotated AES-256 key with activation timestamp](/img/lab-02/Phase4.11.png)
 
@@ -151,11 +143,12 @@ For CCE, IBM Db2 is the primary database platform running the digital currency l
 
 *GCM TDE client showing updated key inventory after rotation*
 
-### Phase 4.2 Outcome — CCE TDE Key Management
+:::info[Phase 4 Complete]
 
-Bohdi has demonstrated end-to-end TDE key management for CCE's IBM Db2 database.
+You have validated that CCE's RSA-1024 certificate was successfully replaced with RSA-2048, reducing exploitability from Critical to Medium. You also executed a live TDE master key rotation using GCM as the KMIP keystore — confirming end-to-end cryptographic lifecycle management for CCE's database at rest. CCE's digital currency ledger remained protected throughout the operation, satisfying OMB M-23-02 data-at-rest encryption requirements.
 
-- GCM's role as the KMIP keystore was validated — Db2 confirmed AES-256 encryption with GCM as the active key authority.
-- The live master key rotation via SYSPROC.ADMIN_ROTATE_MASTER_KEY completed without database downtime.
-- GCM immediately reflected the new AES-256 symmetric key with a timestamped activation record, providing a complete audit trail.
-- CCE's digital currency ledger remained protected at rest throughout the operation — satisfying OMB M-23-02 data-at-rest encryption requirements and NSA CNSA 2.0 key management hygiene standards.
+:::
+
+---
+
+Proceed to **[Summary →](./summary)**

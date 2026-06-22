@@ -11,7 +11,7 @@ This is the remediation step. Using Certificate Lifecycle Management integrated 
 
 ### Step 1: Initiate Certificate Renewal
 
-Directly from Phase 2 (reference previous images) within GCM using the Certificate Lifecycle Management capability and Vault PKI integration:
+Continuing within GCM from Phase 2, with the cert-69 side panel open:
 
 1. Click **back arrow (D)** to skip ticket creation
 2. Ensure **Certificate Lifecycle Management (E)** is selected
@@ -51,7 +51,7 @@ If you get an error after trying to save, reduce the validity period as seen in 
 
 :::
 
-### Step 2: Download and Deploy Certificate
+### Step 3: Download and Deploy Certificate
 
 1. Close the right panel
 2. Type **sampleapp (A)** in the search bar and Click on the newly created **sampleapp (B)**
@@ -86,6 +86,10 @@ If you get an error after trying to save, reduce the validity period as seen in 
 
 :::info[Phase 3 Complete]
 
-You've successfully renewed the RSA-1024 certificate with a new RSA-2048 certificate signed by Vault PKI and deployed it to the sample application server.
+You've successfully renewed the RSA-1024 certificate with a new RSA-2048 certificate signed by HashiCorp Vault PKI and deployed it to the sample application server. Proceed to Phase 4 to validate the remediation and manage CCE's database encryption keys.
 
 :::
+
+---
+
+Proceed to **[Phase 4: Sustain →](./sustain)**

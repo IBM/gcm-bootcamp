@@ -149,17 +149,12 @@ In a production setting, CCE would use this data to answer questions such as:
 
 ---
 
-## Phase 4 Complete
+:::info[Phase 4 Complete]
 
-You reviewed the full set of operational capabilities needed to sustain QSR in a production environment:
+You reviewed all four operational capabilities for sustaining QSR in production: dynamic crypto policy controls, real-time observability, centralized proxy management, and TLS performance benchmarking. CCE now has a repeatable operational model for quantum-safe remediation at scale.
 
-- Dynamic crypto policy controls that enforce enterprise standards without application changes.
-- Observability dashboards providing real-time crypto telemetry.
-- Centralized proxy management across distributed deployments.
-- TLS performance benchmarking to guide architecture and rollout decisions.
-
-CCE now has a repeatable operational model for running adaptive quantum-safe remediation at scale.
+:::
 
 ---
 
-Proceed to **[Lab Summary →](./05-summary)**
+Proceed to **[Lab Summary →](./summary)**
