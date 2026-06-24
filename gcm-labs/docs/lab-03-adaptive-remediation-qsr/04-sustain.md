@@ -175,17 +175,17 @@ PQC migration is not only a security exercise. Agencies must also understand lat
 
 ---
 
-### Step 4.2.1 — Open the Performance Harness
+### Step 4.2.1 — Access the Performance Harness
 
 #### What You're Doing
 
-You're accessing the performance benchmarking tool to measure the operational impact of different cryptographic algorithms.
+You're accessing the performance benchmarking interface to review pre-run test results that demonstrate the operational impact of different cryptographic algorithms.
 
 #### Steps
 
 1. Return to the QSR demo environment.
 2. Locate **Performance Harness**.
-3. Click **New Performance Test Harness** or **Performance Test Harness**, depending on the available option.
+3. Click **Performance Test Harness** to view existing test results.
 
 ![Performance Harness selection in QSR demo interface](/img/lab-03/Performance%20Harness%20Selction.png)
 
@@ -193,31 +193,33 @@ You're accessing the performance benchmarking tool to measure the operational im
 
 #### What's Happening
 
-The Performance Harness simulates real-world TLS connections and measures:
+The Performance Harness has already run comprehensive benchmarks that simulate real-world TLS connections and measure:
 - **Handshake time** — How long it takes to establish a secure connection
 - **Throughput** — How much data can be transmitted per second
 - **CPU utilization** — How much processing power is required
 - **Memory usage** — How much RAM is consumed
 
+**Note:** In this lab, you will review pre-run test results rather than executing new tests. This allows you to analyze performance data without waiting for lengthy benchmark runs.
+
 ---
 
-### Step 4.2.2 — Review Test Options
+### Step 4.2.2 — Review Available Test Results
 
 #### What You're Doing
 
-You're examining the different algorithm combinations that can be benchmarked to understand their performance characteristics.
+You're examining pre-run benchmark results that compare different algorithm combinations to understand their performance characteristics.
 
 #### Steps
 
-Review the available benchmark configurations. The demo allows you to explore combinations of:
-
-- **Legacy, hybrid, and PQC TLS transaction types**
-- **Key exchange algorithms** (RSA, ECDH, MLKEM, etc.)
-- **Signature algorithms** (RSA, ECDSA, Dilithium, etc.)
+1. Review the Performance Harness dashboard showing available test results.
+2. Observe the different algorithm combinations that have been benchmarked:
+   - **Legacy, hybrid, and PQC TLS transaction types**
+   - **Key exchange algorithms** (RSA, ECDH, MLKEM, etc.)
+   - **Signature algorithms** (RSA, ECDSA, Dilithium, etc.)
 
 ![Performance Harness dashboard showing test configuration options](/img/lab-03/Perf%20Harness%20Dashboard.png)
 
-*Performance Harness dashboard showing test configuration options*
+*Performance Harness dashboard showing available test results and configurations*
 
 #### Understanding Performance Factors
 
@@ -240,25 +242,26 @@ Review the available benchmark configurations. The demo allows you to explore co
 
 ---
 
-### Step 4.2.3 — Run or Review a Test
+### Step 4.2.3 — Analyze Test Results
 
 #### What You're Doing
 
-You're executing or reviewing performance benchmarks to understand the real-world impact of different cryptographic choices.
+You're reviewing pre-run performance benchmark results to understand the real-world impact of different cryptographic choices.
 
 #### Steps
 
-1. Select an available test configuration.
-2. Start the test or open an existing test result.
-3. Review the benchmark output.
+1. Select a test result from the available benchmarks.
+2. Open the test result to view detailed performance metrics.
+3. Review the benchmark output and compare different algorithm types.
 
 #### What to Look For
 
-Pay attention to:
+As you review the test results, pay attention to:
 
-- **Connection setup time and TLS handshake behavior** — How long does it take to establish a connection?
-- **Relative performance differences across algorithm types** — How much slower is PQC compared to classical?
-- **Algorithm combinations and any compatibility observations** — Which combinations work well together?
+- **Connection setup time and TLS handshake behavior** — How long does it take to establish a connection with each algorithm type?
+- **Relative performance differences across algorithm types** — How much slower is PQC compared to classical? What about hybrid?
+- **Algorithm combinations and compatibility** — Which combinations provide the best balance of security and performance?
+- **Resource utilization patterns** — Which algorithms consume more CPU, memory, or bandwidth?
 
 #### Expected Observations
 
