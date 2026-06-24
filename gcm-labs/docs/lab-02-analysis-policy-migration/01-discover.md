@@ -32,18 +32,20 @@ Inventory management is key to maintaining crypto-agility. Here, you'll run scan
 
 *GCM Inventory IT-assets table filtered to Network Scan, sampleapp.test.lab:5080 flagged Critical*
 
-2. Click on **Explain (B)** to understand why Exploitability is Critical
-3. Change **Business impact (C)** to see how this changes the Exploitability. Value is updated in the main table.
+2. Click on **Explain (B)** to understand why Risk Level is Critical. Press the back arrow to return to the IT Asset side panel.
+3. Change **Business impact (C)** to see how this changes the Risk Level. Value is updated in the main table.
 
 :::note
 
-If the exploitability score doesn't update when you change Business Impact, this is a display refresh behavior — return the value to Moderate (C) and continue. Mouse over **Small RSA Key Length (D)** policy violation. Close side panel and click on the **Certificate (E)** link.
+If the Risk Level score doesn't update when you change Business Impact, this is a display refresh behavior, return the value to Moderate and continue. 
 
 :::
 
-![sampleapp.test.lab:5080 asset side panel showing Unsafe/Critical posture, cert-69, and Small RSA Key Length violation](/img/lab-02/Phase1.3.png)
+![sampleapp.test.lab:5080 asset side panel showing medium posture, cert, and Small RSA Key Length violation](/img/lab-02/Phase1.3.png)
 
-*sampleapp.test.lab:5080 asset side panel showing Unsafe/Critical posture, cert-69, and Small RSA Key Length violation*
+4. Close the side panel to return back to the Network Scan Inventory.
+
+![GCM Inventory IT-Assets table filtered to Network scan](/img/lab-02/image4.5.png)
 
 :::info[Step 1 Complete]
 

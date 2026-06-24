@@ -9,7 +9,7 @@ Use GCM's AI-powered risk assessment to understand vulnerabilities and prioritiz
 
 :::tip
 
-GCM should be open from Step 1. If you closed it, reopen it using the GCM bookmark and navigate to **Inventory → IT Assets**.
+GCM should be open from Step 1. If you closed it, reopen it using the GCM bookmark and navigate to **Discovery → Network Scan → 4 (IT Assets)**.
 
 :::
 
@@ -31,21 +31,22 @@ Let's verify the actual certificate that the application is using by connecting 
 
 ![Certificate Viewer showing the self-signed sampleapp.test.lab certificate hierarchy](/img/lab-02/Phase2.2.png)
 
-*Certificate Viewer showing the self-signed sampleapp.test.lab certificate hierarchy*
 
-![GCM Cryptographic Objects view with cert-69 (High combined violation severity) highlighted](/img/lab-02/Phase2.3.png)
-
-*GCM Cryptographic Objects view with cert-69 (High combined violation severity) highlighted*
+![Certificate Viewer showing the self-signed sampleapp.test.lab certificate hierarchy](/img/lab-02/Phase2.3.png)
 
 :::note
 
-The following steps reference **cert-69**. Your certificate may have a different name but will follow the same cert-N naming convention.
+The following steps reference **cert-69**. Your certificate will likely have a different name but will follow the same cert-N naming convention.
 
 :::
 
 ### Step 2: Review Certificate Details
 
 Return to the GCM tab:
+
+1. Click on the certificate for the SampleApp IT Asset (Labeled **A**).
+
+![GCM showing the SampleApp IT Asset certificate](/img/lab-02/Phase2a.png)
 
 1. Click on the **cert-69 (A)** to open side panel.
 2. Review **RSA Key size (B)** is 1024 and produces a Policy Violation.
