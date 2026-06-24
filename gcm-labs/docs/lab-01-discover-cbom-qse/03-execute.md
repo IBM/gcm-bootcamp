@@ -31,21 +31,31 @@ Bob does not guess at what your vulnerabilities might be. It calls QSE's `list_f
 
 Once IBM Bob is open:
 
-4. Click **"Open Folder…"** (labeled **A**)
+4. Click **File->Open Folder** (labeled **A**)
+
+   ![IBM Bob Open Folder](/img/lab-01/image6b.png)
 
 5. Navigate to and select the **"secure-chat"** folder (labeled **B**), then click **"Select Folder"** (labeled **C**).
 
    ![IBM Bob Open Folder dialog with secure-chat selected](/img/lab-01/image9.png)
 
+6. Click **Terminal->New Terminal** (labeled **A**), then click the **EXPLORER SCAN RESULTS** tab (labeled **B**).
+
+   ![QSE Scan Results within IBM Bob](/img/lab-01/image9b.png)
+
 ### Step 2: Locate the Vulnerability in QSE's Cryptography Analysis
 
 1. Click **"Cryptography analysis"** (labeled **A**) to open a full breakdown of every cryptographic function in the project and its associated vulnerabilities.
 
-2. Click the first entry: **"keygen-(RSA)-(1024 bit)"** (labeled **B**). You will see it has 4 vulnerabilities (labeled **C**).
+2. Click the first entry: **"keygen-(RSA)-(1024 bit)"** (labeled **B**). You will see it has 4 vulnerabilities.
+
+   ![QSE Scan Results showing keygen-RSA-1024 entry with 4 vulnerabilities](/img/lab-01/image9c.png)
 
 3. Click through each vulnerability to jump to the affected line of code and read the details. Pay attention to the **CWE reference** (labeled **E**) — click it to read the full description of the weakness.
 
-4. In the Cryptography results panel, click **"API discovery"** (labeled **D**) and select **`src\Client.java`** (labeled **E**). The QSE plugin will automatically highlight line 32 — the location of the vulnerability.
+   ![QSE Scan Results showing RSA-1024 vulnerabilites](/img/lab-01/image10a.png)
+
+4. In the Cryptography results panel, click **"API discovery"** (labeled **D**) and select **`src\Client.java Line: 32`** (labeled **E**). The QSE plugin will automatically highlight line 32 — the location of the vulnerability.
 
    ![IBM Bob Cryptography Analysis panel showing keygen-RSA-1024 entry with 4 vulnerabilities](/img/lab-01/image10.png)
 
@@ -61,7 +71,7 @@ You will notice two types of issues: classic cryptography vulnerabilities (e.g.,
 
    ![IBM Bob side panel toggle](/img/lab-01/image11.png)
 
-2. If not logged in, ask for the lab facilitator to log you in.
+2. If not logged in, follow the [Sign Into IBM Bob](/docs/getting-started#step-5--sign-into-ibm-bob) steps in the Environment Setup section.
 
 3. Type the following message to Bob:
 
@@ -69,9 +79,10 @@ You will notice two types of issues: classic cryptography vulnerabilities (e.g.,
 
 4. Confirm that Bob calls MCP tools in the background — you will see tool call indicators in the Bob panel (`list_findings` will appear). If no tools are invoked, ask your lab facilitator to verify the MCP connection.
 
-   ![IBM Bob panel showing MCP tool call for list_findings with scan summary results](/img/lab-01/image12.png)
-
-   ![IBM Bob listing PQC vulnerabilities by category including RSA findings](/img/lab-01/image13.png)
+   <div style={{display: 'flex', gap: '1rem', alignItems: 'flex-start'}}>
+     <img src="/img/lab-01/image12.png" alt="IBM Bob panel showing MCP tool call for list_findings with scan summary results" style={{width: '50%'}} />
+     <img src="/img/lab-01/image13.png" alt="IBM Bob listing PQC vulnerabilities by category including RSA findings" style={{width: '50%'}} />
+   </div>
 
    *IBM Bob listing PQC vulnerabilities by category including RSA findings*
 
@@ -109,7 +120,11 @@ Bob is making real changes to your code. Take a moment to read through the diff 
 
 ### Step 7: Verify the Fix with a New QSE Scan
 
-1. Run a new QSE scan to confirm the fix worked. In IBM Bob: **View → Command Palette** → type **"Quantum Safe Explorer: Scan Cryptography Analysis"** → press **Enter**.
+1. Run a new QSE scan to confirm the fix worked. In IBM Bob: **View → Command Palette** (labled **A**) -> Select **"Quantum Safe Explorer: Scan Cryptography Analysis"** (Labeled **B**).
+
+   ![Opening Command Pallete to re-run the QSE Scan](/img/lab-01/image14a.png)
+
+   ![Running QSE Cryptography Analysis Scan](/img/lab-01/image14b.png)
 
 2. After the scan completes, return to the **Cryptography Analysis** panel. Confirm that the total vulnerability count has decreased and that **"keygen-(RSA)-(1024 bit)"** shows fewer vulnerabilities than before.
 

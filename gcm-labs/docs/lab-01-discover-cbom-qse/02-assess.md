@@ -13,7 +13,7 @@ IBM Guardium Cryptography Manager (GCM) is your command center. It shows you eve
 
 ### Step 1: Open GCM
 
-1. In your browser, click the bookmark labeled **"GCM"**. This opens the IBM Guardium Cryptography Manager dashboard.
+1. In Google Chrome, click the bookmark labeled **"GCM"**. This opens the IBM Guardium Cryptography Manager dashboard.
 
 2. Log in by clicking "Login with OIDC" and use the pre-populated credentials.
 
@@ -27,7 +27,7 @@ IBM Guardium Cryptography Manager (GCM) is your command center. It shows you eve
 
    ![GCM top menu with portfolio view highlighted](/img/lab-01/image3.png)
 
-3. Find the entry for the **secure-chat** application and click the value in the **"Impacted code assets"** column (labeled **A**). This opens a list of all source code files that contain cryptographic functions.
+3. Find the entry for the **secure-chat** application (ensure it is the one with 8 Impacted Code Assets) and click the value in the **"Impacted code assets"** column (labeled **A**). This opens a list of all source code files that contain cryptographic functions.
 
    ![GCM Inventory showing code repositories with secure-chat highlighted](/img/lab-01/image4.png)
 

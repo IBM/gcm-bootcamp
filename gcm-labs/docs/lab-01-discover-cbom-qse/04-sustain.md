@@ -53,7 +53,7 @@ With the pipeline complete, return to GCM to confirm that the vulnerability has 
 
    ![GCM Discovery Import profiles page showing updated last import date for QSE report](/img/lab-01/image19.png)
 
-3. Click on the **"Code assets"** count (labeled **D**) and select **"secure-chat"**.
+3. Click on the **"Code assets"** count (labeled **D**) and select **"secure-chat"**, it should be the first row.
 
 4. Confirm that the **"Use of small key size: 1024"** vulnerability is no longer listed in the Vulnerabilities tab.
 
