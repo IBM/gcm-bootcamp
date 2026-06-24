@@ -5,15 +5,15 @@ title: "Step 4: Sustain"
 
 # Step 4: Sustain — CI/CD Pipeline + GCM Confirmation
 
-CI/CD Pipeline + GCM Confirmation — commit your fix, push to trigger Jenkins, and confirm the vulnerability is resolved in GCM.
+CI/CD Pipeline + GCM Confirmation — commit your fix and confirm the vulnerability is resolved in GCM.
 
 Remediation is not complete until it has been independently validated. Every code change must pass through the Jenkins CI/CD pipeline, which automatically triggers a new QSE scan, regenerates the CBOM, and uploads updated results to GCM — creating the timestamped audit trail needed for OMB M-23-02 compliance.
 
-## Part 4: Commit and Push Your Changes
+## Part 4: Commit Your Changes
 
 ### Step 1: Open Jenkins and Stage Your Changes in IBM Bob
 
-1. Before committing, open **Jenkins** in your browser using the Jenkins bookmark and log in. Keep the Jenkins tab open — you will switch to it after pushing to watch the pipeline run.
+1. Before committing, open **Jenkins** in your browser using the Jenkins bookmark and log in. Keep the Jenkins tab open — you will switch to it after committing to watch the pipeline run.
 
    ![Jenkins dashboard open in browser via bookmark](/img/lab-01/image15.png)
 
@@ -25,29 +25,15 @@ Remediation is not complete until it has been independently validated. Every cod
 
 5. In the commit message box, type:
 
-   > **"fixed code with bob"**
+   > **"Fix key size vulnerability"**
 
 6. Click **"Commit"** (labeled **E**). Wait a few seconds and watch the commit graph (labeled **F**) update to show your new commit.
 
    ![IBM Bob Source Control panel with Client.java staged and commit message entered](/img/lab-01/image16.png)
 
-### Step 2: Push Your Changes to the Repository
+### Step 2: Watch the Jenkins Pipeline Run
 
-1. After committing, click the **"Sync Changes"** button (or the push arrow icon in the Source Control panel) to push your commit to the remote repository.
-
-2. Alternatively, open the Terminal (**Terminal → New Terminal**), type the following command, and then press enter:
-
-   > **git push**
-
-:::note
-
-The push to the remote repository is what triggers the Jenkins pipeline. A local commit without a push will not start a new Jenkins build. Always push your changes to see them flow through the pipeline and into GCM.
-
-:::
-
-### Step 3: Watch the Jenkins Pipeline Run
-
-1. Switch to the **Jenkins** tab in your browser. Within a few seconds of your push, a new build will start automatically.
+1. Switch to the **Jenkins** tab in your browser. Within a few seconds of your commit, a new build will start automatically.
 
 2. Click on the **build progress bar** (labeled **A**) to watch the pipeline run in real time, or click the build number and select **"Console Output"** (labeled **B**) if the build has already finished.
 
@@ -63,7 +49,7 @@ With the pipeline complete, return to GCM to confirm that the vulnerability has 
 
 1. Navigate back to **GCM** (labeled **A**) and click **"Discovery" → "Import profiles"** in the top menu.
 
-2. Check the **"Last import date"** (labeled **C**) for the QSE findings report to confirm it has been updated since your push.
+2. Check the **"Last import date"** (labeled **C**) for the QSE findings report to confirm it has been updated since your commit.
 
    ![GCM Discovery Import profiles page showing updated last import date for QSE report](/img/lab-01/image19.png)
 
@@ -87,10 +73,6 @@ The Jenkins pipeline has run, the updated CBOM has been uploaded to GCM, and the
 
 ---
 
-Proceed to **[Summary & Glossary →](./summary-glossary)**
-
----
-
 ## Optional: Reset the Lab to Its Starting State
 
 If you want to run through the lab again from the beginning, you can revert the secure-chat code to its original state.
@@ -101,8 +83,4 @@ If you want to run through the lab again from the beginning, you can revert the 
 
    > **git reset --hard HEAD~1**
 
-3. Push the reset to trigger a new Jenkins scan:
-
-   > **git push --force**
-
-4. Restart IBM Bob so the QSE plugin reloads the updated scan data.
+3. Restart IBM Bob so the QSE plugin reloads the updated scan data.

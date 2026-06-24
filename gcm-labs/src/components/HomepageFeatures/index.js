@@ -52,7 +52,7 @@ function ResourcesCard() {
       <div className={styles.labCard}>
         <div className={clsx(styles.labNumber, styles.resourcesBadge)}>Resources</div>
         <Heading as="h3" className={styles.labTitle}>Event Resources</Heading>
-        <p className={styles.labTools}>Presentations · Videos · Downloads</p>
+        <p className={styles.labTools}>Leave Behind Material</p>
         <p className={styles.labDescription}>
           Browse event materials, product documentation, and additional learning content for the bootcamp.
         </p>

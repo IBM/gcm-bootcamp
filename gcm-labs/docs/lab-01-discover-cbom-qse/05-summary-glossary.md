@@ -5,7 +5,7 @@ title: "Summary & Glossary"
 
 # Summary & Glossary
 
-## Lab Summary
+## What You Accomplished
 
 In this lab, you completed a real-world PQC migration workflow using IBM Quantum Safe Explorer, IBM Bob, Jenkins CI/CD, and IBM Guardium Cryptography Manager. Here is what CCE accomplished:
 
@@ -38,6 +38,3 @@ PQC migration does not have to be a massive, disruptive project. By using automa
 | **MCP (Model Context Protocol)** | The protocol that connects IBM Bob to live QSE scan data, so Bob's answers are grounded in your actual findings rather than generic knowledge. |
 | **CycloneDX CBOM** | The open standard format used by QSE to output the cryptographic inventory. Uploaded automatically to GCM by Jenkins. |
 
----
-
-Proceed to **[Lab 2: Analysis, Policy & Migration →](../lab-02-analysis-policy-migration/)**

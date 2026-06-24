@@ -110,6 +110,3 @@ You enabled the Forward Proxy and demonstrated how QSR protects legacy client tr
 
 :::
 
----
-
-Proceed to **[Step 4: Sustain →](./sustain)**

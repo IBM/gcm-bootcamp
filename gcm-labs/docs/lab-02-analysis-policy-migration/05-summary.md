@@ -42,6 +42,3 @@ Cryptographic inventory alone does not reduce risk. CCE's Lab 1 CBOM was essenti
 | **ML-KEM / ML-DSA** | NIST-standardized post-quantum algorithms (FIPS 203/204). ML-KEM is used for key encapsulation; ML-DSA for digital signatures. These are the target algorithms for CCE's full PQC migration. |
 | **HashiCorp Vault PKI** | An integrated Certificate Authority used by GCM's CLM to issue CA-signed certificates, replacing self-signed or weak certificates with trusted, renewable ones. |
 
----
-
-Proceed to **[Lab 3: Adaptive Remediation →](../lab-03-adaptive-remediation-qsr/)**

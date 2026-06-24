@@ -108,6 +108,3 @@ You have reviewed the QSR Adaptive Proxy architecture and identified the gap in 
 
 :::
 
----
-
-Proceed to **[Step 2: Assess →](./assess)**

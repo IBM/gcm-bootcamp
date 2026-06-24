@@ -29,6 +29,8 @@ Bob does not guess at what your vulnerabilities might be. It calls QSE's `list_f
 
    ![IBM Bob IDE open](/img/lab-01/image8.png)
 
+Once IBM Bob is open:
+
 4. Click **"Open Folder…"** (labeled **A**)
 
 5. Navigate to and select the **"secure-chat"** folder (labeled **B**), then click **"Select Folder"** (labeled **C**).
@@ -123,6 +125,3 @@ IBM Bob has used live QSE scan data to identify and fix the RSA-1024 vulnerabili
 
 :::
 
----
-
-Proceed to **[Step 4: Sustain →](./sustain)**

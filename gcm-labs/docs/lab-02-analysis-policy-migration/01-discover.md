@@ -37,7 +37,7 @@ Inventory management is key to maintaining crypto-agility. Here, you'll run scan
 
 :::note
 
-Sometimes the value doesn't change. This is a known issue. Leave it as Moderate (C) again. Mouse over **Small RSA Key Length (D)** policy violation. Close side panel and click on the **Certificate (E)** link.
+If the exploitability score doesn't update when you change Business Impact, this is a display refresh behavior — return the value to Moderate (C) and continue. Mouse over **Small RSA Key Length (D)** policy violation. Close side panel and click on the **Certificate (E)** link.
 
 :::
 
@@ -47,10 +47,7 @@ Sometimes the value doesn't change. This is a known issue. Leave it as Moderate 
 
 :::info[Step 1 Complete]
 
-You've discovered the sampleapp.test.lab certificate with RSA-1024 encryption, identified as Critical exploitability due to quantum vulnerability. Proceed to Step 2 to understand exactly why this certificate is dangerous and create a tracked remediation ticket.
+You've discovered the sampleapp.test.lab certificate with RSA-1024 encryption, identified as Critical exploitability due to quantum vulnerability. Proceed to Step 2 to understand exactly why this certificate is dangerous and review AI-generated remediation recommendations.
 
 :::
 
----
-
-Proceed to **[Step 2: Assess →](./assess)**
