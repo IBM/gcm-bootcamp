@@ -41,13 +41,13 @@ You're accessing IBM's Quantum Safe Remediator demo environment, which simulates
 
 2. Log in using the credentials provided to you.
 
-   ![QSR login page](/img/lab-03/Step1.1-LogIn.png)
+   ![QSR login page](/img/lab-03/Step1.1LogIn.png)
 
    **What's Happening:** You're authenticating to a secure demo environment that hosts the QSR Adaptive Proxy architecture. This environment is pre-configured with simulated clients, proxies, and a backend application.
 
 3. Once logged in, click the **Adaptive Proxy Demo** tab in the top navigation bar.
 
-   ![Adaptive Proxy Demo tab selected in top navigation](/img/lab-03/Step1.1-ap-tab.png)
+   ![Adaptive Proxy Demo tab selected in top navigation](/img/lab-03Step1.1aptab.png)
 
    **What's Happening:** This tab contains the interactive demo interface where you'll test different client types and proxy configurations.
 
