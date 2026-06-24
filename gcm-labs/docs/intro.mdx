@@ -7,7 +7,9 @@ title: Lab Introduction
 
 This series of PQC labs is designed to walk you through IBM's post-quantum cryptography (PQC) strategy and approach for migrating your agency's classical cryptography to quantum-safe standards. This lab scenario mirrors what many federal agencies are facing: mission-critical workloads that must prepare for quantum threats like Harvest-Now, Decrypt-Later (HNDL) while maintaining operations and meeting federal PQC mandates.
 
-The IBM Quantum-Safe Readiness Index (QSRI) measures an organization's readiness to adopt quantum-safe cryptography across people, processes, and technology. IBM's 2025 research found even the most advanced organizations score no higher than 35–50 out of 100. [Learn more about QSRI →](https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/quantum-safe) The IBM labs are structured to help federal agencies begin now, discover and inventory their CBOM, assess their risks, create a plan, sequence work correctly, provide hands-on experience with software tools to build crypto-agility, and understand the resources and skills to execute their plan.
+The IBM Quantum-Safe Readiness Index (QSRI) measures an organization's readiness to adopt quantum-safe cryptography across people, processes, and technology. IBM's 2025 research found even the most advanced organizations score no higher than 35–50 out of 100. [IBM Quantum Safe Readiness Index →](https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/quantum-safe)
+
+The IBM labs are structured to help federal agencies begin now, discover and inventory their CBOM, assess their risks, create a plan, sequence work correctly, provide hands-on experience with software tools to build crypto-agility, and understand the resources and skills to execute their plan.
 
 ## Lab Storyline
 
@@ -15,7 +17,7 @@ The IBM Quantum-Safe Readiness Index (QSRI) measures an organization's readiness
   <img src="/img/intro/image1.png" alt="Crypto Currency Exchange Federal Agency" style={{maxWidth: '140px'}} />
   <div>
     <p>These labs use a fictitious federal agency called "Crypto Currency Exchange" (CCE) where you will gain hands-on experience using IBM's integrated suite of quantum-safe software tools — designed to help federal organizations discover, assess, plan, manage, and remediate cryptographic vulnerabilities across their hybrid environments.</p>
-    <p>The time period is the fall of 2026, NSA has a breaking headline that China is on a definitive roadmap to develop a quantum computer capable of running Shor's algorithm that can break classic cryptography algorithms. The newly formed CCE Federal Agency oversees the United States (U.S.) crypto digital currency backed by commodities. The agency needs to accelerate their PQC migration timeline to protect themselves against HNDL attacks and meet the new White House Executive Order, "Securing the Nation Against Advanced Cryptographic Attacks", signed on June 22, 2026. They select IBM's PQC approach and software portfolio tools to execute their PQC plans.</p>
+    <p>The time period is the fall of 2026, The NSA has issued a breaking headline that China is on a definitive roadmap to develop a quantum computer capable of running Shor's algorithm that can break classical cryptography algorithms. The newly formed CCE Federal Agency oversees the United States (U.S.) crypto digital currency backed by commodities. The agency needs to accelerate their PQC migration timeline to protect themselves against HNDL attacks and meet the new White House Executive Order, "Securing the Nation Against Advanced Cryptographic Attacks", signed on June 22, 2026. They select IBM's PQC approach and software portfolio tools to execute their PQC plans.</p>
   </div>
 </div>
 
@@ -32,11 +34,11 @@ The IBM Quantum-Safe Readiness Index (QSRI) measures an organization's readiness
   </div>
 </div>
 
-Johnny Utah, the CCE agency's CISO, instructs his IT staff to apply IBM's end-to-end integrated PQS software portfolio tools to discover and inventory quantum-vulnerable cryptography, prioritize remediation/migration issues, deploy quantum-safe algorithms (NIST-standardized ML-KEM, ML-DSA, SLH-DSA), and enforce post-quantum policies across their agency — before Chinese adversaries can decrypt harvested data and any data moving forward.
+Johnny Utah, the CCE agency's CISO, instructs his IT staff to apply IBM's end-to-end integrated PQC software portfolio tools to discover and inventory quantum-vulnerable cryptography, prioritize remediation/migration issues, deploy quantum-safe algorithms (NIST-standardized ML-KEM, ML-DSA, SLH-DSA), and enforce post-quantum policies across their agency — before Chinese adversaries can decrypt harvested data and any data moving forward.
 
 ## Adopting a Plan
 
-IBM's recommends federal agencies adopt our Six-Phase PQC Migration Lifecycle Framework as shown in figure 1. Our framework is created from NIST, CISA, CNSA 2.0, the Applied Quantum PQC Migration Framework, the PQC Coalition Migration Roadmap, and leading practitioner frameworks authoritative guidance.
+IBM recommends federal agencies adopt our Six-Phase PQC Migration Lifecycle Framework as shown in figure 1. Our framework is created from NIST, CISA, CNSA 2.0, the Applied Quantum PQC Migration Framework, the PQC Coalition Migration Roadmap, and guidance from leading practitioner frameworks.
 
 It provides a structured, actionable path from initial governance commitment through continuous quantum-safe operations — applicable to all federal agencies.
 
@@ -53,6 +55,8 @@ Each lab uses IBM's four-step operational method — **Discover → Assess → E
 Quantum Safe Explorer (QSE) integrates with GCM to analyze application code for cryptographic vulnerabilities. In Lab 1, you'll see how developers and SecOps collaborate to identify issues, fix them in code, and validate changes through CI/CD pipelines.
 
 **Quantum Safe Explorer:** Automatically scans applications and infrastructure to inventory cryptographic assets and identify quantum-vulnerable algorithms.
+
+**IBM Bob:** IBM's AI coding assistant, connected to QSE via MCP. Explains vulnerability findings in plain English and applies targeted code fixes — grounded in live scan data, no cryptography expertise required.
 
 ### Lab 2. Analysis / Policy & Management / Migration
 

@@ -45,4 +45,4 @@ Each step below maps to a phase of IBM's Six-Phase PQC Migration Lifecycle. Lab 
 | **1** | **Discover** | Review the automated QSE-Jenkins-GCM workflow and understand how the scan pipeline operates before diving into findings. | Phase 2 — Discovery & Cryptographic Inventory |
 | **2** | **Assess** | Use the GCM dashboard to review scan results, identify the most critical cryptographic weaknesses, and create a remediation ticket. | Phase 2 — Discovery & Cryptographic Inventory |
 | **3** | **Execute** | Use IBM Bob to automatically identify and fix RSA vulnerabilities with AI-generated code changes grounded in the real QSE scan data. | Phase 5 — Pilot Testing & Phased Migration |
-| **4** | **Sustain** | Commit the fixed code, push to trigger Jenkins, and confirm in GCM that the vulnerability is resolved — producing CCE's first auditable CBOM. | Phase 2 & 5 — Discovery / Pilot Migration |
+| **4** | **Sustain** | Commit the fixed code and confirm in GCM that the vulnerability is resolved — producing CCE's first auditable CBOM. | Phase 2 & 5 — Discovery & Pilot Migration |

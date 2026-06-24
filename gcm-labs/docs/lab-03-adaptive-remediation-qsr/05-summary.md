@@ -35,13 +35,13 @@ By completing Lab 3, CCE has demonstrated that it can:
 
 ---
 
-## Key Takeaway
+:::info[KEY TAKEAWAY]
 
-PQC migration is not only about replacing algorithms in code or renewing certificates.
-
-Federal agencies also need a way to **protect live communications while legacy systems are still in place**.
+PQC migration is not only about replacing algorithms in code or renewing certificates. Federal agencies also need a way to **protect live communications while legacy systems are still in place**.
 
 IBM Quantum Safe Remediator gives CCE a practical transition layer for crypto agility. By deploying Forward and Reverse Proxies, CCE can secure external communications with quantum-safe cryptography, preserve compatibility with existing applications, and manage the transition to post-quantum standards in a controlled, observable, and policy-driven way.
+
+:::
 
 ---
 

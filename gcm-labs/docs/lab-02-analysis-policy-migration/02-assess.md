@@ -5,7 +5,7 @@ title: "Step 2: Assess"
 
 # Step 2: Assess — AI-Powered Risk Assessment
 
-Use GCM's AI-powered risk assessment to understand vulnerabilities and create remediation plans.
+Use GCM's AI-powered risk assessment to understand vulnerabilities and prioritize remediation.
 
 :::tip
 
@@ -13,7 +13,7 @@ GCM should be open from Step 1. If you closed it, reopen it using the GCM bookma
 
 :::
 
-Here the focus shifts from "what do we have" to "how bad is it and what do we do about it." GCM's AI-powered risk assessment explains in plain language why RSA-1024 is quantum-vulnerable, you confirm directly in the browser that the certificate is self-signed and untrusted, and you model how changing business impact moves the exploitability score. Generating a remediation ticket converts the raw finding into a tracked, auditable work item with an AI-drafted title, description, and recommended fix — the kind of evidence trail required to demonstrate compliance under mandates such as OMB M-23-02.
+Here the focus shifts from "what do we have" to "how bad is it and what do we do about it." GCM's AI-powered risk assessment explains in plain language why RSA-1024 is quantum-vulnerable, you confirm directly in the browser that the certificate is self-signed and untrusted, and you model how changing business impact moves the exploitability score.
 
 ### Step 1: Check Certificate in Browser
 
@@ -37,36 +37,37 @@ Let's verify the actual certificate that the application is using by connecting 
 
 *GCM Cryptographic Objects view with cert-69 (High combined violation severity) highlighted*
 
-### Step 2: Review Certificate Details and Create Ticket
+:::note
 
-Return to the GCM tab...
+The following steps reference **cert-69**. Your certificate may have a different name but will follow the same cert-N naming convention.
 
-1. Click on the **cert-69 (A)** to open side panel. The certificate name may vary but should follow the same naming convention.
+:::
 
-2. Review **RSA Key size (B)** is 1024 and Produces a Policy Violation
-3. Notice AI generated Summary at the top
-4. Click **Create Ticket (C)**
+### Step 2: Review Certificate Details
 
-![cert-69 side panel with AI-generated summary and RSA-1024 details, Create Ticket flow open](/img/lab-02/Phase2.4.png)
+Return to the GCM tab:
 
-*cert-69 side panel with AI-generated summary and RSA-1024 details, Create Ticket flow open*
+1. Click on the **cert-69 (A)** to open side panel.
+2. Review **RSA Key size (B)** is 1024 and produces a Policy Violation.
+3. Review the AI-generated Summary at the top.
+
+![cert-69 side panel showing RSA-1024 key size, policy violation, and AI-generated summary](/img/lab-02/Phase2.4.png)
+
+*cert-69 side panel showing RSA-1024 key size, policy violation, and AI-generated summary*
 
 :::note
 
-Notice how AI will generate a Title and Description, which includes affected IT assets and the following Recommendation:
+In a production workflow, this is where Bohdi would click **Create Ticket** to generate a tracked remediation work item. GCM pre-populates the ticket with an AI-drafted title, description, affected assets, and the following recommended fixes:
 
-- [Classic] Generate a new RSA certificate with a key length of at least 2048 bits to replace 'cert-69'.
-- [Classic] Update all systems and applications that use this certificate to reference the new certificate.
-- [Classic] Verify that the new certificate is correctly deployed and trusted by all relevant parties.
+- Generate a new RSA certificate with a key length of at least 2048 bits to replace 'cert-69'.
+- Update all systems and applications that use this certificate to reference the new certificate.
+- Verify that the new certificate is correctly deployed and trusted by all relevant parties.
 
 :::
 
 :::info[Step 2 Complete]
 
-You've assessed the quantum vulnerability, confirmed the certificate is self-signed and untrusted, and reviewed AI-generated remediation recommendations. Proceed to Step 3 to renew the certificate and deploy a stronger replacement.
+You've assessed the quantum vulnerability, confirmed the certificate is self-signed and untrusted, and reviewed the AI-generated analysis and recommended fixes. Proceed to Step 3 to renew the certificate and deploy a stronger replacement.
 
 :::
 
----
-
-Proceed to **[Step 3: Execute →](./execute)**

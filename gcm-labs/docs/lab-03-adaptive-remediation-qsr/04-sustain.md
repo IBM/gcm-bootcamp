@@ -97,6 +97,3 @@ You reviewed QSR's policy controls — enforcing which client crypto profiles ar
 
 :::
 
----
-
-Proceed to **[Lab Summary →](./summary)**

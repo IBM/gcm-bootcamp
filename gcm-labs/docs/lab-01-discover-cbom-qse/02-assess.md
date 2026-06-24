@@ -15,11 +15,11 @@ IBM Guardium Cryptography Manager (GCM) is your command center. It shows you eve
 
 1. In your browser, click the bookmark labeled **"GCM"**. This opens the IBM Guardium Cryptography Manager dashboard.
 
-2. Log in with the credentials provided by your lab facilitator if prompted.
+2. Log in by clicking "Login with OIDC" and use the pre-populated credentials.
 
 ### Step 2: Navigate to the Code Repository
 
-1. In GCM, open the top menu
+1. In GCM, open the top menu.
 
    ![GCM page with button to open top menu highlighted](/img/lab-01/image2.png)
 
@@ -47,26 +47,21 @@ A 1024-bit RSA key is considered too small by modern security standards — it c
 
 :::
 
-### Step 3: Create a Ticket for the Development Team
+:::note
 
-As CCE's Security Administrator, formally flag this issue for the development team. In a real workflow, this becomes a traceable work item in your project management system.
+In a production workflow, this is where Bohdi would create a formal remediation ticket from this finding — GCM supports direct ticket creation pre-populated with the vulnerability details, affected files, and AI-generated fix recommendations, creating the auditable work item trail required for compliance.
 
-1. Note the exact location: **line 32 of Client.java** in the secure-chat application.
-
-2. Create a ticket (or note) for the development team: *"Fix RSA-1024 key generation on line 32 of Client.java. Upgrade to minimum RSA-2048 or migrate to a NIST PQC algorithm."*
+:::
 
 :::tip
 
-You are now switching roles. You have received the ticket and will now act as the Developer who must find and fix the vulnerability at the code level using the QSE plugin and IBM Bob.
+You are now switching roles. You have reviewed the findings as the Security Administrator and will now act as the Developer who must fix the vulnerability at the code level using the QSE plugin and IBM Bob.
 
 :::
 
 :::info[Step 2 Complete]
 
-You have reviewed CCE's vulnerability findings in GCM, identified the RSA-1024 weakness in Client.java, and created a remediation ticket for the development team. Proceed to Step 3 to fix the vulnerability using IBM Bob.
+You have reviewed CCE's vulnerability findings in GCM and identified the RSA-1024 weakness in Client.java. Proceed to Step 3 to fix the vulnerability using IBM Bob.
 
 :::
 
----
-
-Proceed to **[Step 3: Execute →](./execute)**

@@ -31,7 +31,7 @@ Johnny Utah convenes an emergency cryptographic posture review. QSE's CBOM data 
 
 Key findings from Lab 1 that drive Lab 2 priorities:
 
-- 19 PQC vulnerabilities (8 non-quantum-resistant RSA, 3 broken MD5, DES and AES).
+- 19 PQC vulnerabilities.
 - 112 ECDSA P-256 keys protecting API gateways and inter-service communication.
 - 8 RSA-1024-bit certificates across CCE production systems — all quantum-vulnerable.
 - HashiCorp Vault PKI still issuing new certificates using legacy RSA-1024 profiles.
@@ -50,7 +50,7 @@ No coding experience is required. You will be clicking through pre-built tools i
 | Tool | What It Does |
 |------|--------------|
 | **IBM Guardium Cryptography Manager (GCM)** | Your command center for cryptographic asset discovery and lifecycle management. GCM scans your network to find certificates, calculates exploitability scores based on algorithm strength and business impact, enforces cryptographic policies, and maintains a living CBOM for compliance reporting. |
-| **HashiCorp Vault PKI** | Integrated Certificate Authority (CA) that issues and signs certificates. GCM uses Vault PKI to generate new quantum-resistant certificates during the renewal process, replacing weak RSA-1024 certificates with stronger RSA-2048 (or future PQC algorithms). |
+| **HashiCorp Vault PKI** | Integrated Certificate Authority (CA) that issues and signs certificates. GCM uses Vault PKI to generate new certificates during the renewal process, replacing weak RSA-1024 certificates with stronger RSA-2048 (RSA-2048 reduces classical risk but is not yet quantum-safe — addressed in future lab phases). |
 | **Certificate Lifecycle Management (CLM)** | Automated workflow within GCM that discovers certificates, monitors expiration dates, renews certificates before they expire, and deploys updated certificates to target servers — preventing service outages and maintaining continuous compliance. |
 | **Network Scanner** | Built-in GCM capability that discovers TLS/SSL certificates across your infrastructure by scanning domains and ports. It identifies weak cryptographic algorithms (RSA-1024, MD5, SHA-1) and generates policy violation alerts. |
 | **AI-Powered Risk Assessment** | GCM's AI engine that analyzes discovered certificates, explains vulnerabilities in plain English, calculates exploitability scores, and generates remediation recommendations including ticket creation for tracking fixes. |
@@ -62,6 +62,6 @@ Each step below maps to a phase of IBM's Six-Phase PQC Migration Lifecycle. Lab 
 | Step | Name | What Happens | PQC Lifecycle Phase |
 |------|------|--------------|---------------------|
 | **1** | **Discover** | Run GCM's network scanner to discover the sampleapp.test.lab certificate. Review the scan results showing 4 IT assets, identify the RSA-1024 certificate with Critical exploitability, and understand the "Small RSA Key Length" policy violation. | Phase 3 — Risk Scoring & Prioritization |
-| **2** | **Assess** | Use GCM's AI-powered risk assessment to understand why RSA-1024 is quantum-vulnerable. Review the certificate details showing it is self-signed and untrusted. Adjust business impact settings to see how exploitability scores change. Use the AI-generated ticket creation feature to document the vulnerability. | Phase 3 — Risk Scoring & Prioritization |
+| **2** | **Assess** | Use GCM's AI-powered risk assessment to understand why RSA-1024 is quantum-vulnerable. Review the certificate details showing it is self-signed and untrusted. Adjust business impact settings to see how exploitability scores change. Review AI-generated analysis and remediation recommendations. | Phase 3 — Risk Scoring & Prioritization |
 | **3** | **Execute** | Use GCM's Certificate Lifecycle Management (CLM) integrated with HashiCorp Vault PKI to renew the weak certificate. Generate a new RSA-2048 certificate signed by the internal CA, download the certificate with private key, and deploy it to the sample application server using the automated deployment script. | Phase 5 — Pilot Testing & Phased Migration |
 | **4** | **Sustain** | Run a post-renewal network scan to confirm vulnerability resolution, verify the new RSA-2048 certificate is browser-trusted, and demonstrate live TDE master key rotation using GCM's KMIP key management to protect CCE's database encryption at rest. | Phase 5 & 6 — Pilot Migration / Validation & Monitoring |

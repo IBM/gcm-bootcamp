@@ -84,6 +84,3 @@ Each step below maps to a phase of IBM's Six-Phase PQC Migration Lifecycle. Lab 
 | **3** | **Execute** | Enable the Forward Proxy and Reverse Proxy to protect traffic using quantum-safe communication while preserving compatibility with the backend application. | Phase 5 — Pilot Testing & Phased Migration |
 | **4** | **Sustain** | Review policy controls and performance benchmarking to understand how CCE can operate QSR continuously at scale. | Phase 6 — Validation, Monitoring & Crypto-Agility |
 
----
-
-Proceed to **[Step 1: Discover →](./discover)**

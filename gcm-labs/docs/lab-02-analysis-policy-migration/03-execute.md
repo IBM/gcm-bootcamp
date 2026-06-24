@@ -13,9 +13,8 @@ This is the remediation step. Using Certificate Lifecycle Management integrated 
 
 Continuing within GCM from Step 2, with the cert-69 side panel open:
 
-1. Click **back arrow (D)** to skip ticket creation
-2. Ensure **Certificate Lifecycle Management (E)** is selected
-3. Click **Manage > Renew (F)**
+1. Ensure **Certificate Lifecycle Management (A)** is selected
+2. Click **Manage > Renew (B)**
 
 ![cert-69 panel with Certificate Lifecycle Management selected](/img/lab-02/Phase2.5\(3.1\).png)
 
@@ -32,7 +31,7 @@ Continuing within GCM from Step 2, with the cert-69 side panel open:
 
 :::tip
 
-All these values are already pre-recorded for your convenience, just click on the fields.
+All these values are already pre-filled for your convenience, just click on the fields.
 
 :::
 
@@ -43,7 +42,7 @@ All these values are already pre-recorded for your convenience, just click on th
 
 *Renew certificate wizard — Define certificate with alias and Common Name matched to sampleapp.test.lab*
 
-5. Continue clicking **Next** until you reach the **Preview** page then click **Save** to renew the certificate.
+5. Continue clicking **Next** until you reach the **Preview** page, then click **Save** to renew the certificate.
 
 :::tip
 
@@ -54,7 +53,7 @@ If you get an error after trying to save, reduce the validity period as seen in 
 ### Step 3: Download and Deploy Certificate
 
 1. Close the right panel
-2. Type **sampleapp (A)** in the search bar and Click on the newly created **sampleapp (B)**
+2. Type **sampleapp (A)** in the search bar and click on the newly created **sampleapp (B)**
 3. Click **Manage** > **Download (C)**
 
 ![GCM Inventory with the new sampleapp certificate selected](/img/lab-02/Phase3.5.png)
@@ -70,7 +69,7 @@ If you get an error after trying to save, reduce the validity period as seen in 
 
 *Download Certificate dialog set to Certificate with private key, PEM format*
 
-8. Certificate and Keys will be downloaded **(A)** in a zip file
+8. Certificate and keys will be downloaded **(A)** in a zip file
 9. Click on the **Deploy Certificate (B)** script in the Taskbar
 10. Zip file **(C)** will be copied to the destination server
 11. File will be unzipped on the destination and **sample-web-app container (D)** will be restarted
@@ -90,6 +89,3 @@ You've successfully renewed the RSA-1024 certificate with a new RSA-2048 certifi
 
 :::
 
----
-
-Proceed to **[Step 4: Sustain →](./sustain)**

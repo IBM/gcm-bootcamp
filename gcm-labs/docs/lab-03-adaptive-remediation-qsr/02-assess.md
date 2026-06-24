@@ -95,6 +95,3 @@ You tested all three client types and observed how the Reverse Proxy supports in
 
 :::
 
----
-
-Proceed to **[Step 3: Execute →](./execute)**

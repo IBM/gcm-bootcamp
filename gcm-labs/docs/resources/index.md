@@ -5,7 +5,7 @@ title: Resources
 
 # Event Resources
 
-Leave-behind materials from the GCM Quantum Safe Bootcamp. Download any of the resources below for further reading and reference.
+Leave-behind materials from the GCM Workshop. Download any of the resources below for further reading and reference.
 
 ---
 

@@ -38,7 +38,7 @@ Remediation only counts if it is verified and maintained. A post-remediation res
 *GCM Cryptographic Objects showing the new sampleapp certificate linked to the IT asset*
 
 6. Now the Key Size is **RSA 2048 (B)**
-7. In the Classic Violations tab, you can also see there are **No violations found (C)** or the original Key Size violation is no longer there
+7. In the Classic Violations tab, confirm **No violations found (C)** — the RSA key-length violation has been resolved.
 8. However, there are still **PQC Violations (D)**
 
 ![Certificate panels showing RSA-2048, no classic violations, and remaining PQC violations](/img/lab-02/Phase4.4.png)
@@ -76,7 +76,13 @@ While RSA-2048 is stronger than RSA-1024, it's still vulnerable to future quantu
 
 ---
 
-## Step 4 Part 2: Transparent Database Encryption (TDE) Key Management
+## Step 4 Part 2: Transparent Database Encryption (TDE) Key Management *(Optional)*
+
+:::tip[Optional — Complete if time allows]
+
+This section demonstrates TDE Key Management, an additional GCM capability. Complete it only if your lab time permits — the core Lab 2 objectives are already satisfied above.
+
+:::
 
 Transparent Database Encryption (TDE) protects sensitive data at rest by encrypting entire database files at the storage layer — invisible to applications but critical to CCE's data security posture. For CCE, whose mission involves protecting the United States' commodity-backed digital currency ledger, any database encryption key compromise is a national security event.
 
@@ -99,9 +105,11 @@ GCM's TDE Key Management capability provides centralized visibility and control 
 
 *Configure TDE client dialog with the Database type dropdown showing supported platforms*
 
-The existing Db2 TDE Client is already registered in GCM with two AES-256 symmetric keys active, created during CCE's initial GCM onboarding. The KMIP client certificate status is **Active** and Database Linking is **Complete** — confirming that GCM is the live keystore authorizing Db2's encryption operations.
+The existing Db2 TDE Client is already registered in GCM with two AES-256 symmetric keys that were activated during CCE's initial GCM onboarding. The KMIP client certificate status is **Active** and Database Linking is **Complete** — confirming that GCM is the live keystore authorizing Db2's encryption operations.
 
 ### Step 2: Connect to the Database Server and Review Encryption Status
+
+The lab environment includes pre-configured shell aliases for common Db2 operations: `connect` opens the database connection, `info` displays encryption status, and `rotate` executes key rotation.
 
 1. Click the **SSH icon** on the Taskbar to open an SSH connection to the RHEL server.
 2. At the prompt, type the **connect** alias to connect to the Db2 database as db2inst1.
@@ -149,6 +157,3 @@ You have validated that CCE's RSA-1024 certificate was successfully replaced wit
 
 :::
 
----
-
-Proceed to **[Summary →](./summary)**
