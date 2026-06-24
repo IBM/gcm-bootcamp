@@ -35,11 +35,11 @@ The goal is to show how QSR protects communication over the internet while allow
 
 2. Log in using the credentials provided to you.
 
-   ![Screenshot: QSR login page](/img/lab-03/Step 1.1 - Log In.png)
+   ![Screenshot: QSR login page](/img/lab-03/Step%201.1%20-%20Log%20In.png)
 
 3. Once logged in, click the **Adaptive Proxy Demo** tab in the top navigation bar.
 
-   ![Screenshot: Adaptive Proxy Demo tab selected in top navigation](/img/lab-03/Step 1.1 ap tab.png)
+   ![Screenshot: Adaptive Proxy Demo tab selected in top navigation](/img/lab-03/Step%201.1%20ap%20tab.png)
 
 4. Wait for the QSR demo landing page to load.
 
