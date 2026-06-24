@@ -13,7 +13,7 @@ Before looking at specific vulnerabilities, it is essential to understand how th
 
 The pipeline has four key components:
 
-- **QSE Scan:** Performs static analysis of the secure-chat source code. Output: CWE-classified vulnerability findings and a CycloneDX CBOM.
+- **QSE Scan:** Performs static analysis of the secure-chat source code. Output: CWE-classified vulnerability findings and a [CycloneDX](https://cyclonedx.org/) CBOM.
 - **Jenkins CI/CD:** Automates the build-scan-report cycle. Every code commit triggers a QSE scan, generates an updated CBOM, and uploads results to GCM.
 - **IBM Bob:** IBM's agentic coding IDE, connected to QSE via MCP. Bob queries live scan data to explain findings and apply targeted code fixes.
 - **GCM Dashboard:** Aggregates QSE findings and serves as the single source of truth for CCE's cryptographic posture, compliance reporting, and CBOM history.

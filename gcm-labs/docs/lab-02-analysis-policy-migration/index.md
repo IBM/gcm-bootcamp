@@ -25,7 +25,7 @@ In this lab, you will take on the role of **Bohdi, CCE's Security Administrator*
 
 :::info[CCE SCENARIO]
 
-NSA issues an updated advisory: the quantum timeline has been revised forward. HNDL data captured in the last 18 months is now assessed as being at elevated risk of decryption within the target window. OMB M-23-02 compliance deadlines are immovable.
+NSA issues an updated advisory: the quantum timeline has been revised forward. HNDL data captured in the last 18 months is now assessed as being at elevated risk of decryption within the target window. [OMB M-23-02](https://www.whitehouse.gov/wp-content/uploads/2022/11/M-23-02-M-Memo-on-Migrating-to-Post-Quantum-Cryptography.pdf) compliance deadlines are immovable.
 
 Johnny Utah convenes an emergency cryptographic posture review. QSE's CBOM data is loaded into GCM. Bohdi, CCE's Security Administrator, is tasked with driving the analysis, setting enterprise policy, and executing the first wave of migration starting with the highest-risk cryptographic assets identified in Lab 1.
 

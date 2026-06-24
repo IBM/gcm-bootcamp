@@ -15,7 +15,7 @@ In this lab, you will take on the role of **Bohdi, CCE's Security Administrator*
 
 :::info[CCE SCENARIO]
 
-Breaking NSA headline: China has published a definitive quantum roadmap. Harvest-Now, Decrypt-Later (HNDL) operations are actively capturing encrypted communications today — data that becomes readable once a quantum computer is operational. OMB M-23-02 compliance deadlines are immovable.
+Breaking NSA headline: China has published a definitive quantum roadmap. Harvest-Now, Decrypt-Later (HNDL) operations are actively capturing encrypted communications today — data that becomes readable once a quantum computer is operational. [OMB M-23-02](https://www.whitehouse.gov/wp-content/uploads/2022/11/M-23-02-M-Memo-on-Migrating-to-Post-Quantum-Cryptography.pdf) compliance deadlines are immovable.
 
 CCE's secure-chat application handles encrypted agency communications, but no one has ever inventoried its cryptographic assets. Until now, CCE has had no CBOM, no vulnerability baseline, and no automated cryptographic scanning in its CI/CD pipeline. This lab changes that.
 
@@ -31,7 +31,7 @@ No coding experience is required. You will be clicking through pre-built tools a
 
 | Tool | What It Does |
 |------|--------------|
-| **IBM Quantum Safe Explorer (QSE)** | Scans application source code to find cryptographic weaknesses — outdated algorithms or insecure key sizes — and generates detailed vulnerability findings and a CycloneDX CBOM. |
+| **IBM Quantum Safe Explorer (QSE)** | Scans application source code to find cryptographic weaknesses — outdated algorithms or insecure key sizes — and generates detailed vulnerability findings and a [CycloneDX](https://cyclonedx.org/) CBOM. |
 | **IBM Bob** | IBM's agentic coding IDE, connected to QSE via MCP. Bob queries live scan data to explain vulnerabilities in plain English, suggests fixes, and can automatically update the code for you. |
 | **Jenkins CI/CD** | Automates the build-scan-report pipeline. Every code commit triggers a QSE scan, generates an updated CBOM, and uploads results to GCM — creating a continuous, timestamped audit trail. |
 | **IBM Guardium Cryptography Manager (GCM)** | Your command center. Aggregates QSE scan findings, displays CCE's cryptographic security posture, and maintains the living CBOM. The source of truth for vulnerability review and OMB M-23-02 compliance reporting. |

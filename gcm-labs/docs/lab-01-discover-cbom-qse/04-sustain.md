@@ -7,7 +7,7 @@ title: "Step 4: Sustain"
 
 CI/CD Pipeline + GCM Confirmation — commit your fix and confirm the vulnerability is resolved in GCM.
 
-Remediation is not complete until it has been independently validated. Every code change must pass through the Jenkins CI/CD pipeline, which automatically triggers a new QSE scan, regenerates the CBOM, and uploads updated results to GCM — creating the timestamped audit trail needed for OMB M-23-02 compliance.
+Remediation is not complete until it has been independently validated. Every code change must pass through the Jenkins CI/CD pipeline, which automatically triggers a new QSE scan, regenerates the CBOM, and uploads updated results to GCM — creating the timestamped audit trail needed for [OMB M-23-02](https://www.whitehouse.gov/wp-content/uploads/2022/11/M-23-02-M-Memo-on-Migrating-to-Post-Quantum-Cryptography.pdf) compliance.
 
 ## Part 4: Commit Your Changes
 
@@ -39,7 +39,7 @@ Remediation is not complete until it has been independently validated. Every cod
 
    ![Jenkins dashboard showing new build triggered with Console Output option](/img/lab-01/image17.png)
 
-3. In the Console Output, watch for Jenkins to: scan the code with QSE, generate a findings report, produce a **CycloneDX CBOM** file, and upload it to GCM automatically.
+3. In the Console Output, watch for Jenkins to: scan the code with QSE, generate a findings report, produce a **[CycloneDX](https://cyclonedx.org/) CBOM** file, and upload it to GCM automatically.
 
    ![Jenkins Console Output showing CBOM generation and successful file upload to GCM](/img/lab-01/image18.png)
 

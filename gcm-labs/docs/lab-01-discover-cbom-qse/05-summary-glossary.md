@@ -14,8 +14,8 @@ In this lab, you completed a real-world PQC migration workflow using IBM Quantum
 | **QSE Automated Discovery Pipeline** | CCE secure-chat application scanned; GCM-Jenkins-QSE workflow understood and operational |
 | **GCM Vulnerability Assessment** | RSA-1024 vulnerability identified in Client.java (line 32); CWE classifications reviewed; remediation ticket created |
 | **IBM Bob AI-Assisted Remediation** | Bob queried live QSE scan data via MCP; RSA-1024 fix applied without deep cryptography expertise; QSE re-scan confirmed reduced vulnerability count |
-| **CI/CD Pipeline Validation** | Code committed and pushed; Jenkins triggered; CycloneDX CBOM generated and uploaded to GCM; remediation confirmed with timestamped audit trail |
-| **OMB M-23-02 Compliance Foundation** | CCE's first CBOM produced and validated in GCM; discovery-to-remediation evidence trail established; foundation for Labs 2 and 3 ready |
+| **CI/CD Pipeline Validation** | Code committed; Jenkins triggered; [CycloneDX](https://cyclonedx.org/) CBOM generated and uploaded to GCM; remediation confirmed with timestamped audit trail |
+| **[OMB M-23-02](https://www.whitehouse.gov/wp-content/uploads/2022/11/M-23-02-M-Memo-on-Migrating-to-Post-Quantum-Cryptography.pdf) Compliance Foundation** | CCE's first CBOM produced and validated in GCM; discovery-to-remediation evidence trail established; foundation for Labs 2 and 3 ready |
 
 :::info[KEY TAKEAWAY]
 

@@ -161,7 +161,7 @@ After rotation, the new key is immediately visible in GCM. An administrator woul
 
 :::info[TDE Walkthrough Complete]
 
-You've explored GCM's TDE Key Management capability — navigating the TDE Clients inventory and reviewing how GCM acts as the KMIP keystore for database encryption operations. In a full deployment, this workflow enables centralized, auditable master key rotation for CCE's Db2 database fleet, satisfying OMB M-23-02 data-at-rest encryption requirements without touching application code.
+You've explored GCM's TDE Key Management capability — navigating the TDE Clients inventory and reviewing how GCM acts as the KMIP keystore for database encryption operations. In a full deployment, this workflow enables centralized, auditable master key rotation for CCE's Db2 database fleet, satisfying [OMB M-23-02](https://www.whitehouse.gov/wp-content/uploads/2022/11/M-23-02-M-Memo-on-Migrating-to-Post-Quantum-Cryptography.pdf) data-at-rest encryption requirements without touching application code.
 
 :::
 
