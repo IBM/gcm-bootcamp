@@ -33,7 +33,6 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          editUrl: 'https://github.com/IBM/gcm-bootcamp/edit/main/gcm-labs/',
         },
         blog: false,
         theme: {
