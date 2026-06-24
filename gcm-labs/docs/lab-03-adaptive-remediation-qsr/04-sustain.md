@@ -187,6 +187,10 @@ You're accessing the performance benchmarking tool to measure the operational im
 2. Locate **Performance Harness**.
 3. Click **New Performance Test Harness** or **Performance Test Harness**, depending on the available option.
 
+![Performance Harness selection in QSR demo interface](/img/lab-03/Performance%20Harness%20Selction.png)
+
+*Performance Harness selection in QSR demo interface*
+
 #### What's Happening
 
 The Performance Harness simulates real-world TLS connections and measures:
@@ -210,6 +214,10 @@ Review the available benchmark configurations. The demo allows you to explore co
 - **Legacy, hybrid, and PQC TLS transaction types**
 - **Key exchange algorithms** (RSA, ECDH, MLKEM, etc.)
 - **Signature algorithms** (RSA, ECDSA, Dilithium, etc.)
+
+![Performance Harness dashboard showing test configuration options](/img/lab-03/Perf%20Harness%20Dashboard.png)
+
+*Performance Harness dashboard showing test configuration options*
 
 #### Understanding Performance Factors
 
