@@ -3,6 +3,8 @@ sidebar_position: 4
 title: "Step 3: Execute"
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 # Step 3: Execute — Fix Vulnerabilities Using QSE + IBM Bob
 
 Fix Vulnerabilities Using QSE + IBM Bob — use the QSE plugin and IBM Bob to understand and fix RSA vulnerabilities.
@@ -80,8 +82,8 @@ You will notice two types of issues: classic cryptography vulnerabilities (e.g.,
 4. Confirm that Bob calls MCP tools in the background — you will see tool call indicators in the Bob panel (`list_findings` will appear). If no tools are invoked, ask your lab facilitator to verify the MCP connection.
 
    <div style={{display: 'flex', gap: '1rem', alignItems: 'flex-start'}}>
-     <img src="/img/lab-01/image12.png" alt="IBM Bob panel showing MCP tool call for list_findings with scan summary results" style={{width: '50%'}} />
-     <img src="/img/lab-01/image13.png" alt="IBM Bob listing PQC vulnerabilities by category including RSA findings" style={{width: '50%'}} />
+     <img src={useBaseUrl('/img/lab-01/image12.png')} alt="IBM Bob panel showing MCP tool call for list_findings with scan summary results" style={{width: '50%'}} />
+     <img src={useBaseUrl('/img/lab-01/image13.png')} alt="IBM Bob listing PQC vulnerabilities by category including RSA findings" style={{width: '50%'}} />
    </div>
 
    *IBM Bob listing PQC vulnerabilities by category including RSA findings*
