@@ -47,7 +47,7 @@ You're accessing IBM's Quantum Safe Remediator demo environment, which simulates
 
 3. Once logged in, click the **Adaptive Proxy Demo** tab in the top navigation bar.
 
-   ![Adaptive Proxy Demo tab selected in top navigation](/img/lab-03Step1.1aptab.png)
+   ![Adaptive Proxy Demo tab selected in top navigation](/img/lab-03/Step1.1aptab.png)
 
    **What's Happening:** This tab contains the interactive demo interface where you'll test different client types and proxy configurations.
 
