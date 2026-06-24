@@ -8,33 +8,69 @@ import TabItem from '@theme/TabItem';
 
 # Environment Setup
 
-Complete the steps below before starting any lab. You will connect to a Windows virtual machine hosted on IBM TechZone and sign into IBM Bob.
+Complete these steps in order before starting any lab. You'll create an IBMid, open your TechZone workshop, connect to a Windows VM, and sign into IBM Bob.
 
-:::info
+:::warning[Use your registration email everywhere]
 
-Your lab instructor will provide your **TechZone reservation link** and **IBMid credentials** before the session begins. If you have not received these, contact your instructor before proceeding.
+The workshop and IBM Bob both sign you in with one **IBMid**, tied to the email you registered with. Use that **exact email** at every step — if it doesn't match, you can't access the workshop or Bob.
 
 :::
 
 ---
 
-## Step 1 — Find Your Connection Details
+## Step 1 — Create Your IBMid
 
-Navigate to your TechZone Reservation page and click on your reservation. Under **Published Services**, you will see the connection endpoints assigned to your environment. Each attendee gets unique port numbers.
+Create your IBMid first — you'll use it for both the workshop and IBM Bob.
+
+:::tip[Already have an IBMid?]
+
+If you already have one under your registration email, don't create a new one — just **log in** on the sign-in page below and skip to Step 2 (use **Forgot password** if needed).
+
+:::
+
+1. Go to [https://myibm.ibm.com](https://myibm.ibm.com). This opens a sign-in page — click the small **Create an IBMid** link.
+
+   ![IBM sign-in page with the Create an IBMid link below the login fields](/img/getting-started/ibmid-login.png)
+
+2. Fill out the IBMid creation form using the **same email address you registered for this event with**, then submit.
+
+   ![IBMid account creation form](/img/getting-started/ibmid-create.png)
+
+3. Enter the **7-digit verification code** IBM emails you (from `ibmacct@iam.ibm.com`; check spam if it's slow), then accept the privacy notice to finish.
+
+---
+
+## Step 2 — Open the TechZone Workshop
+
+1. Open the **TechZone Workshop link** from the shared Box folder provided for this event.
+
+   ![TechZone workshop link in the shared Box folder](/img/getting-started/techzone-link.png)
+
+2. When prompted, **sign in with the IBMid** you created in Step 1 (the same registration email).
+
+   ![Signing into TechZone with your IBMid](/img/getting-started/techzone-signin.png)
+
+3. You'll land on your workshop reservation.
+
+---
+
+## Step 3 — Find Your Connection Details
+
+Click your reservation. Under **Published Services**, you'll see your connection endpoints. Port numbers are unique to each attendee.
 
 ![TechZone Published Services showing RDP and console endpoints](/img/getting-started/image1.png)
 
 :::tip
 
-Keep this page open — you will refer back to it for credentials and port numbers throughout setup.
+Keep this page open — you'll need its credentials and port numbers throughout setup.
 
 :::
 
 ---
 
-## Step 2 — Connect to the Virtual Machine
+## Step 4 — Connect to the Virtual Machine
 
-Choose your connection method. **Remote Desktop is strongly recommended** for the best experience.
+Choose a connection method — **Remote Desktop is strongly recommended**.
 
 <Tabs groupId="connection-method">
   <TabItem value="rdp" label="Option 1: Remote Desktop (Recommended)" default>
@@ -80,7 +116,7 @@ Choose your connection method. **Remote Desktop is strongly recommended** for th
 
 :::warning
 
-Browser-based access is available as a fallback but is **not recommended** — it is slower and lacks clipboard support.
+Fallback only — slower, and no clipboard support.
 
 :::
 
@@ -88,7 +124,7 @@ From your TechZone reservation page, click the **Console** button next to the vi
 
 ![TechZone console button for browser-based VM access](/img/getting-started/image9.png)
 
-:::tip Browser Console Tips
+:::tip[Browser Console Tips]
 
 Once inside the browser console, use the toolbar controls shown below:
 
@@ -107,9 +143,9 @@ Once inside the browser console, use the toolbar controls shown below:
 
 ---
 
-## Step 3 — Sign Into IBM Bob
+## Step 5 — Sign Into IBM Bob
 
-IBM Bob is the AI-powered coding assistant used in Lab 1. A full description of what IBM Bob does is in the Lab 1 introduction. Complete the following steps after connecting to the virtual machine.
+IBM Bob is the AI coding assistant used in Lab 1 (described fully in the Lab 1 intro). After connecting to the VM:
 
 1. On the Windows VM desktop or taskbar, click the **robot icon** to open IBM Bob.
 
@@ -127,14 +163,14 @@ IBM Bob is the AI-powered coding assistant used in Lab 1. A full description of 
 
    ![IBM Bob authentication page in Chrome](/img/getting-started/image14.png)
 
-5. Enter the **IBMid** credentials provided by your lab instructor and sign in.
+5. Sign in with the **same IBMid** from Step 1 — no separate credentials needed.
 
-   ![Signing into IBM Bob with IBMid credentials](/img/getting-started/image15.png)
+   ![Signing into IBM Bob with your IBMid](/img/getting-started/image15.png)
 
 ---
 
 ## Setup Complete
 
-Once you are signed into IBM Bob, your environment is fully configured for Labs 1 and 2. Lab 3 uses a browser-based demo environment — no additional VM setup is required for that lab.
+You're now set up for Labs 1 and 2. Lab 3 runs in a browser — no extra setup needed.
 
 **[Start Lab 1: Discover and Inventory CBOM →](./lab-01-discover-cbom-qse/)**

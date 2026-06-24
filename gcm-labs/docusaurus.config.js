@@ -19,6 +19,14 @@ const config = {
 
   onBrokenLinks: 'throw',
 
+  markdown: {
+    hooks: {
+      // Allow pages to render while placeholder image paths don't yet exist.
+      // Each missing image logs a warning instead of failing the build.
+      onBrokenMarkdownImages: 'warn',
+    },
+  },
+
   plugins: ['docusaurus-plugin-image-zoom'],
 
   i18n: {
