@@ -13,34 +13,26 @@ This is the remediation step. Using Certificate Lifecycle Management integrated 
 
 Continuing within GCM from Step 2, with the cert-69 side panel open:
 
-1. Ensure **Certificate Lifecycle Management (A)** is selected
+1. Scroll down until you see **Managed by DPM** dropdown (Labeled **A**). Select **Certificate Lifecycle Management** (Labeled **B**).
+
+![cert-69 panel with Managed by DPM dropdown selected](/img/lab-02/Phase2b.png)
+
 2. Click **Manage > Renew (B)**
 
-![cert-69 panel with Certificate Lifecycle Management selected](/img/lab-02/Phase2.5\(3.1\).png)
-
-*cert-69 panel with Certificate Lifecycle Management selected*
-
-![Renew certificate wizard — Select certificate authority (Vault PKI / CLM / VaultCA)](/img/lab-02/Phase2.6\(3.2\).png)
-
-*Renew certificate wizard — Select certificate authority (Vault PKI / CLM / VaultCA)*
+![cert-69 panel with Manage dropdown](/img/lab-02/Phase2c.png)
 
 ### Step 2: Configure New Certificate
 
 1. Select **CA-signed certificate (A)**
 2. Fill in required field values **(B)** and Click **Next (C)**
 
-:::tip
+![Renew certificate wizard — Define certificate](/img/lab-02/Phase3.3.png)
 
-All these values are already pre-filled for your convenience, just click on the fields.
 
-:::
-
-3. Ensure the values for **Name (certificate alias)** and **Common name** match **(A)**
+3. Set the value for **Validity Period (Days)** to **60** **(A)**. 
 4. Click **Next (B)**
 
-![Renew certificate wizard — Define certificate with alias and Common Name matched to sampleapp.test.lab](/img/lab-02/Phase3.3.png)
-
-*Renew certificate wizard — Define certificate with alias and Common Name matched to sampleapp.test.lab*
+![Renew certificate wizard ](/img/lab-02/Phase2d.png)
 
 5. Continue clicking **Next** until you reach the **Preview** page, then click **Save** to renew the certificate.
 
@@ -52,36 +44,25 @@ If you get an error after trying to save, reduce the validity period as seen in 
 
 ### Step 3: Download and Deploy Certificate
 
-1. Close the right panel
-2. Type **sampleapp (A)** in the search bar and click on the newly created **sampleapp (B)**
-3. Click **Manage** > **Download (C)**
+1. Click the **Manage** dropdown **(A)** and select **Download (B)**
 
-![GCM Inventory with the new sampleapp certificate selected](/img/lab-02/Phase3.5.png)
-
-*GCM Inventory with the new sampleapp certificate selected*
+![GCM certificate download](/img/lab-02/Phase3a.png)
 
 4. Select **Certificate with private key (A)**
 5. Select **PEM (B)** File Format
 6. Enter **"pass"** as Password **(C)**
 7. Click **Download (D)**
 
-![Download Certificate dialog set to Certificate with private key, PEM format](/img/lab-02/Phase3.7.png)
+![Download Certificate dialog set to Certificate with private key, PEM format](/img/lab-02/Phase3b.png)
 
-*Download Certificate dialog set to Certificate with private key, PEM format*
-
-8. Certificate and keys will be downloaded **(A)** in a zip file
+8. Certificate and keys will be downloaded **(A)** in a zip file (named cert-N.zip, not sampleapp.zip)
 9. Click on the **Deploy Certificate (B)** script in the Taskbar
 10. Zip file **(C)** will be copied to the destination server
 11. File will be unzipped on the destination and **sample-web-app container (D)** will be restarted
 12. Press any key to exit… **(E)**
 
-![Certificate script copying sampleapp.zip and restarting the sample-web-app container](/img/lab-02/Phase3.8.png)
+![Certificate script copying sampleapp.zip and restarting the sample-web-app container](/img/lab-02/Phase3.7.png)
 
-*Certificate script copying sampleapp.zip and restarting the sample-web-app container*
-
-![Certificate deployment script completed successfully](/img/lab-02/Phase3.9.png)
-
-*Certificate deployment script completed successfully*
 
 :::info[Step 3 Complete]
 

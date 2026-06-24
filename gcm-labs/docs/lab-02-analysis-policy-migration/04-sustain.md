@@ -23,7 +23,7 @@ Remediation only counts if it is verified and maintained. A post-remediation res
 ### Step 2: Verify Vulnerability Resolution
 
 1. Click on **sampleapp.test.lab:5080**
-2. Exploitability has been reduced from **Critical** to **Medium (A)**
+2. Risk Level has been reduced from **Critical** to **Medium (A)**
 3. And no RSA key length violation shows **(B)** any more
 4. Click **Certificate (C)** to see the new certificate
 
@@ -31,17 +31,12 @@ Remediation only counts if it is verified and maintained. A post-remediation res
 
 *GCM Inventory and asset panel showing exploitability reduced to Medium with no RSA key-length violation*
 
-5. Click on the new certificate **sampleapp (A)** that has been associated to the IT Asset
+5. Click on the new certificate **cert-69** that has been associated to the IT Asset
+6. Now the Key Size is **RSA 2048 (A)**
+7. In the Classic Violations tab, confirm **No violations found (B)** — the RSA key-length violation has been resolved.
+8. However, there are still **PQC Violations (C)**
 
-![GCM Cryptographic Objects showing the new sampleapp certificate linked to the IT asset](/img/lab-02/Phase4.3.png)
-
-*GCM Cryptographic Objects showing the new sampleapp certificate linked to the IT asset*
-
-6. Now the Key Size is **RSA 2048 (B)**
-7. In the Classic Violations tab, confirm **No violations found (C)** — the RSA key-length violation has been resolved.
-8. However, there are still **PQC Violations (D)**
-
-![Certificate panels showing RSA-2048, no classic violations, and remaining PQC violations](/img/lab-02/Phase4.4.png)
+![Certificate panels showing RSA-2048, no classic violations, and remaining PQC violations](/img/lab-02/Phase4a.png)
 
 *Certificate panels showing RSA-2048, no classic violations, and remaining PQC violations*
 
@@ -51,14 +46,14 @@ Let's verify the certificate is now trusted by the browser:
 
 1. Click on **SampleWebs** > **Sample App** (right-click) > **Open in incognito window (A)**
 
-![SampleWebs menu with Sample App Open in incognito window highlighted](/img/lab-02/Phase4.5.png)
+![SampleWebs menu with Sample App Open in incognito window highlighted](/img/lab-02/Phase4.7.png)
 
 *SampleWebs menu with Sample App "Open in incognito window" highlighted*
 
 2. Click **View site information** > **Connection is secure** > **Show certificate (issued by CLM) (B)**
 3. Notice how the **sampleapp.test.lab** certificate is issued by **CLM (B)** and therefore trusted by the browser
 
-![Incognito Certificate Viewer showing the certificate issued by CLM and trusted](/img/lab-02/Phase4.6.png)
+![Incognito Certificate Viewer showing the certificate issued by CLM and trusted](/img/lab-02/Phase4.8.png)
 
 *Incognito Certificate Viewer showing the certificate issued by CLM and trusted*
 
@@ -78,9 +73,12 @@ While RSA-2048 is stronger than RSA-1024, it's still vulnerable to future quantu
 
 ## Step 4 Part 2: Transparent Database Encryption (TDE) Key Management *(Optional)*
 
-:::tip[Optional — Complete if time allows]
+:::tip[Optional — Explore if time allows]
 
-This section demonstrates TDE Key Management, an additional GCM capability. Complete it only if your lab time permits — the core Lab 2 objectives are already satisfied above.
+This section demonstrates GCM's TDE Key Management capability. **Db2 is not available in this lab environment**, so the workflow is split:
+
+- **Step 1** is interactive — navigate the GCM UI to explore the TDE Clients screen yourself.
+- **Steps 2–4** are reference walkthroughs — Db2 is not set up here, so review the screenshots to understand what a full key rotation looks like in practice.
 
 :::
 
@@ -93,7 +91,7 @@ GCM's TDE Key Management capability provides centralized visibility and control 
 1. Click top menu > **Inventory** > **TDE clients**
 2. Click **Configure TDE client (A)**
 
-![GCM TDE Clients inventory with the DB2 client (Active KMIP, Complete linking) and Configure TDE client](/img/lab-02/Phase4.7.png)
+![GCM TDE Clients inventory with the DB2 client (Active KMIP, Complete linking) and Configure TDE client](/img/lab-02/Phase4.9.png)
 
 *GCM TDE Clients inventory with the DB2 client (Active KMIP, Complete linking) and Configure TDE client*
 
@@ -101,49 +99,57 @@ GCM's TDE Key Management capability provides centralized visibility and control 
 4. Click **Cancel (C)** to close the configuration dialog without saving.
 5. Click on the existing **DB2 TDE Client (D)** to review its current configuration.
 
-![Configure TDE client dialog with the Database type dropdown showing supported platforms](/img/lab-02/Phase4.8.png)
+![Configure TDE client dialog with the Database type dropdown showing supported platforms](/img/lab-02/Phase4.10.png)
 
 *Configure TDE client dialog with the Database type dropdown showing supported platforms*
 
 The existing Db2 TDE Client is already registered in GCM with two AES-256 symmetric keys that were activated during CCE's initial GCM onboarding. The KMIP client certificate status is **Active** and Database Linking is **Complete** — confirming that GCM is the live keystore authorizing Db2's encryption operations.
 
+---
+
+:::note[Reference Walkthrough — Db2 Not Available in This Environment]
+
+The following steps show what TDE key management looks like end-to-end in a full deployment. Db2 is not configured in this lab, so these are illustrative — review the screenshots to understand the workflow.
+
 ### Step 2: Connect to the Database Server and Review Encryption Status
 
-The lab environment includes pre-configured shell aliases for common Db2 operations: `connect` opens the database connection, `info` displays encryption status, and `rotate` executes key rotation.
+In a full deployment, the lab environment includes pre-configured shell aliases for common Db2 operations: `connect` opens the database connection, `info` displays encryption status, and `rotate` executes key rotation.
 
+An administrator would:
 1. Click the **SSH icon** on the Taskbar to open an SSH connection to the RHEL server.
 2. At the prompt, type the **connect** alias to connect to the Db2 database as db2inst1.
 3. Type the **info** alias to run the encryption info command and review the current configuration.
 
-![Db2 encryptioninfo output showing AES-256 and a KMIP keystore with master key labels](/img/lab-02/Phase4.9.png)
+The output below shows what a healthy TDE configuration looks like — AES-256 encryption with a KMIP keystore pointing to GCM:
+
+![Db2 encryptioninfo output showing AES-256 and a KMIP keystore with master key labels](/img/lab-02/Phase4.11.png)
 
 *Db2 encryptioninfo output showing AES-256 and a KMIP keystore with master key labels*
 
-Confirm that:
+Key details to note:
 - The database is encrypted with **AES-256**
 - The keystore type is **KMIP** (pointing to GCM)
 - The current master key label is visible
 
 ### Step 3: Rotate the Master Encryption Key
 
-1. Type the **rotate** alias to execute the master key rotation command.
+To rotate the master encryption key, an administrator would type the **rotate** alias to execute the rotation command against the live Db2 instance.
 
-![Rotation output showing Return Status 0 and a new master key label](/img/lab-02/Phase4.10.png)
+A successful rotation returns **Status 0** and assigns a new master key label, as shown below:
+
+![Rotation output showing Return Status 0 and a new master key label](/img/lab-02/Phase4.12.png)
 
 *Rotation output showing Return Status 0 and a new master key label*
 
-Confirm that the Return Status is **0** and that a new master key label has been assigned.
-
 ### Step 4: Verify the Rotated Key in GCM
 
-1. Return to GCM and navigate to **Inventory** > **Cryptographic objects**.
-2. Confirm the new AES-256 symmetric key appears with a current activation timestamp.
+After rotation, the new key is immediately visible in GCM. An administrator would navigate to **Inventory** > **Cryptographic objects** to confirm the new AES-256 symmetric key appears with a current activation timestamp.
 
-![GCM Cryptographic Objects showing the newly rotated AES-256 key with activation timestamp](/img/lab-02/Phase4.11.png)
+![GCM Cryptographic Objects showing the newly rotated AES-256 key with activation timestamp](/img/lab-02/Phase4.13.png)
 
 *GCM Cryptographic Objects showing the newly rotated AES-256 key with activation timestamp*
 
-![GCM TDE key management updated view after key rotation](/img/lab-02/Phase4.12.png)
+![GCM TDE key management updated view after key rotation](/img/lab-02/Phase4.13.png)
 
 *GCM TDE key management updated view after key rotation*
 
@@ -151,9 +157,11 @@ Confirm that the Return Status is **0** and that a new master key label has been
 
 *GCM TDE client showing updated key inventory after rotation*
 
-:::info[Step 4 Complete]
+:::
 
-You have validated that CCE's RSA-1024 certificate was successfully replaced with RSA-2048, reducing exploitability from Critical to Medium. You also executed a live TDE master key rotation using GCM as the KMIP keystore — confirming end-to-end cryptographic lifecycle management for CCE's database at rest. CCE's digital currency ledger remained protected throughout the operation, satisfying OMB M-23-02 data-at-rest encryption requirements.
+:::info[TDE Walkthrough Complete]
+
+You've explored GCM's TDE Key Management capability — navigating the TDE Clients inventory and reviewing how GCM acts as the KMIP keystore for database encryption operations. In a full deployment, this workflow enables centralized, auditable master key rotation for CCE's Db2 database fleet, satisfying OMB M-23-02 data-at-rest encryption requirements without touching application code.
 
 :::
 
