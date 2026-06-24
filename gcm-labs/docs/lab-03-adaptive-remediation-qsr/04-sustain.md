@@ -254,6 +254,10 @@ You're reviewing pre-run performance benchmark results to understand the real-wo
 2. Open the test result to view detailed performance metrics.
 3. Review the benchmark output and compare different algorithm types.
 
+![Performance Harness test results showing benchmark data for different algorithm types](/img/lab-03/perf%20harness%20test%20results.png)
+
+*Performance Harness test results showing benchmark data comparing classical, hybrid, and PQC algorithms*
+
 #### What to Look For
 
 As you review the test results, pay attention to:
