@@ -38,7 +38,7 @@ Johnny Utah briefs CCE leadership:
 Bohdi, CCE's Security Administrator, is assigned the next mission:
 
 1. Demonstrate how CCE can support **legacy, hybrid, and quantum-safe clients**.
-2. Protect inbound agency application traffic using a **Quantum Safe Reverse Proxy**.
+2. Protect inbound agency application traffic using the **Quantum Safe Adaptive Proxy**.
 3. Protect outbound client-side traffic using a **Quantum Safe Forward Proxy**.
 4. Enforce cryptographic policies dynamically.
 5. Benchmark legacy, hybrid, and PQC TLS performance using the performance harness.
@@ -62,14 +62,14 @@ Without an interoperability layer, agencies face a difficult choice:
 - Break compatibility with older clients and partner systems.
 - Delay PQC migration until all systems are fully modernized.
 
-IBM Quantum Safe Remediator addresses this transition problem by placing adaptive proxies at strategic network points. The **Reverse Proxy** is deployed at the enterprise backend or cloud perimeter to handle incoming PQC traffic while preserving interoperability with legacy applications. The **Forward Proxy** sits on the client side to upgrade legacy TLS traffic to PQC before transmission over the internet.
+IBM Quantum Safe Remediator addresses this transition problem by placing adaptive proxies at strategic network points. The **Adaptive Proxy** is deployed at the enterprise backend or cloud perimeter, where it functions as a *reverse proxy* — terminating incoming PQC traffic and bridging it to legacy applications while preserving interoperability. The **Forward Proxy** sits on the client side to upgrade legacy TLS traffic to PQC before transmission over the internet.
 
 ## Tools You Will Use
 
 | Tool | What It Does |
 |------|--------------|
-| **IBM Quantum Safe Remediator — Adaptive Proxy** | Provides quantum-safe protection for communications without requiring changes to backend applications. Supports reverse proxy, forward proxy, crypto enforcement, interoperability, quantum-safe key exchange, policy controls, and legacy-to-modern bridging. |
-| **Quantum Safe Reverse Proxy** | Deployed at the enterprise backend or cloud perimeter to handle incoming PQC traffic and bridge it to legacy applications. |
+| **IBM Quantum Safe Remediator — Adaptive Proxy** | Provides quantum-safe protection for communications without requiring changes to backend applications. Supports adaptive and forward proxy modes, crypto enforcement, interoperability, quantum-safe key exchange, policy controls, and legacy-to-modern bridging. |
+| **Quantum Safe Adaptive Proxy** | Deployed at the enterprise backend or cloud perimeter, where it acts as a reverse proxy to handle incoming PQC traffic and bridge it to legacy applications. |
 | **Quantum Safe Forward Proxy** | Deployed near the client side to upgrade legacy TLS traffic to PQC before traffic crosses the internet. |
 | **Performance Harness** | Benchmarks TLS performance across legacy, hybrid, and PQC transactions to guide production architecture decisions. |
 
@@ -81,6 +81,6 @@ Each step below maps to a phase of IBM's Six-Phase PQC Migration Lifecycle. Lab 
 |------|------|--------------|---------------------|
 | **1** | **Discover** | Open the QSR Adaptive Proxy demo environment and review the client-to-proxy-to-application architecture. Identify the gap in CCE's current posture: legacy communications still unprotected at the network layer. | Phase 4 & 5 — Architecture & Pilot Testing |
 | **2** | **Assess** | Test legacy, hybrid, and quantum-safe clients to observe TLS handshake behavior, key exchange, and authentication translation. | Phase 5 — Pilot Testing & Phased Migration |
-| **3** | **Execute** | Enable the Forward Proxy and Reverse Proxy to protect traffic using quantum-safe communication while preserving compatibility with the backend application. | Phase 5 — Pilot Testing & Phased Migration |
+| **3** | **Execute** | Enable the Forward Proxy so client traffic is upgraded to quantum-safe before it reaches the Adaptive Proxy, protecting the internet segment while preserving compatibility with the backend application. | Phase 5 — Pilot Testing & Phased Migration |
 | **4** | **Sustain** | Review policy controls and performance benchmarking to understand how CCE can operate QSR continuously at scale. | Phase 6 — Validation, Monitoring & Crypto-Agility |
 

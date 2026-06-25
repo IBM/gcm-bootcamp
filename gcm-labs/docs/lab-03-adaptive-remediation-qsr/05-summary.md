@@ -15,8 +15,8 @@ In this lab, you demonstrated how CCE can protect sensitive communications durin
 
 | Capability Demonstrated | CCE Outcome |
 |-------------------------|-------------|
-| **QSR Adaptive Proxy Architecture** | Reviewed the client → Forward Proxy → Reverse Proxy → backend application traffic model. |
-| **Reverse Proxy Interoperability** | Demonstrated how the Reverse Proxy supports inbound client compatibility across legacy, hybrid, and quantum-safe crypto profiles. |
+| **QSR Adaptive Proxy Architecture** | Reviewed the client → Forward Proxy → Adaptive Proxy → backend application traffic model. |
+| **Adaptive Proxy Interoperability** | Demonstrated how the Adaptive Proxy supports inbound client compatibility across legacy, hybrid, and quantum-safe crypto profiles. |
 | **Forward Proxy Protection** | Enabled the Forward Proxy to upgrade legacy outbound TLS traffic before it crosses the internet, reducing HNDL exposure. |
 | **Dynamic Crypto Policy Controls** | Explored controls that enforce enterprise-wide cryptographic standards for incoming traffic. |
 | **Performance Harness** | Explored TLS performance benchmarking across legacy, hybrid, and PQC transaction types. |
@@ -39,7 +39,7 @@ By completing Lab 3, CCE has demonstrated that it can:
 
 PQC migration is not only about replacing algorithms in code or renewing certificates. Federal agencies also need a way to **protect live communications while legacy systems are still in place**.
 
-IBM Quantum Safe Remediator gives CCE a practical transition layer for crypto agility. By deploying Forward and Reverse Proxies, CCE can secure external communications with quantum-safe cryptography, preserve compatibility with existing applications, and manage the transition to post-quantum standards in a controlled, observable, and policy-driven way.
+IBM Quantum Safe Remediator gives CCE a practical transition layer for crypto agility. By deploying Forward and Adaptive Proxies, CCE can secure external communications with quantum-safe cryptography, preserve compatibility with existing applications, and manage the transition to post-quantum standards in a controlled, observable, and policy-driven way.
 
 :::
 
@@ -54,7 +54,7 @@ Table 1 below shows how Lab 3 maps to IBM's Six-Phase PQC Migration Lifecycle (i
 | **Phase 2 — Discovery & Cryptographic Inventory** | Uses prior CBOM and cryptographic posture data from Labs 1 & 2 to identify where proxy-based remediation is needed. |
 | **Phase 3 — Risk Scoring & Prioritization** | Focuses QSR deployment on network paths with the highest HNDL exposure. |
 | **Phase 4 — Roadmap, Architecture & Governance** | Demonstrates proxy-based architecture for legacy-to-modern crypto bridging. |
-| **Phase 5 — Pilot Testing & Phased Migration** | Executes a pilot using Forward Proxy, Reverse Proxy, and performance benchmarking. |
+| **Phase 5 — Pilot Testing & Phased Migration** | Executes a pilot using Forward Proxy, Adaptive Proxy, and performance benchmarking. |
 | **Phase 6 — Validation, Monitoring & Crypto-Agility** | Uses policy controls and performance benchmarking to sustain QSR operations at scale. |
 
 ---

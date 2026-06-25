@@ -3,7 +3,7 @@ sidebar_position: 4
 title: "Step 3: Execute"
 ---
 
-# Step 3: Execute — Protect Legacy Traffic with Forward and Reverse Proxy
+# Step 3: Execute — Protect Legacy Traffic with the Forward Proxy
 
 ## Overview — The Complete Solution
 
@@ -21,7 +21,7 @@ Legacy / Hybrid / Quantum Safe Client
     Quantum-Safe Transport over Internet
             |
             v
-  [Reverse Proxy — bridges PQC to legacy backend]
+  [Adaptive Proxy — bridges PQC to legacy backend]
             |
             v
       Backend Application
@@ -42,8 +42,8 @@ The Forward Proxy addresses **Harvest-Now, Decrypt-Later (HNDL)** risk by ensuri
 
 **How It Works:**
 1. **Client → Forward Proxy:** The legacy client connects using classical TLS (the only protocol it supports)
-2. **Forward Proxy → Internet → Reverse Proxy:** The Forward Proxy upgrades the connection to quantum-safe TLS before transmission
-3. **Reverse Proxy → Backend:** The Reverse Proxy translates back to classical TLS for the backend
+2. **Forward Proxy → Internet → Adaptive Proxy:** The Forward Proxy upgrades the connection to quantum-safe TLS before transmission
+3. **Adaptive Proxy → Backend:** The Adaptive Proxy translates back to classical TLS for the backend
 
 **The Result:** The most vulnerable segment (crossing the internet) is protected with quantum-safe cryptography, while both endpoints continue using their existing configurations.
 
@@ -60,7 +60,7 @@ You're activating the Forward Proxy to create a complete quantum-safe tunnel bet
 1. Return to the QSR demo landing page.
 2. Locate the **Forward Proxy Control**.
 3. Turn on / enable the **Forward Proxy**.
-4. Confirm the **Reverse Proxy** remains enabled.
+4. Confirm the **Adaptive Proxy** remains active (it is always on — no toggle to change).
 
 ![QSR demo with Forward Proxy control highlighted](/img/lab-03/Step3.1.png)
 
@@ -70,12 +70,12 @@ You're activating the Forward Proxy to create a complete quantum-safe tunnel bet
 
 **Before (Step 2 Configuration):**
 ```
-[Legacy Client] --[Classical TLS - VULNERABLE]-- [Internet] --[Reverse Proxy]-- [Backend]
+[Legacy Client] --[Classical TLS - VULNERABLE]-- [Internet] --[Adaptive Proxy]-- [Backend]
 ```
 
 **After (Step 3 Configuration):**
 ```
-[Legacy Client] --[Classical TLS]-- [Forward Proxy] --[Quantum-Safe TLS]-- [Internet] --[Reverse Proxy]-- [Backend]
+[Legacy Client] --[Classical TLS]-- [Forward Proxy] --[Quantum-Safe TLS]-- [Internet] --[Adaptive Proxy]-- [Backend]
                                                        ↑
                                                 Protected Segment
 ```
@@ -135,12 +135,12 @@ Compare this result to your Step 2 Legacy client test. Look for:
 - ✅ **Key Exchange:** Classical algorithms (RSA, ECDHE, etc.)
 - ✅ **Status:** SUCCESS
 
-**Forward Proxy → Reverse Proxy Connection (Over Internet):**
+**Forward Proxy → Adaptive Proxy Connection (Over Internet):**
 - ✅ **Protocol:** Quantum-Safe TLS
 - ✅ **Key Exchange:** Post-quantum algorithm (MLKEM1024, MLKEM768, etc.)
 - ✅ **Status:** SUCCESS — **This is the critical protection**
 
-**Reverse Proxy → Backend Connection:**
+**Adaptive Proxy → Backend Connection:**
 - ✅ **Protocol:** Classical TLS (the backend hasn't changed)
 - ✅ **Key Exchange:** Classical algorithms
 - ✅ **Status:** SUCCESS
@@ -190,7 +190,7 @@ Observe whether enabling the Forward Proxy changes the negotiated cryptographic 
 
 **What You Should See:**
 - ✅ **Connection Status:** SUCCESS
-- ✅ **Flexibility:** The Forward Proxy may allow the hybrid client to negotiate directly with the Reverse Proxy, or it may still provide translation
+- ✅ **Flexibility:** The Forward Proxy may allow the hybrid client to negotiate directly with the Adaptive Proxy, or it may still provide translation
 - ✅ **Optimization:** The system uses the strongest cryptography available at each segment
 
 ### Why This Matters
@@ -235,7 +235,7 @@ After retesting all three clients with both proxies enabled, take a moment to co
 
 ### Summary of Protection Levels
 
-| Client Type | Step 2 (Reverse Proxy Only) | Step 3 (Both Proxies) | Improvement |
+| Client Type | Step 2 (Adaptive Proxy Only) | Step 3 (Both Proxies) | Improvement |
 |-------------|----------------------------|----------------------|-------------|
 | **Legacy** | ⚠️ Classical TLS over internet | ✅ Quantum-safe TLS over internet | **HNDL risk eliminated** |
 | **Hybrid** | ⚠️ May use classical TLS | ✅ Quantum-safe TLS guaranteed | **Consistent protection** |
@@ -285,7 +285,7 @@ QSR provides a practical transition architecture that allows CCE to:
 - Risk accumulates as more traffic is harvested
 
 **With QSR:**
-- Deploy Forward and Reverse Proxies in weeks
+- Deploy Forward and Adaptive Proxies in weeks
 - Protect traffic immediately
 - Continue using existing application
 - Reduce HNDL risk while planning long-term modernization

@@ -16,12 +16,12 @@ In Labs 1 and 2, CCE learned that remediation is not complete until it can be go
 
 In this phase, you will review two operational capabilities that allow CCE to run quantum-safe remediation continuously — not just as a one-time technical exercise:
 
-1. **Reverse Proxy policy controls** — Enforce cryptographic standards at the network layer
+1. **Adaptive Proxy policy controls** — Enforce cryptographic standards at the network layer
 2. **Performance Harness** — Benchmark TLS performance across different algorithm types
 
 ---
 
-## Part 4.1 — Reverse Proxy Policy Controls
+## Part 4.1 — Adaptive Proxy Policy Controls
 
 ### What This Is
 
@@ -33,21 +33,20 @@ QSR includes dynamic policy controls that enforce enterprise-wide cryptographic 
 - **Dynamic Adjustment:** Policies can be updated without redeploying applications
 - **Audit and Compliance:** All policy decisions are logged and traceable
 
-### Step 4.1.1 — Open Reverse Proxy Controls
+### Step 4.1.1 — Open the Adaptive Proxy Controls
 
 #### What You're Doing
 
-You're accessing the policy configuration interface for the Reverse Proxy to see what cryptographic standards can be enforced at the network layer.
+You're locating the policy configuration interface for the Adaptive Proxy to see which client cryptographic profiles can be accepted or blocked at the network layer.
 
 #### Steps
 
-1. Return to the QSR demo landing page.
-2. Locate the **Reverse Proxy Control** section.
-3. Open or expand the Reverse Proxy controls.
+1. Return to the **Adaptive Proxy Demo** tab.
+2. Locate the **Adaptive Proxy Controls** panel on the right side of the interface, next to **Forward Proxy Controls**.
 
 #### What's Happening
 
-The Reverse Proxy acts as a **policy enforcement point** for all incoming traffic. Instead of each backend application implementing its own cryptographic policy, the proxy enforces a consistent standard across all protected services.
+The Adaptive Proxy acts as a **policy enforcement point** for all incoming traffic. Instead of each backend application implementing its own cryptographic policy, the proxy enforces a consistent standard across all protected services.
 
 ---
 
@@ -55,34 +54,35 @@ The Reverse Proxy acts as a **policy enforcement point** for all incoming traffi
 
 #### What You're Doing
 
-You're examining the types of policies that can be enforced to control which clients are allowed to connect and what cryptographic standards they must meet.
+You're examining the controls that govern which clients are allowed to connect and what cryptographic standards they must meet.
 
 #### Steps
 
-Review the policy options available in the demo environment. Depending on your lab setup, these may include settings related to:
+The **Adaptive Proxy Controls** panel exposes two policy toggles and an apply action:
 
-- **Accepted client crypto profiles** (legacy, hybrid, quantum-safe)
-- **Legacy compatibility and fallback behavior**
-- **Routing and enforcement behavior**
-- **Hybrid and PQC support levels**
+- **Disable Legacy / Allow legacy** — Accept or reject clients that present only classical (legacy) cryptography.
+- **Disable Hybrid / Allow hybrid** — Accept or reject clients that present hybrid (classical + PQC) cryptography.
+- **Reconfigure** — Applies your selected policy to the live Adaptive Proxy.
+
+Quantum-safe clients are always accepted; the toggles control whether weaker profiles are permitted.
 
 #### Understanding Policy Options
 
-**Typical Policy Scenarios:**
+Combining these two toggles produces the policy modes CCE will move through during migration:
 
 1. **Permissive Mode (Current Configuration):**
-   - Accept legacy, hybrid, and quantum-safe clients
+   - Allow legacy **and** allow hybrid (quantum-safe always accepted)
    - Maximize compatibility during migration
    - Use case: Early migration phase, broad partner ecosystem
 
 2. **Hybrid-Minimum Mode:**
-   - Require at least hybrid cryptography
-   - Block pure legacy clients
+   - **Disable legacy**, allow hybrid
+   - Require at least hybrid cryptography; block pure legacy clients
    - Use case: Mid-migration, reducing HNDL risk
 
 3. **PQC-Only Mode:**
+   - **Disable legacy and disable hybrid**
    - Require full quantum-safe cryptography
-   - Block legacy and hybrid clients
    - Use case: Post-migration, maximum security
 
 #### Why This Matters
@@ -106,18 +106,18 @@ You're testing how policy changes affect client connectivity, demonstrating how 
 
 #### Steps
 
-1. Select one available Reverse Proxy control and change the setting.
-2. Rerun one of the client tests using **Try it**.
-3. Review how the transaction behavior changes in response to the policy adjustment.
+1. In the **Adaptive Proxy Controls**, set **Disable Legacy** and **Disable Hybrid** to enforce a **PQC-only** policy. (To try Hybrid-Minimum mode instead, disable only **Legacy**.)
+2. Click **Reconfigure** to apply the new policy to the Adaptive Proxy.
+3. Rerun each client using **Try it** and review how the transaction behavior changes.
 
 #### What to Observe
 
-**Example Test:** Change policy to block legacy clients
+**Example Test:** Enforce a PQC-only policy (disable both legacy and hybrid)
 
 **Expected Results:**
-- ❌ **Legacy Client:** Connection BLOCKED or REJECTED
-- ✅ **Hybrid Client:** Connection SUCCESS (meets minimum standard)
-- ✅ **Quantum Safe Client:** Connection SUCCESS (exceeds minimum standard)
+- ❌ **Legacy Client:** Connection rejected — *"Legacy Clients no longer supported"*
+- ❌ **Hybrid Client:** Connection rejected — *"Hybrid Clients no longer supported"*
+- ✅ **Quantum Safe Client:** Connection SUCCESS (meets the quantum-safe requirement)
 
 ![QSR demo showing policy enforcement — Legacy and Hybrid clients blocked, Quantum Safe client still supported](/img/lab-03/Step4.1.png)
 
@@ -142,7 +142,7 @@ This demonstrates **centralized policy enforcement**:
 **Real-World Scenario for CCE:**
 
 CCE discovers a new vulnerability in a classical algorithm. With QSR:
-1. Update the Reverse Proxy policy to block that algorithm
+1. Update the Adaptive Proxy policy to block that algorithm
 2. Policy takes effect immediately for all protected services
 3. No application deployments required
 4. Audit logs show which clients were affected
@@ -153,7 +153,7 @@ CCE discovers a new vulnerability in a classical algorithm. With QSR:
 
 #### Steps
 
-After testing, return the control to its original setting unless instructed otherwise by your lab facilitator.
+After testing, set both toggles back to **Allow legacy** and **Allow hybrid**, then click **Reconfigure** to restore the permissive policy — unless instructed otherwise by your lab facilitator.
 
 #### Why
 
