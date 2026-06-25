@@ -15,22 +15,24 @@ The goal is to show how QSR protects communication over the internet while allow
 
 ### Steps
 
-1. Open a new **incognito / private browser window** and navigate to the QSR demo link provided in the **Box folder**. 
+1. Open a new **incognito / private browser window** and navigate to the QSR demo link provided in the **Box folder**.
 
-2. Log in using the credentials provided to you.
+2. Your browser will show a security warning because the demo is served with an internal certificate. Click **Advanced**, then **Proceed (unsafe)** to continue to the site. This is expected for the demo environment.
+
+3. Log in using the credentials provided to you.
 
    ![QSR login page](/img/lab-03/Step1.1LogIn.png)
 
-3. Once logged in, click the **Adaptive Proxy Demo** tab in the top navigation bar.
+4. Once logged in, click the **Adaptive Proxy Demo** tab in the top navigation bar.
 
    ![Adaptive Proxy Demo tab selected in top navigation](/img/lab-03/Step1.1aptab.png)
 
-4. Confirm that you can see three client options:
+5. Confirm that you can see three client options:
    - **Legacy client** — Represents older systems using traditional TLS 1.2/1.3 with classical cryptography only
    - **Hybrid client** — Represents transitional systems that support both classical and post-quantum cryptography
    - **Quantum Safe client** — Represents modern systems with full post-quantum cryptographic capabilities
 
-5. Confirm that you can see two control panels:
+6. Confirm that you can see two control panels:
    - **Forward Proxy Controls** — Enable or disable the client-side proxy that upgrades outbound traffic to quantum-safe before it crosses the internet
    - **Adaptive Proxy Controls** — Govern which client crypto profiles the enterprise-side proxy accepts (allow or disable legacy and hybrid clients), then apply changes with **Reconfigure**
 

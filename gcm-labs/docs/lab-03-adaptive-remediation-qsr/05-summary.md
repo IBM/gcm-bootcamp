@@ -47,14 +47,12 @@ IBM Quantum Safe Remediator gives CCE a practical transition layer for crypto ag
 
 ## How Lab 3 Fits into the PQC Migration Journey
 
-Table 1 below shows how Lab 3 maps to IBM's Six-Phase PQC Migration Lifecycle (introduced in the [Lab Introduction](/docs/intro)).
+The table below shows how Lab 3 maps to IBM's Six-Phase PQC Migration Lifecycle (introduced in the [Lab Introduction](./index.md)). Building on the discovery and risk work from Labs 1 & 2, Lab 3 advances CCE through Phases 4 to 6.
 
 | IBM PQC Lifecycle Phase | Lab 3 Contribution |
 |-------------------------|-------------------|
-| **Phase 2 — Discovery & Cryptographic Inventory** | Uses prior CBOM and cryptographic posture data from Labs 1 & 2 to identify where proxy-based remediation is needed. |
-| **Phase 3 — Risk Scoring & Prioritization** | Focuses QSR deployment on network paths with the highest HNDL exposure. |
 | **Phase 4 — Roadmap, Architecture & Governance** | Demonstrates proxy-based architecture for legacy-to-modern crypto bridging. |
-| **Phase 5 — Pilot Testing & Phased Migration** | Executes a pilot using Forward Proxy, Adaptive Proxy, and performance benchmarking. |
+| **Phase 5 — Pilot Testing & Phased Migration** | Executes a pilot using the Forward Proxy, Adaptive Proxy, and performance benchmarking. |
 | **Phase 6 — Validation, Monitoring & Crypto-Agility** | Uses policy controls and performance benchmarking to sustain QSR operations at scale. |
 
 ---
