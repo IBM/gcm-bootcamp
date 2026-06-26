@@ -9,6 +9,36 @@ Leave-behind materials from the GCM Workshop. Download any of the resources belo
 
 ---
 
+## Event Presentations
+
+<table>
+<thead>
+<tr><th>Resource</th><th>Description</th><th></th></tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Crypto Agility for Federal</strong><br/><em>Presentation</em></td>
+<td>Presentation covering cryptographic agility strategies and IBM's solutions tailored for U.S. federal missions.</td>
+<td><a href="/pdfs/Crypto_Agility_Federal_30min-6-22-26.pptx" download>Download</a></td>
+</tr>
+<tr>
+<td><strong>IBM GCM Enterprise for PQC Now</strong><br/><em>Presentation</em></td>
+<td>Overview of IBM Guardium Cryptography Manager's enterprise capabilities for organizations acting on post-quantum cryptography readiness today.</td>
+<td><a href="/pdfs/IBM%20GCM%20Enterprise%20for%20PQC%20Now%202026.06.25%20FINAL%202.pptx" download>Download</a></td>
+</tr>
+<tr>
+<td><strong>Intro to IBM Quantum Ready Now</strong><br/><em>Presentation</em></td>
+<td>Introductory presentation on IBM's Quantum Ready Now program, outlining the path for organizations to assess and advance their quantum-safe posture.</td>
+<td><a href="/pdfs/Intro%20to%20IBM%20Quantum%20Ready%20Now.pptx" download>Download</a></td>
+</tr>
+<tr>
+<td><strong>PQC Now for U.S. Federal Missions</strong><br/><em>Presentation</em></td>
+<td>Presentation focused on post-quantum cryptography priorities and solutions for U.S. federal agencies facing near-term compliance and security requirements.</td>
+<td><a href="/pdfs/PQC%20Now%20for%20U.S.%20Federal%20Missions%2C%2025%20June%202026%20final.pptx" download>Download</a></td>
+</tr>
+</tbody>
+</table>
+
 ## Solution Overview
 
 <table>
