@@ -15,7 +15,7 @@ Inventory management is key to maintaining crypto-agility. Here, you'll run scan
 
 ### Step 1: Start the Lab Services
 
-Before running the network scan, double-click the **start-services** icon on the desktop to start the services required for this lab. Skipping this step can cause options to be missing later — for example, the private key options in the certificate renewal dropdown in Step 3 may not appear.
+Before running the network scan, double-click the **start-services** icon on the desktop to start the services required for this lab. Skipping this step can cause options to be missing later — for example, the **CA name**, **Role**, and **Issuer** dropdowns in the Renew certificate dialog in Step 3 may appear empty.
 
 ![Windows desktop showing the start-services icon](/img/lab-02/desktop-start-services.png)
 

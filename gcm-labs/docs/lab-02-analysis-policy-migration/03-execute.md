@@ -26,13 +26,19 @@ Continuing within GCM from Step 2, with the cert-69 side panel open:
 1. Select **CA-signed certificate (A)**
 2. Fill in required field values **(B)** and Click **Next (C)**
 
-![Renew certificate wizard — Define certificate](/img/lab-02/Phase3.3.png)
+![Renew certificate dialog — Define certificate](/img/lab-02/Phase3.3.png)
+
+:::note
+
+If the **CA name**, **Role**, or **Issuer** dropdowns are empty, go back to [Step 1: Start the Lab Services](./discover#step-1-start-the-lab-services) and make sure you double-clicked **start-services** before beginning this lab.
+
+:::
 
 
 3. Set the value for **Validity Period (Days)** to **60** **(A)**. 
 4. Click **Next (B)**
 
-![Renew certificate wizard ](/img/lab-02/Phase2d.png)
+![Renew certificate dialog](/img/lab-02/Phase2d.png)
 
 5. Continue clicking **Next** until you reach the **Preview** page, then click **Save** to renew the certificate.
 
