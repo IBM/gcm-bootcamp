@@ -15,7 +15,9 @@ IBM Guardium Cryptography Manager (GCM) is your command center. It shows you eve
 
 1. In Google Chrome, click the bookmark labeled **"GCM"**. This opens the IBM Guardium Cryptography Manager dashboard.
 
-2. Log in by clicking "Login with OIDC" and use the pre-populated credentials.
+2. Delete the GCM cookies so you start with a fresh session: click the **site information icon** to the left of the address bar, select **Cookies and site data** > **Manage on-device site data**, delete the entries for the GCM address, then refresh the page.
+
+3. Log in by clicking "Login with OIDC" and use the pre-populated credentials.
 
 ### Step 2: Navigate to the Code Repository
 
@@ -27,7 +29,7 @@ IBM Guardium Cryptography Manager (GCM) is your command center. It shows you eve
 
    ![GCM top menu with portfolio view highlighted](/img/lab-01/image3.png)
 
-3. Find the entry for the **secure-chat** application (ensure it is the one with 8 Impacted Code Assets) and click the value in the **"Impacted code assets"** column (labeled **A**). This opens a list of all source code files that contain cryptographic functions.
+3. Find the entry for the **secure-chat** application (the Impacted Code Assets count may differ from the screenshot, e.g., 7 instead of 8) and click the value in the **"Impacted code assets"** column (labeled **A**). This opens a list of all source code files that contain cryptographic functions.
 
    ![GCM Inventory showing code repositories with secure-chat highlighted](/img/lab-01/image4.png)
 
@@ -40,6 +42,12 @@ IBM Guardium Cryptography Manager (GCM) is your command center. It shows you eve
    ![Expanding the Use of small key size: 1024 vulnerability details](/img/lab-01/image6.png)
 
    *GCM Vulnerabilities tab showing Client.java with "Use of small key size: 1024"*
+
+:::note
+
+The number of vulnerabilities, impacted code assets, and other counts in your environment may differ from the numbers shown in the screenshots. This is expected.
+
+:::
 
 :::note
 

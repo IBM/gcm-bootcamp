@@ -24,6 +24,12 @@ Inventory management is key to maintaining crypto-agility. Here, you'll run scan
 
 *GCM Discovery Profiles screen with Network Scan "Run discovery now" and the 4 IT Assets link highlighted*
 
+:::note
+
+The number of IT assets and policy violations in your environment may differ from the numbers shown in the screenshots. This is expected.
+
+:::
+
 ### Step 2: Review Discovered Assets
 
 1. Click on the **sampleapp.test.lab:5080** IT asset **(A)** to open side panel

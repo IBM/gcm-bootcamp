@@ -49,7 +49,7 @@ Once IBM Bob is open:
 
 1. Click **"Cryptography analysis"** (labeled **A**) to open a full breakdown of every cryptographic function in the project and its associated vulnerabilities.
 
-2. Click the first entry: **"keygen-(RSA)-(1024 bit)"** (labeled **B**). You will see it has 4 vulnerabilities.
+2. Click the first entry: **"keygen-(RSA)-(1024 bit)"** (labeled **B**). You will see it has several vulnerabilities (the screenshot shows 4; your count may differ).
 
    ![QSE Scan Results showing keygen-RSA-1024 entry with 4 vulnerabilities](/img/lab-01/image9c.png)
 
@@ -57,9 +57,15 @@ Once IBM Bob is open:
 
    ![QSE Scan Results showing RSA-1024 vulnerabilites](/img/lab-01/image10a.png)
 
-4. In the Cryptography results panel, click **"API discovery"** (labeled **D**) and select **`src\Client.java Line: 32`** (labeled **E**). The QSE plugin will automatically highlight line 32 — the location of the vulnerability.
+4. In the Cryptography results panel, click **"API discovery"** (labeled **D**) and select the **`java.security.KeyPairGenerator.initialize`** entry at **`src/main/java/Client.java Line : 32`** (labeled **E**). The QSE plugin will automatically highlight line 32 — the location of the vulnerability.
 
    ![IBM Bob Cryptography Analysis panel showing keygen-RSA-1024 entry with 4 vulnerabilities](/img/lab-01/image10.png)
+
+:::note
+
+The path shown above reflects the current secure-chat project layout. Older screenshots in this step may still show `src\Client.java` — the line number and function are unchanged.
+
+:::
 
 :::note
 
@@ -87,6 +93,12 @@ You will notice two types of issues: classic cryptography vulnerabilities (e.g.,
    </div>
 
    *IBM Bob listing PQC vulnerabilities by category including RSA findings*
+
+:::note
+
+Bob is an AI assistant, so its responses will not be word-for-word the same as the screenshots in this lab. The wording, formatting, and order of findings may differ, and Bob may not follow the exact flow described here. For example, it may give recommendations without proposing a plan or to-do list, or ask you before making changes. This is expected. The goal is to see how Bob uses live QSE scan data to explain and address the findings.
+
+:::
 
 ### Step 4: Navigate to Code Findings Directly
 
