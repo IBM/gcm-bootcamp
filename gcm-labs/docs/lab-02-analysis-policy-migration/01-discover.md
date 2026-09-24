@@ -13,7 +13,13 @@ This phase establishes the cryptographic inventory baseline by running GCM's net
 
 Inventory management is key to maintaining crypto-agility. Here, you'll run scans, review discovered assets and perform lifecycle operations like renewing and deploying certificates. These tasks demonstrate how GCM helps reduce risk and enforce cryptographic policies.
 
-### Step 1: Run Network Scan (Sample App)
+### Step 1: Start the Lab Services
+
+Before running the network scan, double-click the **start-services** icon on the desktop to start the services required for this lab. Skipping this step can cause options to be missing later — for example, the private key options in the certificate renewal dropdown in Step 3 may not appear.
+
+![Windows desktop showing the start-services icon](/img/lab-02/desktop-start-services.png)
+
+### Step 2: Run Network Scan (Sample App)
 
 1. Click top menu > **Discovery** > **Discovery profiles**
 2. **Network Scan** > **…** > **Run discovery now (A)**
@@ -30,7 +36,7 @@ The number of IT assets and policy violations in your environment may differ fro
 
 :::
 
-### Step 2: Review Discovered Assets
+### Step 3: Review Discovered Assets
 
 1. Click on the **sampleapp.test.lab:5080** IT asset **(A)** to open side panel
 
